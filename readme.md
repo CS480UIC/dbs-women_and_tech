@@ -3,9 +3,10 @@
 1. [Author(s)](#author)
 1. [Database description](#description)
 # Database
-DATABASE NAME
+women_and_tech
 # Author(s)
-AUTHOR1
+Joann Chan
 AUTHOR2
+AUTHOR3
 # Database description
 Write the database description and requirements here
