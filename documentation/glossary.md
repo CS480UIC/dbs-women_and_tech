@@ -1,18 +1,19 @@
 Glossary
-=== 
+===
 
+## Entities
 
 Entity Name: Member
 
-Synonyms: 
+Synonyms: User, Participant, 
 
-Description: 
+Description: A member is any female of any race, religion, culture, nationality, and/or socio-economic background who signs-up to women_and_tech. Who also either is a student (k-12 or higher Ed.) or working in a tech related industry or someone who is just interesting in persuing a career in tech.
 
 ---
 
 Entity Name: Mentor
 
-Synonyms: 
+Synonyms: Teacher, Leader,
 
 Description: 
 
@@ -20,7 +21,7 @@ Description:
 
 Entity Name: Mentee
 
-Synonyms: 
+Synonyms: Student, Follower, 
 
 Description: 
 
@@ -28,15 +29,15 @@ Description:
 
 Entity Name: Scholarships
 
-Synonyms: 
+Synonyms: Awards, Gants, Montary Aid(s)
 
-Description: 
+Description: These are montary awards to aid in the finiancial security bearing members. Anyone can apply (before the deadline) for one, but some have pre-requesets. 
 
 ---
 
 Entity Name: Network Event
 
-Synonyms: 
+Synonyms: Conferance, Workshop, Program
 
 Description: 
 
@@ -44,14 +45,27 @@ Description:
 
 Entity Name:  Learning Resource
 
-Synonyms: 
+Synonyms: Learning aid, self-teaching tool, 
 
 Description: 
 
 ---
 
-Entity Name: Advocacy Group
+Entity Name: Special Interest Group (SIG)
 
-Synonyms: 
+Synonyms: Advocacy Group, 
 
-Description: 
+Description: This is a group of people (members) who are interested in persueing an interesting specialized hobby. All ages are welcome, and all experiences are welcome.
+
+---
+
+<br>
+
+## Relationship Cordinality
+
+---
+<br>
+
+## Atribute Cordinality
+
+---
