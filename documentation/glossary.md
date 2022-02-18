@@ -37,15 +37,15 @@ Synonyms: Student, Follower, Trainee, Intern
 
 Description: A mentee is ny person that is currently interested in the tech industry, but needs some guidence on how to navigate through school, bootcamps, etc for software engineering or any tech related field. A mentee can have multiple mentors to guide them through different topics related to tech.
 
-Relationships:
-member_info M(1)
-mentee M(1)
+Relationships: <br />
+member_info M(1) <br />
+mentee M(1) <br />
 
-Attributes:
-mentee_id(PK) 1-1 (1)
-member_id(FK) 1-1 (1)
-field_of_interest M-M (0)
-mentor_id(FK) 1-M (1)
+Attributes: <br />
+mentee_id(PK) 1-1 (1) <br />
+member_id(FK) 1-1 (1) <br />
+field_of_interest M-M (0) <br />
+mentor_id(FK) 1-M (1) <br />
 
 ---
 
