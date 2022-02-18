@@ -58,7 +58,7 @@ Description: A mentee is ny person that is currently interested in the tech indu
 
 Relationships: <br />
 member_info 1(1) <br />
-mentee M(1) <br />
+mentor M(1) <br />
 
 Attributes: <br />
 mentee_id(PK) 1-1 (1) <br />
