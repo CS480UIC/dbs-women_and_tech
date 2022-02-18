@@ -13,17 +13,39 @@ Description: A member is any female of any race, religion, culture, nationality,
 
 Entity Name: Mentor
 
-Synonyms: Teacher, Leader,
+Synonyms: Teacher, Leader, Counselor, Advisor
 
-Description: 
+Description: A mentor is any person that is currently in the tech industry or has had experience in the tech industry.Each Mentor has at least one mentee. Each mentor should have experience in at least one tech topic.
+
+Relationships:
+member_info M(1)
+mentee M(1)
+
+Attributes:
+mentor_id(PK) 1-1 (1)
+member_id(FK) 1-1 (1)
+years_in_industry M-1 (1)
+role_in_industry M-M (1)
+mentee_id(FK) 1-M (1)
+years_of mentoring 1-1 (1)
 
 ---
 
 Entity Name: Mentee
 
-Synonyms: Student, Follower, 
+Synonyms: Student, Follower, Trainee, Intern
 
-Description: 
+Description: A mentee is ny person that is currently interested in the tech industry, but needs some guidence on how to navigate through school, bootcamps, etc for software engineering or any tech related field. A mentee can have multiple mentors to guide them through different topics related to tech.
+
+Relationships:
+member_info M(1)
+mentee M(1)
+
+Attributes:
+mentee_id(PK) 1-1 (1)
+member_id(FK) 1-1 (1)
+field_of_interest M-M (0)
+mentor_id(FK) 1-M (1)
 
 ---
 
