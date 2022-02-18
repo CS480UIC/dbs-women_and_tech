@@ -17,17 +17,17 @@ Synonyms: Teacher, Leader, Counselor, Advisor
 
 Description: A mentor is any person that is currently in the tech industry or has had experience in the tech industry.Each Mentor has at least one mentee. Each mentor should have experience in at least one tech topic.
 
-Relationships:
+Relationships: <br />
 member_info M(1) <br />
 mentee M(1) <br />
 
-Attributes:
-mentor_id(PK) 1-1 (1)
-member_id(FK) 1-1 (1)
-years_in_industry M-1 (1)
-role_in_industry M-M (1)
-mentee_id(FK) 1-M (1)
-years_of mentoring 1-1 (1)
+Attributes: <br />
+mentor_id(PK) 1-1 (1) <br />
+member_id(FK) 1-1 (1) <br />
+years_in_industry M-1 (1) <br />
+role_in_industry M-M (1) <br />
+mentee_id(FK) 1-M (1) <br />
+years_of mentoring 1-1 (1) <br />
 
 ---
 
