@@ -80,7 +80,18 @@ Entity Name: Network Event
 
 Synonyms: Conferance, Workshop, Program
 
-Description: 
+Description: A member who can attemp multiple tech events without duplicate time. Event can conduct in different address and date, but title is unique.
+
+Relationships: <br />
+member_info M(1) <br />
+networ_event M(1) <br />
+
+Attributes: <br />
+event_id (PK) 1-1 (1) <br />
+member_id (FK) 1-1 (1) <br />
+event_title M-1 (1) <br />
+event_address 1-M (1) <br />
+event_date M-M (1) <br />
 
 ---
 
@@ -88,7 +99,21 @@ Entity Name:  Learning Resource
 
 Synonyms: Learning aid, self-teaching tool, 
 
-Description: 
+Description: Learning resource are text books, films, plays, radio programs, images, speeches, multimedia, lectures, or online teaching tool that related to tech feild.
+
+Relationships: <br />
+member_info M(1) <br />
+learning_resource M(1) <br />
+
+Attributes: <br />
+resource_id (PK) 1-1 (1) <br />
+member_id (FK) 1-1 (1) <br />
+resource_type 1-M (1)  <br />
+resource_title 1-1 (1) <br />
+publisher M-M (0) <br />
+author M-M (1) <br />
+language M-M (1) <br />
+publish_year 1-1 (1) <br />
 
 ---
 
