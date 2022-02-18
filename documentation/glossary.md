@@ -98,7 +98,6 @@ Description: A member who can attemp multiple tech events without duplicate time
 
 Relationships: <br />
 member_info M(1) <br />
-networ_event M(1) <br />
 
 Attributes: <br />
 event_id (PK) 1-1 (1) <br />
@@ -117,7 +116,6 @@ Description: Learning resource are text books, films, plays, radio programs, ima
 
 Relationships: <br />
 member_info M(1) <br />
-learning_resource M(1) <br />
 
 Attributes: <br />
 resource_id (PK) 1-1 (1) <br />
