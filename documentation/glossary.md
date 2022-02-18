@@ -74,6 +74,20 @@ Synonyms: Awards, Gants, Montary Aid(s)
 
 Description: These are montary awards to aid in the finiancial security bearing members. Anyone can apply (before the deadline) for one, but some have pre-requesets. 
 
+Relationships: <br>
+member_info M(1) <br />
+
+Attributes: <br>
+scholarship_id (PK) 1-1 (1) <br>
+scholarship_name M-M (1) <br>
+Scholarship_amount M-1 (1) <br>
+past_holders (FK) M-M (0) <br>
+current_holders (FK) M-M (0) <br>
+scholarship_description 1-M (1) <br>
+application_deadline 1-M (1) <br>
+application_released 1-M (1) <br>
+requirements M-M (0) <br>
+
 ---
 
 Entity Name: Network Event
@@ -122,5 +136,16 @@ Entity Name: Special Interest Group (SIG)
 Synonyms: Advocacy Group, 
 
 Description: This is a group of people (members) who are interested in persueing an interesting specialized hobby. All ages are welcome, and all experiences are welcome.
+
+Relationships: <br>
+member_info M(1) <br>
+
+Attributes: <br>
+group_id (PK) 1-1 (1) <br>
+group_name 1-1 (1) <br>
+mission_statement 1-M (0) <br>
+type 1-1 (1) <br>
+webpage_url 1-1 (1) <br>
+date_created 1-1(1) <br>
 
 ---
