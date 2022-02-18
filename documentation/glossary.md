@@ -99,14 +99,3 @@ Synonyms: Advocacy Group,
 Description: This is a group of people (members) who are interested in persueing an interesting specialized hobby. All ages are welcome, and all experiences are welcome.
 
 ---
-
-<br>
-
-## Relationship Cordinality
-
----
-<br>
-
-## Atribute Cordinality
-
----
