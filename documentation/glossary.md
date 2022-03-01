@@ -147,3 +147,12 @@ webpage_url 1-1 (1) <br>
 date_created 1-1(1) <br>
 
 ---
+## Dependency Relationship
+
+member_info
+
+---
+## Dependent Entities
+
+Mentor ,Mentee ,Scholarships ,Network Event ,Learning Resource ,Special Interest Group
+
