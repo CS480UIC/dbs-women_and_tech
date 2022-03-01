@@ -159,16 +159,16 @@ date_created 1-1(1) <br>
 
 ---
 ## Dependency Relationship
-Independent Entity - User
+Independent Entity - User <br>
 Dependent Entity - Mentor ,Mentee ,Scholarships ,Network Event ,Learning Resource ,Special Interest Group
-
----
-## Supertype entities
-User
 
 ---
 ## Subtype Entities
 Mentor, Mentee
+
+---
+## Supertype entities
+User
 
 ---
 ## Plural Attribute
