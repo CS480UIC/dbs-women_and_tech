@@ -159,7 +159,6 @@ date_created 1-1(1) <br>
 
 ---
 ## Dependency Relationship
-
 User
 
 ---
@@ -169,11 +168,13 @@ Mentor ,Mentee ,Scholarships ,Network Event ,Learning Resource ,Special Interest
 
 ---
 ## Subtype Entities
-mentor 1(1), mentee 1(1)
+Mentor 1(1), Mentee 1(1)
 
 ---
 ## Supertype entities
-user
+User
 
 ---
-# Plural Attribute
+## Plural Attribute
+Each scholarship had past holders. past_holde is a plural attribute of scholarship. The plural attribute past_holde moves to the new table scholarship_past_holders. The primary key of the new table is the composite of plural attribute past_holder and foreign key scholarship_id.
+The foreign key scholarship references the initial table.
