@@ -158,17 +158,16 @@ webpage_url 1-1 (1) <br>
 date_created 1-1(1) <br>
 
 ---
+## Dependent Entities
+Mentor ,Mentee ,Scholarships ,Network Event ,Learning Resource ,Special Interest Group
+
+---
 ## Dependency Relationship
 User
 
 ---
-## Dependent Entities
-
-Mentor ,Mentee ,Scholarships ,Network Event ,Learning Resource ,Special Interest Group
-
----
 ## Subtype Entities
-Mentor 1(1), Mentee 1(1)
+Mentor, Mentee
 
 ---
 ## Supertype entities
