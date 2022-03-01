@@ -176,5 +176,5 @@ User
 
 ---
 ## Plural Attribute
-Each scholarship had past holders. past_holde is a plural attribute of scholarship. The plural attribute past_holde moves to the new table scholarship_past_holders. The primary key of the new table is the composite of plural attribute past_holder and foreign key scholarship_id.
+Each scholarship had past holders. past_holder is a plural attribute of scholarship. The plural attribute past_holder moves to the new table scholarship_past_holder. The primary key of the new table is the composite of plural attribute past_holder and foreign key scholarship_id.
 The foreign key scholarship references the initial table.
