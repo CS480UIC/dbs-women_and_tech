@@ -152,6 +152,7 @@ member_info M(1) <br>
 Attributes: <br>
 group_id (PK) 1-1 (1) <br>
 group_name 1-1 (1) NOT NULL<br>
+members_id(FK) 1-M (1) NOT NULL <br>
 mission_statement 1-M (0) NULL<br>
 type 1-1 (1) NOT NULL<br>
 webpage_url 1-1 (1) NOT NULL<br>
