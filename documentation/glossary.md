@@ -10,22 +10,22 @@ Synonyms: User, Participant,
 Description: A member is any female of any race, religion, culture, nationality, and/or socio-economic background who signs-up to women_and_tech. Who also either is a student (k-12 or higher Ed.) or working in a tech related industry or someone who is just interesting in persuing a career in tech.
 
 Relationships:  <br />
-network_event 1(1) <br />
-learning_resource 1(1) <br />
-special_interest_group 1(1)<br />
-scholarships 1(1)<br />
-mentor 1(1) <br />
-mentee 1(1) <br />
+network_event 1(1) NOT NULL <br />
+learning_resource 1(1) NOT NULL<br />
+special_interest_group 1(1) NOT NULL<br />
+scholarships 1(1) NOT NULL<br />
+mentor 1(1) NOT NULL<br />
+mentee 1(1) NOT NULL<br />
 
 Attributes:<br />
-member_id (PK) 1-1 (1) <br />
-member_password 1-1 (1) <br />
-first_name M-1 (1) <br />
-last_name M-1 (1) <br />
-birthday M-1 (1) <br />
-education_level M-1 (0) <br />
-email 1-1 (1) <br />
-bio 1-1 (0) <br />
+member_id (PK) 1-1 (1)<br />
+member_password 1-1 (1) NOT NULL<br />
+first_name M-1 (1) NOT NULL<br />
+last_name M-1 (1) NOT NULL<br />
+birthday M-1 (1) NOT NULL<br />
+education_level M-1 (0) NULL<br />
+email 1-1 (1) NOT NULL<br />
+bio 1-1 (0) NULL<br />
 
 ---
 
@@ -39,11 +39,11 @@ Relationships: <br />
 mentee M(1) <br />
 
 Attributes: <br />
-member_id (PK FK) 1-1 (1) <br />
-years_in_industry M-1 (1) <br />
-role_in_industry M-M (1) <br />
-mentee_id(FK) 1-M (1) <br />
-years_of mentoring 1-1 (1) <br />
+member_id (PK FK) 1-1 (1)<br />
+years_in_industry M-1 (1) NOT NULL<br />
+role_in_industry M-M (1) NOT NULL<br />
+mentee_id(FK) 1-M (1) NOT NULL<br />
+years_of mentoring 1-1 (1) NOT NULL<br />
 
 ---
 
@@ -57,11 +57,11 @@ Relationships: <br />
 mentor M(1) <br />
 
 Attributes: <br />
-member_id (PK FK) 1-1 (1)  <br />
-field_of_interest M-M (0)  <br />
-mentor_id(FK) 1-M (1)  <br />
-major M-M (0)  <br />
-school_name M-M (0)  <br />
+member_id (PK FK) 1-1 (1) <br />
+field_of_interest M-M (0)  NULL<br />
+mentor_id(FK) 1-M (1)  NOT NULL<br />
+major M-M (0)  NULL<br />
+school_name M-M (0)  NULL<br />
 
 ---
 Entity Name: mentor_mentee
@@ -75,7 +75,7 @@ mentor M(1) <br />
 mentee M(1) <br />
 
 Attributes: <br />
-PK (mentor_id FK, mentee_id FK) M-M(1)
+PK (mentor_id FK, mentee_id FK) M-M(1) <br>
 
 ---
 
@@ -90,14 +90,14 @@ member_info M(1) <br />
 
 Attributes: <br>
 scholarship_id (PK) 1-1 (1) <br>
-scholarship_name M-M (1) <br>
-Scholarship_amount M-1 (1) <br>
-past_holders (FK) M-M (0) <br>
-current_holders (FK) M-M (0) <br>
-scholarship_description 1-M (1) <br>
-application_deadline 1-M (1) <br>
-application_released 1-M (1) <br>
-requirements M-M (0) <br>
+scholarship_name M-M (1) NOT NULL<br>
+Scholarship_amount M-1 (1) NOT NULL<br>
+past_holders (FK) M-M (0) NULL<br>
+current_holders (FK) M-M (0) NULL<br>
+scholarship_description 1-M (1) NOT NULL<br>
+application_deadline 1-M (1) NOT NULL<br>
+application_released 1-M (1) NOT NULL<br>
+requirements M-M (0) NULL<br>
 
 ---
 
@@ -111,11 +111,11 @@ Relationships: <br />
 member_info M(1) <br />
 
 Attributes: <br />
-event_id (PK) 1-1 (1) <br />
-member_id (FK) 1-1 (1) <br />
-event_title M-1 (1) <br />
-event_address 1-M (1) <br />
-event_date M-M (1) <br />
+event_id (PK) 1-1 (1)<br />
+member_id (FK) 1-1 (1) NOT NULL<br />
+event_title M-1 (1) NOT NULL<br />
+event_address 1-M (1) NOT NULL<br />
+event_date M-M (1) NOT NULL<br />
 
 ---
 
@@ -130,13 +130,13 @@ member_info M(1) <br />
 
 Attributes: <br />
 resource_id (PK) 1-1 (1) <br />
-member_id (FK) 1-1 (1) <br />
-resource_type 1-M (1)  <br />
-resource_title 1-1 (1) <br />
-publisher M-M (0) <br />
-author M-M (1) <br />
-language M-M (1) <br />
-publish_year 1-1 (1) <br />
+member_id (FK) 1-1 (1) NOT NULL<br />
+resource_type 1-M (1)  NOT NULL<br />
+resource_title 1-1 (1) NOT NULL<br />
+publisher M-M (0) NULL<br />
+author M-M (1) NOT NULL<br />
+language M-M (1) NOT NULL<br />
+publish_year 1-1 (1) NOT NULL<br />
 
 ---
 
@@ -151,11 +151,11 @@ member_info M(1) <br>
 
 Attributes: <br>
 group_id (PK) 1-1 (1) <br>
-group_name 1-1 (1) <br>
-mission_statement 1-M (0) <br>
-type 1-1 (1) <br>
-webpage_url 1-1 (1) <br>
-date_created 1-1(1) <br>
+group_name 1-1 (1) NOT NULL<br>
+mission_statement 1-M (0) NULL<br>
+type 1-1 (1) NOT NULL<br>
+webpage_url 1-1 (1) NOT NULL<br>
+date_created 1-1(1) NOT NULL<br>
 
 ---
 ## Dependency Relationship
