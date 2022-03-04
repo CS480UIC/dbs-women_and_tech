@@ -18,14 +18,14 @@ mentor 1(1) NOT NULL<br />
 mentee 1(1) NOT NULL<br />
 
 Attributes:<br />
-member_id (PK) 1-1 (1)<br />
-member_password 1-1 (1) NOT NULL<br />
-first_name M-1 (1) NOT NULL<br />
-last_name M-1 (1) NOT NULL<br />
-birthday M-1 (1) NOT NULL<br />
-education_level M-1 (0) NULL<br />
-email 1-1 (1) NOT NULL<br />
-bio 1-1 (0) NULL<br />
+member_id (PK) UNIQUE NOT NULL<br />
+member_password UNIQUE NOT NULL<br />
+first_name NOT NULL<br />
+last_name NOT NULL<br />
+birthday NOT NULL<br />
+education_level NULL<br />
+email UNIQUE NOT NULL<br />
+bio NULL<br />
 
 ---
 
@@ -39,11 +39,11 @@ Relationships: <br />
 mentee M(1) <br />
 
 Attributes: <br />
-member_id (PK FK) 1-1 (1)<br />
-years_in_industry M-1 (1) NOT NULL<br />
-role_in_industry M-M (1) NOT NULL<br />
-mentee_id(FK) 1-M (1) NOT NULL<br />
-years_of mentoring 1-1 (1) NOT NULL<br />
+member_id (PK FK) UNIQUE NOT NULL<br />
+years_in_industry NOT NULL<br />
+role_in_industry NOT NULL<br />
+mentee_id(FK) NOT NULL<br />
+years_of mentoring UNIQUE NOT NULL<br />
 
 ---
 
@@ -57,11 +57,11 @@ Relationships: <br />
 mentor M(1) <br />
 
 Attributes: <br />
-member_id (PK FK) 1-1 (1) <br />
-field_of_interest M-M (0)  NULL<br />
-mentor_id(FK) 1-M (1)  NOT NULL<br />
-major M-M (0)  NULL<br />
-school_name M-M (0)  NULL<br />
+member_id (PK FK) UNIQUE NOT NULL <br />
+field_of_interest  NULL<br />
+mentor_id(FK) NOT NULL<br />
+major NULL<br />
+school_name NULL<br />
 
 ---
 Entity Name: mentor_mentee
@@ -89,15 +89,15 @@ Relationships: <br>
 member_info M(1) <br />
 
 Attributes: <br>
-scholarship_id (PK) 1-1 (1) <br>
-scholarship_name M-M (1) NOT NULL<br>
-Scholarship_amount M-1 (1) NOT NULL<br>
-past_holders (FK) M-M (0) NULL<br>
-current_holders (FK) M-M (0) NULL<br>
-scholarship_description 1-M (1) NOT NULL<br>
-application_deadline 1-M (1) NOT NULL<br>
-application_released 1-M (1) NOT NULL<br>
-requirements M-M (0) NULL<br>
+scholarship_id (PK) UNIQUE NOT NULL <br>
+scholarship_name NOT NULL<br>
+Scholarship_amount NOT NULL<br>
+past_holders (FK) NULL<br>
+current_holders (FK) NULL<br>
+scholarship_description NOT NULL<br>
+application_deadlineNOT NULL<br>
+application_released NOT NULL<br>
+requirements NULL<br>
 
 ---
 
@@ -111,11 +111,11 @@ Relationships: <br />
 member_info M(1) <br />
 
 Attributes: <br />
-event_id (PK) 1-1 (1)<br />
-member_id (FK) 1-1 (1) NOT NULL<br />
-event_title M-1 (1) NOT NULL<br />
-event_address 1-M (1) NOT NULL<br />
-event_date M-M (1) NOT NULL<br />
+event_id (PK) UNIQUE<br />
+member_id (FK) UNIQUE NOT NULL<br />
+event_title NOT NULL<br />
+event_address NOT NULL<br />
+event_date NOT NULL<br />
 
 ---
 
@@ -129,14 +129,14 @@ Relationships: <br />
 member_info M(1) <br />
 
 Attributes: <br />
-resource_id (PK) 1-1 (1) <br />
-member_id (FK) 1-1 (1) NOT NULL<br />
-resource_type 1-M (1)  NOT NULL<br />
-resource_title 1-1 (1) NOT NULL<br />
-publisher M-M (0) NULL<br />
-author M-M (1) NOT NULL<br />
-language M-M (1) NOT NULL<br />
-publish_year 1-1 (1) NOT NULL<br />
+resource_id (PK) UNIQUE NOT NULL<br />
+member_id (FK) UNIQUE NOT NULL<br />
+resource_type NOT NULL<br />
+resource_title UNIQUE NOT NULL<br />
+publisher NULL<br />
+author NOT NULL<br />
+language NOT NULL<br />
+publish_year NOT NULL<br />
 
 ---
 
@@ -150,13 +150,13 @@ Relationships: <br>
 member_info M(1) <br>
 
 Attributes: <br>
-group_id (PK) 1-1 (1) <br>
-group_name 1-1 (1) NOT NULL<br>
-members_id(FK) 1-M (1) NOT NULL <br>
-mission_statement 1-M (0) NULL<br>
-type 1-1 (1) NOT NULL<br>
-webpage_url 1-1 (1) NOT NULL<br>
-date_created 1-1(1) NOT NULL<br>
+group_id (PK) UNIQUE NOT NULL <br>
+group_name UNIQUE NOT NULL<br>
+members_id(FK) NOT NULL <br>
+mission_statement NULL<br>
+type NOT NULL<br>
+webpage_url UNQIUE NOT NULL<br>
+date_created NOT NULL<br>
 
 ---
 ## Attribute Types
@@ -229,77 +229,59 @@ Attribute type: type
 
 Data Type: VARCHAR(10)
 
-Description: 'type' describes attributes which label information with free-form types. Examples include resource, and group types.
+Description: 'type' describes attributes which label information with free-form types. Examples include resource, and group types. 
 ---
 
 Attribute type: password
 
 Data Type: VARCHAR(64)
 
-Description: 'password' describes  attributes which label login information passwords. Examples include member password.
+Description: 'password' describes  attributes which label login information passwords. Examples include 'pwd123456', 'hello!!', hshh527t84fnw74**&hhjwh.
 ---
 
-###### TO REMOVE AFTER CHECK #####
-*member_id (PK) 1-1 (1)<br />
-*member_password 1-1 (1) NOT NULL<br />
-*first_name M-1 (1) NOT NULL<br />
-*last_name M-1 (1) NOT NULL<br />
-*birthday M-1 (1) NOT NULL<br />
-*education_level M-1 (0) NULL<br />
-*email 1-1 (1) NOT NULL<br />
-*bio 1-1 (0) NULL<br />
 
-*member_id (PK FK) 1-1 (1)<br />
-*years_in_industry M-1 (1) NOT NULL<br />
-*role_in_industry M-M (1) NOT NULL<br />
-*mentee_id(FK) 1-M (1) NOT NULL<br />
-*years_of_mentoring 1-1 (1) NOT NULL<br />
-
-*member_id (PK FK) 1-1 (1) <br />
-*field_of_interest M-M (0)  NULL<br />
-*mentor_id(FK) 1-M (1)  NOT NULL<br />
-*major M-M (0)  NULL<br />
-*school_name M-M (0)  NULL<br />
-
-*scholarship_id (PK) 1-1 (1) <br>
-*scholarship_name M-M (1) NOT NULL<br>
-*Scholarship_amount M-1 (1) NOT NULL<br>
-*past_holders (FK) M-M (0) NULL<br>
-*current_holders (FK) M-M (0) NULL<br>
-*scholarship_description 1-M (1) NOT NULL<br>
-*application_deadline 1-M (1) NOT NULL<br>
-*application_released 1-M (1) NOT NULL<br>
-*requirements M-M (0) NULL<br>
-
-*event_id (PK) 1-1 (1)<br />
-*member_id (FK) 1-1 (1) NOT NULL<br />
-*event_title M-1 (1) NOT NULL<br />
-*event_address 1-M (1) NOT NULL<br />
-*event_date M-M (1) NOT NULL<br />
-
-*resource_id (PK) 1-1 (1) <br />
-*ember_id (FK) 1-1 (1) NOT NULL<br />
-*resource_type 1-M (1)  NOT NULL<br />
-*resource_title 1-1 (1) NOT NULL<br />
-*publisher M-M (0) NULL<br />
-*author M-M (1) NOT NULL<br />
-*language M-M (1) NOT NULL<br />
-*publish_year 1-1 (1) NOT NULL<br />
-
-
-*group_id (PK) 1-1 (1) <br>
-*group_name 1-1 (1) NOT NULL<br>
-*mission_statement 1-M (0) NULL<br>
-*group_type 1-1 (1) NOT NULL<br>
-*webpage_url 1-1 (1) NOT NULL<br>
-*date_created 1-1(1) NOT NULL<br>
-
-###### END TO REMOVE AFTER CHECK #####
-
----
 ## Dependency Relationship
 Independent Entity - User <br>
-Dependent Entity - Mentor ,Mentee ,Scholarships ,Network Event ,Learning Resource ,Special Interest Group
+Dependent Entities - Mentor, Mentee, Mentor_mentee, Scholarships, Network_Event, Learning_Resource, Special_Interest_Group <br>
+
+Super-type User, Subtype(s) Mentor and Mentee
+  - cascade actions: Cascade on primary key update and delete<br>
+  - restrict actions: Restrict on foreign key insert and update<br>
+  - set default: N/A <br>
+  - set null: N/A <br>
+
+Mentor --> Mentor_Mentee <-- Mentee<br>
+  - cascade actions:  <br>
+  - restrict actions: <br>
+  - set default: N/A <br>
+  - set null: N/A <br>
+
+Scholarships --> Scholarships_Past_Current_Holder <-- User <br>
+  - cascade actions: Cascade on primary key update and delete<br>
+  - restrict actions: <br>
+  - set default: N/A <br>
+  - set null: N/A <br>
+  - 
+Network Event --> User<br>
+  - cascade actions: Cascade on primary key update and delete<br>
+  - restrict actions: <br>
+  - set default: N/A <br>
+  - set null: N/A <br>
+
+Learning Resource --> User<br>
+  - cascade actions: Cascade on primary key update and delete<br>
+  - restrict actions: <br>
+  - set default: N/A <br>
+  - set null: N/A <br>
+
+Special Interest Group --> User<br>
+  - cascade actions: Cascade on primary key update and delete<br>
+  - restrict actions: <br>
+  - set default: N/A <br>
+  - set null: N/A <br>
+
+
+## Foreign Key implementations
 
 ---
 ## Subtype Entities
