@@ -43,7 +43,7 @@ member_id (PK FK) UNIQUE NOT NULL<br />
 years_in_industry NOT NULL<br />
 role_in_industry NOT NULL<br />
 mentee_id(FK) NOT NULL<br />
-years_of mentoring UNIQUE NOT NULL<br />
+years_of mentoring NOT NULL<br />
 
 ---
 
@@ -90,14 +90,27 @@ member_info M(1) <br />
 
 Attributes: <br>
 scholarship_id (PK) UNIQUE NOT NULL <br>
-scholarship_name NOT NULL<br>
+scholarship_name UNIQUE NOT NULL<br>
 Scholarship_amount NOT NULL<br>
-past_holders (FK) NULL<br>
-current_holders (FK) NULL<br>
+
 scholarship_description NOT NULL<br>
-application_deadlineNOT NULL<br>
+application_deadline NOT NULL<br>
 application_released NOT NULL<br>
 requirements NULL<br>
+
+---
+
+Entity Name: Scholarship_past_current_holder
+
+Description: Store current and past member holders of a certain scholarship.
+
+Relationships: <br>
+User M(0) <br>
+Scholarships M(0) <br>
+
+Attributes: <br>
+past_holders (FK) NULL<br>
+current_holders (FK) NULL<br>
 
 ---
 
@@ -113,7 +126,7 @@ member_info M(1) <br />
 Attributes: <br />
 event_id (PK) UNIQUE<br />
 member_id (FK) UNIQUE NOT NULL<br />
-event_title NOT NULL<br />
+event_title UNIQUE NOT NULL<br />
 event_address NOT NULL<br />
 event_date NOT NULL<br />
 
@@ -152,7 +165,7 @@ member_info M(1) <br>
 Attributes: <br>
 group_id (PK) UNIQUE NOT NULL <br>
 group_name UNIQUE NOT NULL<br>
-members_id(FK) NOT NULL <br>
+members_id(FK) UNIQUE NOT NULL <br>
 mission_statement NULL<br>
 type NOT NULL<br>
 webpage_url UNQIUE NOT NULL<br>
@@ -180,7 +193,7 @@ Attribute type: date
 
 Data Type: DATETIME
 
-Description: 'date' describes attributes which label information with free-form dates (format: YYYY-MM-DD hh:mm:ss, with range present date to some valid future date). Examples release, deadline, birthday, publish_year, group creation, event, 
+Description: 'date' describes attributes which label information with free-form dates (format: YYYY-MM-DD hh:mm:ss, with range present date to some valid future date). Examples release, deadline, birthday, publish_year, group creation, network event.
 
 ---
 
@@ -249,56 +262,44 @@ Description: 'password' describes  attributes which label login information pass
 ---
 
 
-## Dependency Relationship
+## Dependency Relationship(s)
+
 Independent Entity - User <br>
 Dependent Entities - Mentor, Mentee, Mentor_mentee, Scholarships, Network_Event, Learning_Resource, Special_Interest_Group <br>
 
 Super-type User, Subtype(s) Mentor and Mentee
   - cascade actions: Cascade on primary key update and delete<br>
   - restrict actions: Restrict on foreign key insert and update<br>
-  - set default: N/A <br>
-  - set null: N/A <br>
 
-Mentor --> Mentor_Mentee <-- Mentee<br>
-  - cascade actions:  <br>
-  - restrict actions: <br>
+Mentor --> Mentor_Mentee <-- Mentee <br>
+  - cascade actions:  Cascade on primary key update and delete <br>
+  - restrict actions: Restrict on foreign key insert and update <br>
   - set default: N/A <br>
   - set null: N/A <br>
 
 Scholarships --> Scholarships_Past_Current_Holder <-- User <br>
-  - cascade actions: Cascade on primary key update and delete<br>
-  - restrict actions: <br>
+  - cascade actions: Cascade on User primary key update and delete, cascade on Scholarship primary key update <br>
+  - restrict actions: Restrict on foreign key insert and update <br>
   - set default: N/A <br>
-  - set null: N/A <br>
-  - 
-Network Event --> User<br>
-  - cascade actions: Cascade on primary key update and delete<br>
-  - restrict actions: <br>
-  - set default: N/A <br>
-  - set null: N/A <br>
-
-Learning Resource --> User<br>
-  - cascade actions: Cascade on primary key update and delete<br>
-  - restrict actions: <br>
+  - set null: Set foreign key null on Scholarship primary key delete <br>
+  
+Network Event --> User <br>
+  - cascade actions: Cascade on primary key update and delete <br>
+  - restrict actions: Restrict on foreign key insert and update <br>
   - set default: N/A <br>
   - set null: N/A <br>
 
-Special Interest Group --> User<br>
-  - cascade actions: Cascade on primary key update and delete<br>
-  - restrict actions: <br>
+Learning Resource --> User <br>
+  - cascade actions: Cascade on primary key update and delete <br>
+  - restrict actions: Restrict on foreign key insert and updat e<br>
   - set default: N/A <br>
   - set null: N/A <br>
 
-
-## Foreign Key implementations
-
----
-## Subtype Entities
-Mentor, Mentee
-
----
-## Supertype entities
-User
+Special Interest Group --> User <br>
+  - cascade actions: Cascade on primary key update<br>
+  - restrict actions: Restrict on foreign key insert and update <br>
+  - set default: N/A <br>
+  - set null: Set foreign key null on delete <br>
 
 ---
 ## Plural Attribute
