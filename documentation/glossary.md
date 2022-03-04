@@ -173,6 +173,7 @@ Attribute type: name
 Data Type: VARCHAR(30)
 
 Description: 'name' describes attributes which label information with free-form names up to 30 characters. Examples include people, scholarship, event, resource, and group names. But also, publisher, author, language, and major, field of interest, role in industry names.
+
 ---
 
 Attribute type: date
@@ -180,6 +181,7 @@ Attribute type: date
 Data Type: DATETIME
 
 Description: 'date' describes attributes which label information with free-form dates (format: YYYY-MM-DD hh:mm:ss, with range present date to some valid future date). Examples release, deadline, birthday, publish_year, group creation, event, 
+
 ---
 
 Attribute type: description
@@ -195,6 +197,7 @@ Attribute type: email
 Data Type: VARCHAR(64)
 
 Description: 'email' describes attributes which label information with free-form emails. Example incluce email.
+
 ---
 
 Attribute type: address
@@ -202,6 +205,7 @@ Attribute type: address
 Data Type: VARCHAR(100)
 
 Description:'address' describes attributes which label information with free-form addresses. Examples include event, and url addresses.
+
 ---
 
 Attribute type: amount (monetary)
@@ -209,6 +213,7 @@ Attribute type: amount (monetary)
 Data Type: DECIMAL(5,2)
 
 Description: 'amount' descibes attributes which label information with free-form monetary amounts. Examples include scholarship amount (25,000.00).
+
 ---
 
 Attribute type: count (non-monetary)
@@ -216,6 +221,7 @@ Attribute type: count (non-monetary)
 Data Type: TINYINT
 
 Description: 'count' descibes attributes which label information with free-form non-monetary amounts. Examples include 3 years_of_experience, 20 years_of_mentoring counts.
+
 ---
 
 Attribute type: level
@@ -223,6 +229,7 @@ Attribute type: level
 Data Type: SMALLINT
 
 Description: 'level' describes attributes which label information with fixed level values. Examples include, 1 for k-12, 2 for AS, 3 for BS, 4 for MS, 5 for Ph.D., 6 for MD, and 7 for JD.
+
 ---
 
 Attribute type: type
@@ -230,6 +237,7 @@ Attribute type: type
 Data Type: VARCHAR(10)
 
 Description: 'type' describes attributes which label information with free-form types. Examples include resource, and group types. 
+
 ---
 
 Attribute type: password
@@ -237,6 +245,7 @@ Attribute type: password
 Data Type: VARCHAR(64)
 
 Description: 'password' describes  attributes which label login information passwords. Examples include 'pwd123456', 'hello!!', hshh527t84fnw74**&hhjwh.
+
 ---
 
 
