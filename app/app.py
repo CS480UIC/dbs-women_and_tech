@@ -30,26 +30,26 @@ def handle_data():
     return welcome_msg
 
 
-# def getUsers() -> List[Dict]:
-#     config = {
-#         'user': 'root',
-#         'password': 'root',
-#         'host': 'db',
-#         'port': '3306',
-#         'database': 'user'
-#     }
-#     connection = mysql.connector.connect(**config)
-#     cursor = connection.cursor()
-#     cursor.execute('SELECT * FROM user')
-#     results = [{'user':username, 'email': email} for (username, _, email) in cursor]
-#     cursor.close()
-#     connection.close()
+def getUsers() -> List[Dict]:
+    config = {
+        'user': 'user',
+        'password': 'password',
+        'host': 'db',
+        'port': '3306',
+        'database': 'user'
+    }
+    connection = mysql.connector.connect(**config)
+    cursor = connection.cursor()
+    cursor.execute('SELECT * FROM user')
+    results = [{'user':username, 'email': email} for (username, _, email) in cursor]
+    cursor.close()
+    connection.close()
 
-#     return results
+    return results
 
-# @app.route("/db")
-# def getDB():
-#     return  json.dumps({'Users': getUsers()})
+@app.route("/db")
+def getDB():
+    return  json.dumps({'Users': getUsers()})
 
 
 #Create the main driver function
