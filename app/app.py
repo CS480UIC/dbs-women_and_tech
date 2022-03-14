@@ -8,8 +8,8 @@ app = Flask(__name__, template_folder='templates', static_folder='static')
 # home route
 @app.route("/")
 def hello():
-    return "Hello, world!"
-    # return render_template('index.html', name = 'Jane', gender = 'Female')
+    # return "Hello, world!"
+    return render_template('index.html')
 
 # serving form web page
 @app.route("/my-form")
