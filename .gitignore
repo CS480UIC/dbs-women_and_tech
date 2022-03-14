@@ -1,3 +1,42 @@
+# File created using '.gitignore Generator' for Visual Studio Code: https://bit.ly/vscode-gig
+
+# Created by https://www.gitignore.io/api/python,macos
+
+### macOS ###
+# General
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# PyCharm
+.idea/
+
+# VSCode
+.vscode
+
+# Icon must end with two \r
+Icon
+
+# Thumbnails
+._*
+
+# Files that might appear in the root of a volume
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+# Directories potentially created on remote AFP share
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+### Python ###
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -8,9 +47,9 @@ __pycache__/
 
 # Distribution / packaging
 .Python
-build/
+/build/
 develop-eggs/
-dist/
+/dist/
 downloads/
 eggs/
 .eggs/
@@ -20,8 +59,6 @@ parts/
 sdist/
 var/
 wheels/
-pip-wheel-metadata/
-share/python-wheels/
 *.egg-info/
 .installed.cfg
 *.egg
@@ -40,14 +77,12 @@ pip-delete-this-directory.txt
 # Unit test / coverage reports
 htmlcov/
 .tox/
-.nox/
 .coverage
 .coverage.*
 .cache
 nosetests.xml
 coverage.xml
 *.cover
-*.py,cover
 .hypothesis/
 .pytest_cache/
 
@@ -59,7 +94,6 @@ coverage.xml
 *.log
 local_settings.py
 db.sqlite3
-db.sqlite3-journal
 
 # Flask stuff:
 instance/
@@ -77,26 +111,11 @@ target/
 # Jupyter Notebook
 .ipynb_checkpoints
 
-# IPython
-profile_default/
-ipython_config.py
-
 # pyenv
 .python-version
 
-# pipenv
-#   According to pypa/pipenv#598, it is recommended to include Pipfile.lock in version control.
-#   However, in case of collaboration, if having platform-specific dependencies or dependencies
-#   having no cross-platform support, pipenv may install dependencies that don't work, or not
-#   install all needed dependencies.
-#Pipfile.lock
-
-# PEP 582; used by e.g. github.com/David-OConnor/pyflow
-__pypackages__/
-
-# Celery stuff
+# celery beat schedule file
 celerybeat-schedule
-celerybeat.pid
 
 # SageMath parsed files
 *.sage.py
@@ -114,6 +133,9 @@ venv.bak/
 .spyderproject
 .spyproject
 
+# PyCharm project settings
+.idea
+
 # Rope project settings
 .ropeproject
 
@@ -122,22 +144,27 @@ venv.bak/
 
 # mypy
 .mypy_cache/
+
+# Temporarily generating these with pytype locally for type safety
+typeshed/
+pytype.cfg
+
+### Python Patch ###
+.venv/
+
+
+# End of https://www.gitignore.io/api/python,macos
+
+# Custom rules (everything added below won't be overriden by 'Generate .gitignore File' if you use 'Update' option)
+.vs/slnx.sqlite
+
+# mypy/typing section
+typeshed/
 .dmypy.json
-dmypy.json
-
-# Pyre type checker
-.pyre/
-
-
-# Editors
-.vscode/
-.idea/
-
-# Vagrant
-.vagrant/
-
-# Mac/OSX
-.DS_Store
-
-# Windows
-Thumbs.db
+mypyhtml/
+XDG_CACHE_HOME/
+snap/
+prime/
+stage/
+pip-wheel-metadata/
+.vim/
