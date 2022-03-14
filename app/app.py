@@ -40,7 +40,7 @@ def form():
 
 def getUsers() -> List[Dict]:
     cur = mysql.connection.cursor()
-    cur.execute('SELECT * FROM user')
+    cur.execute("""SELECT * FROM user""")
     results = [{'user':username, 'email': email} for (username, _, email) in cursor]
     cursor.close()
     connection.close()
