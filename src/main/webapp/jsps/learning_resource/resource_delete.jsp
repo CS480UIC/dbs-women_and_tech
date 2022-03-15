@@ -6,7 +6,7 @@
 <html>
   <head>
     
-    <title>Delete Network Event</title>
+    <title>Delete Learning Resource</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -21,11 +21,11 @@
   </head>
   
   <body>
-  <h1>Delete Network Event</h1>
+  <h1>Delete Learning Resource</h1>
 <form action="<c:url value='/Entity1ServletDelete'/>" method="post">
 	<input type="hidden" name="method" value="search"/>
-	Delete Event ID   :<input type="text" name="eventID" value="${form.eventID }"/>
-	<span style="color: red; font-weight: 900">${errors.username }</span>
+	Delete Resource ID   :<input type="text" name="resourceID" value="${form.resourceID }"/>
+	<span style="color: red; font-weight: 900">${errors.resourceID }</span>
 	<br/>
 	<input type="submit" value="Delete"/>
 </form>

@@ -25,7 +25,7 @@
 <form action="<c:url value='/Entity1ServletDelete'/>" method="post">
 	<input type="hidden" name="method" value="search"/>
 	Delete Event ID   :<input type="text" name="eventID" value="${form.eventID }"/>
-	<span style="color: red; font-weight: 900">${errors.username }</span>
+	<span style="color: red; font-weight: 900">${errors.eventID }</span>
 	<br/>
 	<input type="submit" value="Delete"/>
 </form>

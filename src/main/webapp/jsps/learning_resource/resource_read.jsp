@@ -6,7 +6,7 @@
 <html>
   <head>
     
-    <title>Read Network Event</title>
+    <title>Read Learning Resource</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -21,15 +21,15 @@
   </head>
   
   <body>
-  <h1>Read Network Event</h1>
+  <h1>Read Learning Resource</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
-<form action="<c:url value='/NetworkEventServletRead'/>" method="post">
+<form action="<c:url value='/ResourceServletRead'/>" method="post">
 	<input type="hidden" name="method" value="regist"/>
-	Event ID    :<input type="text" name="eventID " value="${form.eventID  }"/>
-	<span style="color: red; font-weight: 900">${errors.eventID  }</span>
+	Resource ID    :<input type="text" name="resourceID" value="${form.resourceID }"/>
+	<span style="color: red; font-weight: 900">${errors.resourceID  }</span>
 	<br/>
 
-	<input type="submit" value="Read Event"/>
+	<input type="submit" value="Read Resource"/>
 </form>
   </body>
 </html>

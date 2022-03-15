@@ -24,10 +24,10 @@
   <h1>Update Network Event</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
 <form>
-	Event ID    :<input type="text" name="eventID" value="${entity1.eventID }" disabled/>
+	Event ID    :<input type="text" name="eventID" value="${network_event.eventID }" disabled/>
 	<br/>
 	
-	Member ID：<input type="text" name="memberID" value="${entity1.memberID }" disabled />
+	Member ID：<input type="text" name="memberID" value="${network_event.memberID }" disabled />
 	<br/>
 	
 </form>

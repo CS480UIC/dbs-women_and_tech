@@ -6,7 +6,7 @@
 <html>
   <head>
     
-    <title>Update Network Event</title>
+    <title>Update Learning Resource</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -21,29 +21,38 @@
   </head>
   
   <body>
-  <h1>Update Network Event</h1>
+  <h1>Update Learning Resource</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
 <form>
-	Event ID    :<input type="text" name="eventID" value="${entity1.eventID }" disabled/>
+	Resource ID    :<input type="text" name="resourceID" value="${learning_resource.resourceID }" disabled/>
 	<br/>
 	
-	Member ID：<input type="text" name="memberID" value="${entity1.memberID }" disabled />
+	Member ID：<input type="text" name="memberID" value="${learning_resource.memberID }" disabled />
 	<br/>
 	
 </form>
-<h1>Update the Event Information</h1>
+<h1>Update the Resource Information</h1>
 <form action="<c:url value='/Entity1ServletUpdate'/>" method="post">
 		<input type="hidden" name="method" value="update"/>
-				<input type="hidden" name="eventID" value="${network_event.eventID}"/>
+				<input type="hidden" name="resourceID" value="${learning_resource.resourceID}"/>
 	
-	Event Title：<input type="password" name="eventTitle" value="${form.eventTitle }"/>
-	<span style="color: red; font-weight: 900">${errors.eventTitle}</span>
+	Resource Title：<input type="password" name="resourceTitle" value="${form.resourceTitle }"/>
+	<span style="color: red; font-weight: 900">${errors.resourceTitle}</span>
 	<br/>
-	Event Address：<input type="password" name="eventAddress" value="${form.eventAddress }"/>
-	<span style="color: red; font-weight: 900">${errors.eventAddress}</span>
+	Resource Type ：<input type="password" name="resourceType" value="${form.resourceType }"/>
+	<span style="color: red; font-weight: 900">${errors.resourceType}</span>
 	<br/>
-	Event Date	：<input type="text" name="eventDate" value="${form.eventDate }"/>
-	<span style="color: red; font-weight: 900">${errors.eventDate }</span>
+	Author	：<input type="text" name="author" value="${form.author }"/>
+	<span style="color: red; font-weight: 900">${errors.author }</span>
+	<br/>
+	Publisher	：<input type="text" name="publisher" value="${form.publisher }"/>
+	<span style="color: red; font-weight: 900">${errors.publisher }</span>
+	<br/>
+	Publish Year	：<input type="text" name="publishYear" value="${form.publishYear }"/>
+	<span style="color: red; font-weight: 900">${errors.publishYear }</span>
+	<br/>
+	Language	：<input type="text" name="language" value="${form.language }"/>
+	<span style="color: red; font-weight: 900">${errors.language }</span>
 	<br/>
 	<input type="submit" value="Update"/>
 </form>

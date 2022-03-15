@@ -6,7 +6,7 @@
 <html>
   <head>
     
-    <title>Network Event Create</title>
+    <title>Create Learning Resource</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -21,24 +21,33 @@
   </head>
   
   <body>
-  <h1>Network Event Create</h1>
+  <h1>Create Learning Resource</h1>
 <form action="<c:url value='/Entity1ServletCreate'/>" method="post">
-	Event ID    :<input type="text" name="eventID" value="${form.eventID }"/>
-	<span style="color: red; font-weight: 900">${errors.eventID }</span>
+	Resource ID   : <input type="text" name="resourceID" value="${form.resourceID }"/>
+	<span style="color: red; font-weight: 900">${errors.resourceID }</span>
 	<br/>
 	Member ID：<input type="password" name="memberID" value="${form.memberID }"/>
 	<span style="color: red; font-weight: 900">${errors.memberID }</span>
 	<br/>
-	Event Title	：<input type="text" name="eventTitle" value="${form.eventTitle }"/>
-	<span style="color: red; font-weight: 900">${errors.eventTitle }</span>
+	Resource Title	：<input type="text" name="resourceTitle" value="${form.resourceTitle }"/>
+	<span style="color: red; font-weight: 900">${errors.resourceTitle }</span>
 	<br/>
-	Event Address	：<input type="text" name="eventAddress" value="${form.eventAddress}"/>
-	<span style="color: red; font-weight: 900">${errors.eventAddress }</span>
+	Resource Type	：<input type="text" name="resourceType" value="${form.resourceType}"/>
+	<span style="color: red; font-weight: 900">${errors.resourceType }</span>
 	<br/>
-	Event Date	：<input type="text" name="eventDate" value="${form.eventDate }"/>
-	<span style="color: red; font-weight: 900">${errors.eventDate }</span>
+	Author	：<input type="text" name="author" value="${form.author }"/>
+	<span style="color: red; font-weight: 900">${errors.author }</span>
 	<br/>
-	<input type="submit" value="Create Event"/>
+	Publisher	：<input type="text" name="publisher" value="${form.publisher }"/>
+	<span style="color: red; font-weight: 900">${errors.publisher }</span>
+	<br/>
+	Publish Year	：<input type="text" name="publishYear" value="${form.publishYear}"/>
+	<span style="color: red; font-weight: 900">${errors.publishYear }</span>
+	<br/>
+	Language	：<input type="text" name="language" value="${form.language }"/>
+	<span style="color: red; font-weight: 900">${errors.language }</span>
+	<br/>
+	<input type="submit" value="Create resource"/>
 </form>
   </body>
 </html>
