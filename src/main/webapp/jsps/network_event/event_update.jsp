@@ -6,7 +6,7 @@
 <html>
   <head>
     
-    <title>Delete Entity</title>
+    <title>Update Network Event</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -21,28 +21,31 @@
   </head>
   
   <body>
-  <h1>Update Entity</h1>
+  <h1>Update Network Event</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
 <form>
-	User    :<input type="text" name="username1" value="${entity1.username }" disabled/>
+	Event ID    :<input type="text" name="eventID" value="${entity1.eventID }" disabled/>
 	<br/>
 	
-	Password：<input type="text" name="password1" value="${entity1.password }" disabled />
+	Member ID：<input type="text" name="memberID" value="${entity1.memberID }" disabled />
 	<br/>
-	Email	：<input type="text" name="email1" value="${entity1.email }" disabled/>
-	<br/>
+	
 </form>
-<h1>Update the values below</h1>
+<h1>Update the Event Information</h1>
 <form action="<c:url value='/Entity1ServletUpdate'/>" method="post">
 		<input type="hidden" name="method" value="update"/>
-				<input type="hidden" name="username" value="${entity1.username }"/>
-	Password：<input type="password" name="password" value="${form.password }"/>
-	<span style="color: red; font-weight: 900">${errors.password }</span>
+				<input type="hidden" name="eventID" value="${network_event.eventID}"/>
+	
+	Event Title：<input type="password" name="eventTitle" value="${form.eventTitle }"/>
+	<span style="color: red; font-weight: 900">${errors.eventTitle}</span>
 	<br/>
-	Email	：<input type="text" name="email" value="${form.email }"/>
-	<span style="color: red; font-weight: 900">${errors.email }</span>
+	Event Address：<input type="password" name="eventAddress" value="${form.eventAddress }"/>
+	<span style="color: red; font-weight: 900">${errors.eventAddress}</span>
 	<br/>
-	<input type="submit" value="Update Entity1"/>
+	Event Date	：<input type="text" name="eventDate" value="${form.eventDate }"/>
+	<span style="color: red; font-weight: 900">${errors.eventDate }</span>
+	<br/>
+	<input type="submit" value="Update"/>
 </form>
 
 </body>
