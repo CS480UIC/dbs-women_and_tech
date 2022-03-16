@@ -22,10 +22,10 @@
 	<body>
 		<h1>Special Interest Group  Menu</h1>
 	    <br>
-		<a href="<c:url value='/jsps/special_interest_group/special_interest_group_create.jsp'/>" target="_parent">Create Special Interest Group </a> |&nbsp; 
-		<a href="<c:url value='/jsps/special_interest_group/special_interest_group_read.jsp'/>" target="_parent">Read Special Interest Group </a> |&nbsp;
-		<a href="<c:url value='/jsps/special_interest_group/special_interest_group_update.jsp'/>" target="_parent">Update Special Interest Group </a> |&nbsp;	 
-		<a href="<c:url value='/jsps/special_interest_group/special_interest_group_delete.jsp'/>" target="_parent">Delete Special Interest Group </a>	
+		<a href="<c:url value='/jsps/special_interest_group/specialinterestgroupcreate.jsp'/>" target="_parent">Create Special Interest Group </a> |&nbsp; 
+		<a href="<c:url value='/jsps/special_interest_group/specialinterestgroupread.jsp'/>" target="_parent">Read Special Interest Group </a> |&nbsp;
+		<a href="<c:url value='/jsps/special_interest_group/specialinterestgroupupdate.jsp'/>" target="_parent">Update Special Interest Group </a> |&nbsp;	 
+		<a href="<c:url value='/jsps/special_interest_group/specialinterestgroupdelete.jsp'/>" target="_parent">Delete Special Interest Group </a>	
 	
 	</body>
 </html>

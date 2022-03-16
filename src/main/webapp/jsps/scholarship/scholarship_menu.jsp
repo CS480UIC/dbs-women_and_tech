@@ -22,10 +22,10 @@
 	<body>
 		<h1>Scholarship Menu</h1>
 	    <br>
-		<a href="<c:url value='/jsps/scholarship/scholarship_create.jsp'/>" target="_parent">Create Scholarship</a> |&nbsp; 
-		<a href="<c:url value='/jsps/scholarship/scholarship_read.jsp'/>" target="_parent">Read Scholarship</a> |&nbsp;
-		<a href="<c:url value='/jsps/scholarship/scholarship_update.jsp'/>" target="_parent">Update Scholarship</a> |&nbsp;	 
-		<a href="<c:url value='/jsps/scholarship/scholarship_delete.jsp'/>" target="_parent">Delete Scholarship</a>	
+		<a href="<c:url value='/jsps/scholarship/scholarshipcreate.jsp'/>" target="_parent">Create Scholarship</a> |&nbsp; 
+		<a href="<c:url value='/jsps/scholarship/scholarshipread.jsp'/>" target="_parent">Read Scholarship</a> |&nbsp;
+		<a href="<c:url value='/jsps/scholarship/scholarshipupdate.jsp'/>" target="_parent">Update Scholarship</a> |&nbsp;	 
+		<a href="<c:url value='/jsps/scholarship/scholarshipdelete.jsp'/>" target="_parent">Delete Scholarship</a>	
 	
 	</body>
 </html>
