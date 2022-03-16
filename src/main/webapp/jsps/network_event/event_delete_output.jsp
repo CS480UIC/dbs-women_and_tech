@@ -36,7 +36,6 @@
 	<br/>
 	Event Date	：<input type="text" name="eventDate" value="${network_event.eventDate }" disabled/>
 	<br/>
-	
 	<input type="submit" value="Delete Event"/>
 </form>
 
