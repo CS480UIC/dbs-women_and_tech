@@ -15,3 +15,7 @@ We will build a database to store resources that will hopefully encourage women 
 
 ## CRUD for User:
 ![Alt text](/screenshots/User_CRUD.png?raw=true)
+![Alt text](/screenshots/createUser.png?raw=true)
+![Alt text](/screenshots/readUser.png?raw=true)
+![Alt text](/screenshots/updateUser.png?raw=true)
+![Alt text](/screenshots/deleteUser.png?raw=true)
