@@ -33,3 +33,17 @@ We will build a database to store resources that will hopefully encourage women 
 ![Alt text](/screenshots/readMentor.png?raw=true)
 ![Alt text](/screenshots/updateMentor.png?raw=true)
 ![Alt text](/screenshots/deleteMentor.png?raw=true)
+
+## CRUD for Learning Resource:
+![Alt text](/screenshots/LR_CRUD.png?raw=true)
+![Alt text](/screenshots/createLR.png?raw=true)
+![Alt text](/screenshots/readLR.png?raw=true)
+![Alt text](/screenshots/updateLR.png?raw=true)
+![Alt text](/screenshots/deleteLR.png?raw=true)
+
+## CRUD for Network Event:
+![Alt text](/screenshots/NE_CRUD.png?raw=true)
+![Alt text](/screenshots/createNE.png?raw=true)
+![Alt text](/screenshots/readNE.png?raw=true)
+![Alt text](/screenshots/updateNE.png?raw=true)
+![Alt text](/screenshots/deleteNE.png?raw=true)
