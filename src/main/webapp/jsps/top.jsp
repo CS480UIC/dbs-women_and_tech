@@ -40,6 +40,7 @@
 			<a href="<c:url value='/jsps/learning_resource/resource_menu.jsp'/>" target="_parent">Learning Resource</a> |&nbsp;
 			<a href="<c:url value='/jsps/network_event/event_menu.jsp'/>" target="_parent">Network Event</a> |&nbsp;
 			<a href="<c:url value='/jsps/mentee/mentee_menu.jsp'/>" target="_parent">Mentee</a> |&nbsp;
+			<a href="<c:url value='/jsps/mentor/mentor_menu.jsp'/>" target="_parent">Mentor</a> |&nbsp;
 			
 		</c:when>
 		<c:otherwise>
@@ -49,6 +50,7 @@
 			<a href="<c:url value='/jsps/learning_resource/resource_menu.jsp'/>" target="_parent">Learning Resource</a> |&nbsp;
 			<a href="<c:url value='/jsps/network_event/event_menu.jsp'/>" target="_parent">Network Event</a> |&nbsp;
 			<a href="<c:url value='/jsps/mentee/mentee_menu.jsp'/>" target="_parent">Mentee</a> |&nbsp;
+			<a href="<c:url value='/jsps/mentor/mentor_menu.jsp'/>" target="_parent">Mentor</a> |&nbsp;
 	
 
 		</c:otherwise>
