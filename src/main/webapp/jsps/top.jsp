@@ -37,6 +37,9 @@
 		<c:when test="${empty sessionScope.session_user }">
 			<a href="<c:url value='/jsps/user/login.jsp'/>" target="_parent">Login</a> |&nbsp; 
 			<a href="<c:url value='/jsps/user/regist.jsp'/>" target="_parent">Register</a> |&nbsp; 
+			<a href="<c:url value='/jsps/learning_resource/resource_menu.jsp'/>" target="_parent">Learning Resource</a> |&nbsp;
+			<a href="<c:url value='/jsps/network_event/event_menu.jsp'/>" target="_parent">Network Event</a> |&nbsp;
+			<a href="<c:url value='/jsps/mentee/mentee_menu.jsp'/>" target="_parent">Mentee</a> |&nbsp;
 			
 		</c:when>
 		<c:otherwise>
@@ -45,6 +48,7 @@
 			<a href="<c:url value='/UserServletLogout'/>" target="_parent">Logout</a> |&nbsp; 
 			<a href="<c:url value='/jsps/learning_resource/resource_menu.jsp'/>" target="_parent">Learning Resource</a> |&nbsp;
 			<a href="<c:url value='/jsps/network_event/event_menu.jsp'/>" target="_parent">Network Event</a> |&nbsp;
+			<a href="<c:url value='/jsps/mentee/mentee_menu.jsp'/>" target="_parent">Mentee</a> |&nbsp;
 	
 
 		</c:otherwise>
