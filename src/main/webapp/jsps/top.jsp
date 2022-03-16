@@ -42,6 +42,8 @@
 			<a href="<c:url value='/jsps/mentee/mentee_menu.jsp'/>" target="_parent">Mentee</a> |&nbsp;
 			<a href="<c:url value='/jsps/mentor/mentor_menu.jsp'/>" target="_parent">Mentor</a> |&nbsp;
 			<a href="<c:url value='/jsps/new_user/user_menu.jsp'/>" target="_parent">User</a> |&nbsp;
+			<a href="<c:url value='/jsps/scholarship/scholarship_menu.jsp'/>" target="_parent">Scholarship</a> |&nbsp;
+			<a href="<c:url value='/jsps/special_interest_group/special_interest_group_menu.jsp'/>" target="_parent">Special Interest Group</a> |&nbsp;
 			
 		</c:when>
 		<c:otherwise>
@@ -53,6 +55,8 @@
 			<a href="<c:url value='/jsps/mentee/mentee_menu.jsp'/>" target="_parent">Mentee</a> |&nbsp;
 			<a href="<c:url value='/jsps/mentor/mentor_menu.jsp'/>" target="_parent">Mentor</a> |&nbsp;
 			<a href="<c:url value='/jsps/new_user/user_menu.jsp'/>" target="_parent">User</a> |&nbsp;
+			<a href="<c:url value='/jsps/scholarship/scholarship_menu.jsp'/>" target="_parent">Scholarship</a> |&nbsp;
+			<a href="<c:url value='/jsps/special_interest_group/special_interest_group_menu.jsp'/>" target="_parent">Special Interest Group</a> |&nbsp;
 	
 
 		</c:otherwise>

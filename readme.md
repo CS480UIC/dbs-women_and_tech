@@ -13,6 +13,9 @@ We will build a database to store resources that will hopefully encourage women 
 
 ## Screenshots
 
+## Main Page:
+![Alt text](/screenshots/mainPage.png?raw=true)
+
 ## CRUD for User:
 ![Alt text](/screenshots/User_CRUD.png?raw=true)
 ![Alt text](/screenshots/createUser.png?raw=true)

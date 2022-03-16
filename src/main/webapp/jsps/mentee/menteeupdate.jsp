@@ -24,20 +24,20 @@
   <h1>Update mentee</h1>
 <form action="<c:url value='/Entity1ServletUpdate'/>" method="post">
 	<input type="hidden" name="method" value="search"/>
-	member_id:<input type="text" name="member_id" value="${form.username }"/>
-	<span style="color: red; font-weight: 900">${errors.username }</span>
+	member_id:<input type="text" name="member_id" value="${form.member_id }"/>
+	<span style="color: red; font-weight: 900">${errors.member_id }</span>
 	<br/>
-	field_of_interest：<input type="text" name="field_of_interest" value="${form.password }"/>
-	<span style="color: red; font-weight: 900">${errors.password }</span>
+	field_of_interest：<input type="text" name="field_of_interest" value="${form.field_of_interest }"/>
+	<span style="color: red; font-weight: 900">${errors.field_of_interest }</span>
 	<br/>
-	 mentor_id：<input type="text" name="mentor_id" value="${form.email }"/>
-	<span style="color: red; font-weight: 900">${errors.email }</span>
+	 mentor_id：<input type="text" name="mentor_id" value="${form.mentor_id }"/>
+	<span style="color: red; font-weight: 900">${errors.mentor_id }</span>
 	<br/>
-	major：<input type="text" name="major" value="${form.email }"/>
-	<span style="color: red; font-weight: 900">${errors.email }</span>
+	major：<input type="text" name="major" value="${form.major }"/>
+	<span style="color: red; font-weight: 900">${errors.major }</span>
 	<br/>
-	school_name：<input type="text" name="school_name" value="${form.email }"/>
-	<span style="color: red; font-weight: 900">${errors.email }</span>
+	school_name：<input type="text" name="school_name" value="${form.school_name }"/>
+	<span style="color: red; font-weight: 900">${errors.school_name }</span>
 	<br/>
 	<input type="submit" value="Update mentee"/>
 </form>
