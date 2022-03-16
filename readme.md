@@ -19,3 +19,17 @@ We will build a database to store resources that will hopefully encourage women 
 ![Alt text](/screenshots/readUser.png?raw=true)
 ![Alt text](/screenshots/updateUser.png?raw=true)
 ![Alt text](/screenshots/deleteUser.png?raw=true)
+
+## CRUD for Mentee:
+![Alt text](/screenshots/Mentee_CRUD.png?raw=true)
+![Alt text](/screenshots/createMentee.png?raw=true)
+![Alt text](/screenshots/readMentee.png?raw=true)
+![Alt text](/screenshots/updateMentee.png?raw=true)
+![Alt text](/screenshots/deleteMentee.png?raw=true)
+
+## CRUD for Mentor:
+![Alt text](/screenshots/Mentor_CRUD.png?raw=true)
+![Alt text](/screenshots/createMentor.png?raw=true)
+![Alt text](/screenshots/readMentor.png?raw=true)
+![Alt text](/screenshots/updateMentor.png?raw=true)
+![Alt text](/screenshots/deleteMentor.png?raw=true)
