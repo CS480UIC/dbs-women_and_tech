@@ -24,26 +24,26 @@
   <h1>Update User</h1>
 <form action="<c:url value='/Entity1ServletUpdate'/>" method="post">
 	<input type="hidden" name="method" value="search"/>
-	 member_id:<input type="text" name="member_id" value="${form.username }"/>
-	<span style="color: red; font-weight: 900">${errors.username }</span>
+	 member_id:<input type="text" name="member_id" value="${form.member_id }"/>
+	<span style="color: red; font-weight: 900">${errors.member_id }</span>
 	<br/>
-	first_name：<input type="text" name="first_name" value="${form.password }"/>
-	<span style="color: red; font-weight: 900">${errors.password }</span>
+	first_name：<input type="text" name="first_name" value="${form.first_name }"/>
+	<span style="color: red; font-weight: 900">${errors.first_name }</span>
 	<br/>
-	last_name：<input type="text" name="last_name" value="${form.email }"/>
-	<span style="color: red; font-weight: 900">${errors.email }</span>
+	last_name：<input type="text" name="last_name" value="${form.last_name }"/>
+	<span style="color: red; font-weight: 900">${errors.last_name }</span>
 	<br/>
-	birthday：<input type="text" name="birthday" value="${form.email }"/>
-	<span style="color: red; font-weight: 900">${errors.email }</span>
+	birthday：<input type="text" name="birthday" value="${form.birthday }"/>
+	<span style="color: red; font-weight: 900">${errors.birthday }</span>
 	<br/>
-	education_level：<input type="text" name="education_level" value="${form.email }"/>
-	<span style="color: red; font-weight: 900">${errors.email }</span>
+	education_level：<input type="text" name="education_level" value="${form.education_level }"/>
+	<span style="color: red; font-weight: 900">${errors.education_level }</span>
 	<br/>
 	email：<input type="text" name="email" value="${form.email }"/>
 	<span style="color: red; font-weight: 900">${errors.email }</span>
 	<br/>
-	bio：<input type="text" name="bio" value="${form.email }"/>
-	<span style="color: red; font-weight: 900">${errors.email }</span>
+	bio：<input type="text" name="bio" value="${form.bio }"/>
+	<span style="color: red; font-weight: 900">${errors.bio }</span>
 	<br/>
 	<input type="submit" value="Update User"/>
 </form>
