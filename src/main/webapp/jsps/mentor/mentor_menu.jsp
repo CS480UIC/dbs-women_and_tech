@@ -6,7 +6,7 @@
 	<head>
 		<base href="">
 		
-		<title>Mentee Menu</title>
+		<title>Mentor Menu</title>
 		
 		<meta http-equiv="pragma" content="no-cache">
 		<meta http-equiv="cache-control" content="no-cache">
@@ -20,12 +20,12 @@
 	
 	</head>
 	<body>
-		<h1>Mentee Menu</h1>
+		<h1>Mentor Menu</h1>
 	    <br>
-		<a href="<c:url value='/jsps/mentee/menteecreate.jsp'/>" target="_parent">Create mentee</a> |&nbsp; 
-		<a href="<c:url value='/jsps/mentee/menteeread.jsp'/>" target="_parent">Read mentee</a> |&nbsp;
-		<a href="<c:url value='/jsps/mentee/menteeupdate.jsp'/>" target="_parent">Update mentee</a> |&nbsp;	 
-		<a href="<c:url value='/jsps/mentee/menteedelete.jsp'/>" target="_parent">Delete mentee</a>	
+		<a href="<c:url value='/jsps/mentor/mentorcreate.jsp'/>" target="_parent">Create Mentor</a> |&nbsp; 
+		<a href="<c:url value='/jsps/mentor/mentorread.jsp'/>" target="_parent">Read Mentor</a> |&nbsp;
+		<a href="<c:url value='/jsps/mentor/mentorupdate.jsp'/>" target="_parent">Update Mentor</a> |&nbsp;	 
+		<a href="<c:url value='/jsps/mentor/mentordelete.jsp'/>" target="_parent">Delete Mentor</a>	
 	
 	</body>
 </html>

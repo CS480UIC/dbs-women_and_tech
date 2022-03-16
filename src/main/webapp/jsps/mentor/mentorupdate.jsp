@@ -6,7 +6,7 @@
 <html>
   <head>
     
-    <title>Update Entity1</title>
+    <title>Update mentor</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -21,13 +21,25 @@
   </head>
   
   <body>
-  <h1>Update</h1>
+  <h1>Update Mentor</h1>
 <form action="<c:url value='/Entity1ServletUpdate'/>" method="post">
 	<input type="hidden" name="method" value="search"/>
-	Update User   :<input type="text" name="username" value="${form.username }"/>
+	 member_id:<input type="text" name="member_id" value="${form.username }"/>
 	<span style="color: red; font-weight: 900">${errors.username }</span>
 	<br/>
-	<input type="submit" value="Update Entity1"/>
+	years_in_industry：<input type="text" name="years_in_industry" value="${form.password }"/>
+	<span style="color: red; font-weight: 900">${errors.password }</span>
+	<br/>
+	role_in_industry：<input type="text" name="role_in_industry" value="${form.email }"/>
+	<span style="color: red; font-weight: 900">${errors.email }</span>
+	<br/>
+	mentee_id：<input type="text" name="mentee_id" value="${form.email }"/>
+	<span style="color: red; font-weight: 900">${errors.email }</span>
+	<br/>
+	years_of_mentoring：<input type="text" name="years_of_mentoring" value="${form.email }"/>
+	<span style="color: red; font-weight: 900">${errors.email }</span>
+	<br/>
+	<input type="submit" value="Update mentor"/>
 </form>
   </body>
 </html>
