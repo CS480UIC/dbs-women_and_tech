@@ -23,20 +23,20 @@
   <body>
   <h1>mentor Create</h1>
 <form action="<c:url value='/Entity1ServletCreate'/>" method="post">
-	 member_id:<input type="text" name="member_id" value="${form.username }"/>
-	<span style="color: red; font-weight: 900">${errors.username }</span>
+	 member_id:<input type="text" name="member_id" value="${form.member_id }"/>
+	<span style="color: red; font-weight: 900">${errors.member_id }</span>
 	<br/>
-	years_in_industry：<input type="text" name="years_in_industry" value="${form.password }"/>
-	<span style="color: red; font-weight: 900">${errors.password }</span>
+	years_in_industry：<input type="text" name="years_in_industry" value="${form.years_in_industry }"/>
+	<span style="color: red; font-weight: 900">${errors.years_in_industry }</span>
 	<br/>
-	role_in_industry：<input type="text" name="role_in_industry" value="${form.email }"/>
-	<span style="color: red; font-weight: 900">${errors.email }</span>
+	role_in_industry：<input type="text" name="role_in_industry" value="${form.role_in_industry }"/>
+	<span style="color: red; font-weight: 900">${errors.role_in_industry }</span>
 	<br/>
-	mentee_id：<input type="text" name="mentee_id" value="${form.email }"/>
-	<span style="color: red; font-weight: 900">${errors.email }</span>
+	mentee_id：<input type="text" name="mentee_id" value="${form.mentee_id }"/>
+	<span style="color: red; font-weight: 900">${errors.mentee_id }</span>
 	<br/>
-	years_of_mentoring：<input type="text" name="years_of_mentoring" value="${form.email }"/>
-	<span style="color: red; font-weight: 900">${errors.email }</span>
+	years_of_mentoring：<input type="text" name="years_of_mentoring" value="${form.years_of_mentoring }"/>
+	<span style="color: red; font-weight: 900">${errors.years_of_mentoring }</span>
 	<br/>
 	<input type="submit" value="Create mentor"/>
 </form>
