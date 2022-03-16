@@ -47,3 +47,17 @@ We will build a database to store resources that will hopefully encourage women 
 ![Alt text](/screenshots/readNE.png?raw=true)
 ![Alt text](/screenshots/updateNE.png?raw=true)
 ![Alt text](/screenshots/deleteNE.png?raw=true)
+
+## CRUD for Scholarship:
+![Alt text](/screenshots/Scholarship_CRUD.png?raw=true)
+![Alt text](/screenshots/createScholarship.png?raw=true)
+![Alt text](/screenshots/readScholarship.png?raw=true)
+![Alt text](/screenshots/updateScholarship.png?raw=true)
+![Alt text](/screenshots/deleteScholarship.png?raw=true)
+
+## CRUD for Special Interest Group:
+![Alt text](/screenshots/Special_Interest_Group_CRUD.png?raw=true)
+![Alt text](/screenshots/createSpecialInterestGroup.png?raw=true)
+![Alt text](/screenshots/readSpecialInterestGroup.png?raw=true)
+![Alt text](/screenshots/updateSpecialInterestGroup.png?raw=true)
+![Alt text](/screenshots/deleteSpecialInterestGroup.png?raw=true)
