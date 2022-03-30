@@ -24,3 +24,5 @@ group by Member_ID
 select event_title, event_address, date(event_date) as date_time
 from network_event
 ;
+
+-- Complex Queries
