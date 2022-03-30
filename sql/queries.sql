@@ -18,6 +18,7 @@ where member_id = 1
 select Member_ID, count(*) as total_resourse
 from learning_resource
 group by Member_ID
+HAVING COUNT(*) = 1
 ;
 
 
