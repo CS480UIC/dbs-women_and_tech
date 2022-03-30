@@ -41,12 +41,12 @@
 	Publisher	：<input type="text" name="publisher" value="${form.publisher }"/>
 	<span style="color: red; font-weight: 900">${errors.publisher }</span>
 	<br/>
-	Publish Year	：<input type="text" name="publishYear" value="${form.publishYear}"/>
+	Publish Year ：<input type="text" name="publishYear" value="${form.publishYear}"/>
 	<span style="color: red; font-weight: 900">${errors.publishYear }</span>
 	<br/>
-	Language	：<input type="text" name="language" value="${form.language }"/>
+	Language	 ：<input type="text" name="language" value="${form.language }"/>
 	<span style="color: red; font-weight: 900">${errors.language }</span>
-	<br/>
+	<br/>    
 	<input type="submit" value="Create resource"/>
 </form>
   </body>
