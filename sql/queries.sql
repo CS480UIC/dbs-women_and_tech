@@ -26,3 +26,9 @@ from network_event
 ;
 
 -- Complex Queries
+
+select b.first_name, b.last_name, a.resource_type, a.resource_title, a.resource_language
+from learning_resource a
+left join member b
+on a.member_id = b.member_id
+;
