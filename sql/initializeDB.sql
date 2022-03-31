@@ -5,7 +5,7 @@ CREATE DATABASE women_in_tech;
 use women_in_tech;
 
 CREATE TABLE member_user (
-	member_id TINYINT UNSIGNED UNIQUE NOT NULL AUTO_INCREMENT,
+	member_id TINYINT UNSIGNED UNIQUE NOT NULL,
     member_password VARCHAR(50) UNIQUE NOT NULL,
     first_name VARCHAR(100) NOT NULL,
     last_name VARCHAR(100) NOT NULL,
@@ -18,7 +18,7 @@ CREATE TABLE member_user (
 
 CREATE TABLE learning_resource
 (
-	resource_id TINYINT UNSIGNED NOT NULL AUTO_INCREMENT,
+	resource_id TINYINT UNSIGNED NOT NULL,
 	member_id TINYINT UNSIGNED NOT NULL,
 	resource_title VARCHAR(30) NOT NULL,
 	resource_type VARCHAR(10) NOT NULL,
@@ -34,7 +34,7 @@ CREATE TABLE learning_resource
 
 CREATE TABLE network_event
 (
-	event_id TINYINT UNSIGNED NOT NULL AUTO_INCREMENT,
+	event_id TINYINT UNSIGNED NOT NULL,
 	member_id TINYINT UNSIGNED NOT NULL,
 	event_title VARCHAR(30) NOT NULL,
 	event_address VARCHAR(30) NOT NULL,
@@ -46,7 +46,7 @@ CREATE TABLE network_event
 
 CREATE TABLE scholarship
 (
-	scholarship_id TINYINT UNSIGNED UNIQUE AUTO_INCREMENT,
+	scholarship_id TINYINT UNSIGNED UNIQUE,
 	scholarship_name VARCHAR(30) UNIQUE NOT NULL,
 	scholarship_amount DECIMAL(5,2) NOT NULL,
 	scholarship_description VARCHAR(500) NOT NULL,
@@ -77,7 +77,7 @@ CREATE TABLE scholarship_past_current_holder
 
 CREATE TABLE special_interest_group
 (
-	group_id TINYINT UNIQUE NOT NULL AUTO_INCREMENT,
+	group_id TINYINT UNIQUE NOT NULL,
 	group_name VARCHAR(30) UNIQUE NOT NULL,
 	members_id TINYINT UNSIGNED UNIQUE NULL,
 	mission_statement VARCHAR(500) NULL,
