@@ -11,4 +11,5 @@
 - Make sure there are no transitive dependency for non-prime attributes </br>
 
 # Boyce Codd Normal Form:
-- 
+- Make sure database is already in Normal Form 3 </br>
+- For every functional dependency where A -> B, then A has to be the super key of that table
