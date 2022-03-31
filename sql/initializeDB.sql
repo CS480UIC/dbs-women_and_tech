@@ -16,6 +16,28 @@ CREATE TABLE member_user (
     PRIMARY KEY (member_id)
 );
 
+CREATE TABLE mentor
+(
+  member_id TINYINT UNSIGNED UNIQUE NOT NULL,
+  years_in_industry SMALLINT UNSIGNED NOT NULL,
+  role_in_industry VARCHAR(200) NOT NULL,
+  years_of_mentoring SMALLINT UNISGNED NOT NULL,
+  
+  PRIMARY KEY(member_id),
+  FOREIGN KEY (member_id) REFERENCEs member(member_id)
+);
+
+CREATE TABLE mentee
+(
+  member_id TINYINT UNSIGNED UNIQUE NOT NULL,
+  field_of_interest VARCHAR(200),
+  major VARCHAR(200),
+  school_name VARCHAR(400),
+  
+  PRIMARY KEY(member_id),
+  FOREIGN KEY (member_id) REFERENCEs member(member_id)
+);
+
 CREATE TABLE learning_resource
 (
 	resource_id TINYINT UNSIGNED NOT NULL,
