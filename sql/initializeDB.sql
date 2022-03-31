@@ -1,4 +1,4 @@
-CREATE DATABASE women_tech;
+CREATE DATABASE women_in_tech;
 
 use women_tech;
 
@@ -28,4 +28,42 @@ CREATE TABLE network_event
   
   PRIMARY KEY(event_id),
   FOREIGN KEY (member_id) REFERENCES member(member_id)
+);
+
+CREATE TABLE scholarship
+(
+  scholarship_id SMALLINT UNSIGNED UNIQUE NOT NULL,
+  scholarship_name VARCHAR(100) UNIQUE NOT NULL,
+  scholarship_amount SMALLINT NOT NULL,
+  scholarship_description VARCHAR(500) NOT NULL,
+  application_deadline DATETIME NOT NULL
+  application_released DATETIME NOT NULL
+  requirements VARCHAR(300) NULL
+  
+  PRIMARY KEY(scholarship_id)
+);
+
+CREATE TABLE scholarship_past_current_holder
+(
+  scholarship_id NULL,
+  past_holder NULL,
+  current_holder NULL
+  
+  PRIMARY KEY(past_holders, past_holders, current_holder),
+  FOREIGN KEY (past_holders) REFERENCES member(member_id)
+  FOREIGN KEY (current_holder) REFERENCES member(member_id)
+);
+
+CREATE TABLE special_interest_group
+(
+  group_id SMALLINT UNIQUE NOT NULL,
+  group_name VARCHAR(100) UNIQUE NOT NULL,
+  members_id SMALLINT UNSIGNED UNIQUE NULL,
+  mission_statement VARCHAR(500) NULL,
+  type VARCHAR(50) NOT NULL,
+  webpage_url VARCHAR(100) UNIQUE NOT NULL,
+  date_created DATETIME NOT NULL
+  
+  PRIMARY KEY(group_id),
+  FOREIGN KEY (members_id) REFERENCES member(member_id)
 );
