@@ -24,7 +24,7 @@ CREATE TABLE mentor
   years_of_mentoring SMALLINT UNSIGNED NOT NULL,
   
   PRIMARY KEY(member_id),
-  FOREIGN KEY (member_id) REFERENCEs member(member_id)
+  FOREIGN KEY (member_id) REFERENCEs member_user(member_id)
 );
 
 CREATE TABLE mentee
@@ -35,7 +35,7 @@ CREATE TABLE mentee
   school_name VARCHAR(400),
   
   PRIMARY KEY(member_id),
-  FOREIGN KEY (member_id) REFERENCEs member(member_id)
+  FOREIGN KEY (member_id) REFERENCEs member_user(member_id)
 );
 
 CREATE TABLE learning_resource
