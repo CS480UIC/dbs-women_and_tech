@@ -32,40 +32,50 @@ CREATE TABLE network_event
 
 CREATE TABLE scholarship
 (
-  scholarship_id SMALLINT UNSIGNED UNIQUE NOT NULL,
-  scholarship_name VARCHAR(100) UNIQUE NOT NULL,
-  scholarship_amount SMALLINT NOT NULL,
+  scholarship_id TINYINT UNSIGNED UNIQUE NOT NULL,
+  scholarship_name VARCHAR(30) UNIQUE NOT NULL,
+  scholarship_amount DECIMAL(5,2) NOT NULL,
   scholarship_description VARCHAR(500) NOT NULL,
   application_deadline DATETIME NOT NULL
   application_released DATETIME NOT NULL
-  requirements VARCHAR(300) NULL
+  requirements VARCHAR(500) NULL
   
   PRIMARY KEY(scholarship_id)
 );
 
 CREATE TABLE scholarship_past_current_holder
 (
-  scholarship_id NULL,
-  past_holder NULL,
-  current_holder NULL
+  scholarship_id TINYINTNULL,
+  past_holder TINYINT NULL,
+  current_holder TINYINT NULL
   
-  PRIMARY KEY(past_holders, past_holders, current_holder),
-  FOREIGN KEY (past_holders) REFERENCES member(member_id)
+  PRIMARY KEY(scholarship_id, past_holders, current_holder),
+  FOREIGN KEY (scholarship_id) REFERENCES scholarship(scholarship_id),
+  	ON DELETE SET NULL
+  	ON UPDATE CASCADE
+  FOREIGN KEY (past_holders) REFERENCES member(member_id),
+  	ON UPDATE, DELETE CASCADE
+  	ON INSERT, UPDATE RESTRICT
   FOREIGN KEY (current_holder) REFERENCES member(member_id)
+  	ON UPDATE, DELETE CASCADE
+  	ON INSERT, UPDATE RESTRICT
 );
 
 CREATE TABLE special_interest_group
 (
-  group_id SMALLINT UNIQUE NOT NULL,
-  group_name VARCHAR(100) UNIQUE NOT NULL,
-  members_id SMALLINT UNSIGNED UNIQUE NULL,
+  group_id TINYINT UNIQUE NOT NULL,
+  group_name VARCHAR(30) UNIQUE NOT NULL,
+  members_id TINYINT UNSIGNED UNIQUE NULL,
   mission_statement VARCHAR(500) NULL,
-  type VARCHAR(50) NOT NULL,
+  type VARCHAR(10) NOT NULL,
   webpage_url VARCHAR(100) UNIQUE NOT NULL,
   date_created DATETIME NOT NULL
   
   PRIMARY KEY(group_id),
+  	ON UPDATE CASCADE,
   FOREIGN KEY (members_id) REFERENCES member(member_id)
+  	ON INSERT, UPDATE RESTRICT,
+  	ON DELETE SET NULL
 );
 
 CREATE TABLE member_user
@@ -80,26 +90,4 @@ CREATE TABLE member_user
   bio VARCHAR(500),
   
   PRIMARY KEY(member_id)
-);
-
-CREATE TABLE mentor
-(
-  member_id SMALLINT UNSIGNED UNIQUE NOT NULL,
-  years_in_industry SMALLINT UNSIGNED NOT NULL,
-  role_in_industry VARCHAR(100) NOT NULL,
-  years_of_mentoring SMALLINT UNSIGNED NOT NULL,
-  
-  PRIMARY KEY(member_id),
-  FOREIGN KEY (member_id) REFERENCES member(member_id)
-);
-
-CREATE TABLE mentee
-(
-  member_id SMALLINT UNSIGNED UNIQUE NOT NULL,
-  field_of_interest VARCHAR(200),
-  major VARCHAR(200),
-  school_name VARCHAR(500),
-  
-  PRIMARY KEY(member_id),
-  FOREIGN KEY (member_id) REFERENCES member(member_id)
 );
