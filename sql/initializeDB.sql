@@ -1,4 +1,4 @@
-DROP DATABASE women_in_tech; 
+-- DROP DATABASE women_in_tech; 
 
 CREATE DATABASE women_in_tech;
 
