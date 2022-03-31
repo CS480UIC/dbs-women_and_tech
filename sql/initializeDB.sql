@@ -1,6 +1,6 @@
 CREATE DATABASE women_in_tech;
 
-use women_tech;
+use women_in_tech;
 
 CREATE TABLE learning_resource
 (
