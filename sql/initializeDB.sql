@@ -21,7 +21,7 @@ CREATE TABLE mentor
   member_id TINYINT UNSIGNED UNIQUE NOT NULL,
   years_in_industry SMALLINT UNSIGNED NOT NULL,
   role_in_industry VARCHAR(200) NOT NULL,
-  years_of_mentoring SMALLINT UNISGNED NOT NULL,
+  years_of_mentoring SMALLINT UNSIGNED NOT NULL,
   
   PRIMARY KEY(member_id),
   FOREIGN KEY (member_id) REFERENCEs member(member_id)
