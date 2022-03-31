@@ -6,36 +6,50 @@ use women_in_tech;
 
 CREATE TABLE member_user (
 	member_id TINYINT UNSIGNED UNIQUE NOT NULL,
-    member_password VARCHAR(50) UNIQUE NOT NULL,
-    first_name VARCHAR(100) NOT NULL,
-    last_name VARCHAR(100) NOT NULL,
-    birthday DATE NOT NULL,
-    education_level VARCHAR(200),
-    email VARCHAR(200) UNIQUE NOT NULL,
-    bio VARCHAR(500),
-    PRIMARY KEY (member_id)
+	member_password VARCHAR(50) UNIQUE NOT NULL,
+	first_name VARCHAR(100) NOT NULL,
+	last_name VARCHAR(100) NOT NULL,
+	birthday DATE NOT NULL,
+	education_level VARCHAR(200),
+	email VARCHAR(200) UNIQUE NOT NULL,
+	bio VARCHAR(500),
+	PRIMARY KEY (member_id)
 );
 
 CREATE TABLE mentor
 (
-  member_id TINYINT UNSIGNED UNIQUE NOT NULL,
-  years_in_industry SMALLINT UNSIGNED NOT NULL,
-  role_in_industry VARCHAR(200) NOT NULL,
-  years_of_mentoring SMALLINT UNSIGNED NOT NULL,
-  
-  PRIMARY KEY(member_id),
-  FOREIGN KEY (member_id) REFERENCEs member_user(member_id)
+	member_id TINYINT UNSIGNED UNIQUE NOT NULL,
+	years_in_industry SMALLINT UNSIGNED NOT NULL,
+	role_in_industry VARCHAR(200) NOT NULL,
+	years_of_mentoring SMALLINT UNSIGNED NOT NULL,
+
+	PRIMARY KEY(member_id),
+	FOREIGN KEY (member_id) REFERENCEs member_user(member_id)
 );
 
 CREATE TABLE mentee
 (
-  member_id TINYINT UNSIGNED UNIQUE NOT NULL,
-  field_of_interest VARCHAR(200),
-  major VARCHAR(200),
-  school_name VARCHAR(400),
-  
-  PRIMARY KEY(member_id),
-  FOREIGN KEY (member_id) REFERENCEs member_user(member_id)
+	member_id TINYINT UNSIGNED UNIQUE NOT NULL,
+	field_of_interest VARCHAR(200),
+	major VARCHAR(200),
+	school_name VARCHAR(400),
+
+	PRIMARY KEY(member_id),
+	FOREIGN KEY (member_id) REFERENCEs member_user(member_id)
+);
+
+CREATE TABLE mentor_mentee
+(
+	mentor_id TINYINT UNSIGNED UNIQUE,
+	mentee_id TINYINT UNSIGNED UNIQUE,
+	
+	PRIMARY KEY (mentor_id, mentee_id),
+	FOREIGN KEY (mentor_id) REFERENCES mentor(member_id)
+		ON DELETE CASCADE
+		ON UPDATE CASCADE,
+	FOREIGN KEY (mentee_id) REFERENCES mentee(member_id)
+		ON DELETE CASCADE
+		ON UPDATE CASCADE
 );
 
 CREATE TABLE learning_resource
