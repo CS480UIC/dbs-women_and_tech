@@ -67,3 +67,17 @@ CREATE TABLE special_interest_group
   PRIMARY KEY(group_id),
   FOREIGN KEY (members_id) REFERENCES member(member_id)
 );
+
+CREATE TABLE member_user
+(
+  member_id SMALLINT UNSIGNED UNIQUE NOT NULL,
+  member_password VARCHAR(50) UNIQUE NOT NULL,
+  first_name VARCHAR(100) NOT NULL,
+  last_name VARCHAR(100) NOT NULL,
+  birthday DATE NOT NULL,
+  education_level VARCHAR(200),
+  email VARCHAR(200) UNIQUE NOT NULL,
+  bio VARCHAR(500),
+  
+  PRIMARY KEY(member_id)
+);
