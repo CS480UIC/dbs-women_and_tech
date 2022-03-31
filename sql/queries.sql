@@ -47,8 +47,8 @@ on a.member_id = b.member_id
 
 select *
 from scholarship
-where scholarship_amount > (
+where scholarship_amount > ( 
 	select avg(scholarship_amount)
 	from scholarship
-)
+) -- check if the scholarship description contasins the words 'bootcamp'
 ;
