@@ -1,4 +1,4 @@
-use tech;
+use women_in_tech;
 
 -- Simple Queries
 

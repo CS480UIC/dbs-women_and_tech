@@ -1,4 +1,4 @@
-use women_tech;
+use women_in_tech;
 
 CREATE PROCEDURE SelectAll_learning_resource
 AS

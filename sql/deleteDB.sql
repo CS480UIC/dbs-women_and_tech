@@ -1,4 +1,4 @@
-use women_tech;
+use women_in_tech;
 
 drop table learning_resource;
 drop table network_event;
