@@ -27,7 +27,7 @@ public class UserDao {
 			
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/women_in_tech","womenTech", "Uic1234567!");
-		    String sql = "select * from user where username=?";
+		    String sql = "select * from member_user where username=?";
 		    PreparedStatement preparestatement = connect.prepareStatement(sql); 
 		    preparestatement.setString(1,username);
 		    ResultSet resultSet = preparestatement.executeQuery();
@@ -60,7 +60,7 @@ public class UserDao {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/women_in_tech","womenTech", "Uic1234567!");
 			
-			String sql = "insert into user values(?,?,?)";
+			String sql = "insert into member_user values(?,?,?)";
 			PreparedStatement preparestatement = connect.prepareStatement(sql); 
 		    preparestatement.setString(1,user.getUsername());
 		    preparestatement.setString(2,user.getPassword());
@@ -78,7 +78,7 @@ public class UserDao {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/women_in_tech","womenTech", "Uic1234567!");
-			String sql = "select * from user";
+			String sql = "select * from member_user";
 			PreparedStatement preparestatement = connect.prepareStatement(sql); 
 			ResultSet resultSet = preparestatement.executeQuery();			
 			while(resultSet.next()){
