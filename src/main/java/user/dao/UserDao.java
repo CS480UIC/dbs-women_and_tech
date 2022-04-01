@@ -33,22 +33,18 @@ public class UserDao {
 		    ResultSet resultSet = preparestatement.executeQuery();
 		    //ResultSet resultSet  = preparestatement.executeUpdate();
 		    while(resultSet.next()){
-//		    	String user_name = resultSet.getString("username");
-		    	
+	
 		    	String member_email = resultSet.getString("email");
 		    	
 		    	if(member_email.equals(email)){
-//		    		user.setUsername(resultSet.getString("username"));
-//		    		user.setPassword(resultSet.getString("password"));
-//		    		user.setEmail(resultSet.getString("email"));
-		    		
+
 		    		user.setMember_id(resultSet.getString("member_id"));
 		    		user.setMember_password(resultSet.getString("member_password"));
 		    		user.setBio(resultSet.getString("bio"));
 		    		user.setBirthday(resultSet.getString("birthday"));
 		    		user.setEducation_level(resultSet.getString("education_level"));
 		    		user.setEmail(resultSet.getString("email"));
-		    		user.setFirst_name("first_name");
+		    		user.setFirst_name(resultSet.getString("first_name"));
 		    		user.setLast_name(resultSet.getString("last_name"));
 		   	    		
 		    	}
@@ -77,7 +73,6 @@ public class UserDao {
 			String sql = "insert into member_user ( first_name, last_name,member_password,email, birthday, education_level, bio) values(?,?,?,?,?,?,?)";
 			PreparedStatement preparestatement = connect.prepareStatement(sql); 
 			
-//			preparestatement.setString(1,user.getMember_id());
 		
 			preparestatement.setString(1,user.getFirst_name());
 			preparestatement.setString(2,user.getLast_name());
@@ -106,9 +101,7 @@ public class UserDao {
 			ResultSet resultSet = preparestatement.executeQuery();			
 			while(resultSet.next()){
 				User user = new User();
-//				user.setUsername(resultSet.getString("username"));
-//	    		user.setPassword(resultSet.getString("password"));
-//	    		user.setEmail(resultSet.getString("email"));
+
 				
 				user.setMember_id(resultSet.getString("member_id"));
 	    		user.setMember_password(resultSet.getString("member_password"));
