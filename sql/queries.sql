@@ -79,4 +79,8 @@ where exists
 	(select *
     from network_event
     where event_id = C.resource_id
+<<<<<<< HEAD
     );
+=======
+    );
+>>>>>>> 8d36f931eff52f5b894b836bfcbfe9a87e8ea679
