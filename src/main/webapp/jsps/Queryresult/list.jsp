@@ -11,13 +11,23 @@
 	<h3 align="center"> User Table </h3>
 	<table border="1" width="70%" align="center">
 	<tr>
-		<th>name</th>
-		<th>email</th>
+		<th>Member ID</th>
+		<th>First Name</th>
+		<th>Last Name</th>
+		<th>Birthday</th>
+		<th>Education Level</th>
+		<th>Email</th>
+		<th>Bio</th>
 	</tr>
 <c:forEach items="${UserList}" var="user">
 	<tr>
-		<td>${user.username}</td>
+		<td>${user.member_id}</td>
+		<td>${user.first_name}</td>
+		<td>${user.last_name}</td>
+		<td>${user.birthday}</td>
+		<td>${user.education_level}</td>
 		<td>${user.email}</td>
+		<td>${user.bio}</td>
 	</tr>
 </c:forEach>
 </table>
