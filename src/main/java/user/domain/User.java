@@ -8,11 +8,7 @@ public class User {
 	/*
 	 * Correspond to the user table
 	 */
-	
-//	private String username;
-//	private String password; 
-//	private String email;
-	
+
 	private String member_id;
 	private String member_password;
 	private String first_name;
@@ -21,14 +17,6 @@ public class User {
 	private String education_level;
 	private String email;
 	private String bio;
-	
-
-	
-//	@Override
-//	public String toString() {
-//		return "User [ username=" + username + ", password="
-//				+ password + ", email=" + email +"]";
-//	}
 	
 	
 	public String getMember_id() {
