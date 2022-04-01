@@ -26,7 +26,7 @@
 <p style="color: red; font-weight: 900">${msg }</p>
 <form action="<c:url value='/UserServletRegister'/>" method="post">
 	<input type="hidden" name="method" value="regist"/>
-	User    :<input type="text" name="username" value="${form.username }"/>
+	<%-- User    :<input type="text" name="username" value="${form.username }"/>
 	<span style="color: red; font-weight: 900">${errors.username }</span>
 	<br/>
 	Password：<input type="password" name="password" value="${form.password }"/>
@@ -35,7 +35,32 @@
 	Email	：<input type="text" name="email" value="${form.email }"/>
 	<span style="color: red; font-weight: 900">${errors.email }</span>
 	<br/>
+	<input type="submit" value="Register"/> --%>
+	
+	
+	First Name   :<input type="text" name="firstName" value="${form.first_name }"/>
+	<span style="color: red; font-weight: 900">${errors.first_name }</span>
+	<br/>
+	Last Name   :<input type="text" name="lastName" value="${form.last_name }"/>
+	<span style="color: red; font-weight: 900">${errors.last_name }</span>
+	<br/>
+	Password：<input type="password" name="password" value="${form.member_password }"/>
+	<span style="color: red; font-weight: 900">${errors.member_password }</span>
+	<br/>
+	Email	：<input type="text" name="email" value="${form.email }"/>
+	<span style="color: red; font-weight: 900">${errors.email }</span>
+	<br/>
+	Birthday	：<input type="date" name="birthday" value="${form.birthday }"/>
+	<span style="color: red; font-weight: 900">${errors.birthday }</span>
+	<br/>
+	Education Level ：<input type="text" name="eduacationLevel" value="${form.education_level }"/>
+	<span style="color: red; font-weight: 900">${errors.education_level }</span>
+	<br/>
+	Bio ：<input type="text" name="bio" value="${form.bio }"/>
+	<span style="color: red; font-weight: 900">${errors.bio }</span>
+	<br/>
 	<input type="submit" value="Register"/>
+	
 </form>
   </body>
 </html>

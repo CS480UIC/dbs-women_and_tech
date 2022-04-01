@@ -80,7 +80,6 @@ public class User {
 	}
 
 	
-	
 	public String getBio() {
 		return bio;
 	}
