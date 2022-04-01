@@ -1,6 +1,6 @@
-Timestamp,member_id,field_of_interest,mentor_id,major,school_name
-3/1/2022 21:30:41,1,UI/UX,6,Computer Science,UIC
-3/1/2022 21:32:04,2,unknown,7,undecided,UIUC
-3/1/2022 21:34:24,3,Back-end development,8,CS,University of Illinois at Chicago
-3/1/2022 21:35:07,4,front end development,9,undecided,IIT
-3/1/2022 21:35:39,5,Undecided,10,CS,Northwestern University
+"member_id";"field_of_interest";"major";"school_name"
+1;"""UI/UX""";"""Computer Science""";"""UIC"""
+2;"""unknown""";"""undecided""";"""UIUC"""
+3;"""Back-end development""";"""CS""";"""University of Illinois at Chicago"""
+4;"""front end development""";"""undecided""";"""IIT"""
+5;"""Undecided""";"""CS""";"""Northwestern University"""
