@@ -84,7 +84,7 @@ CREATE TABLE scholarship
 (
 	scholarship_id TINYINT UNSIGNED UNIQUE,
 	scholarship_name VARCHAR(200) UNIQUE NOT NULL,
-	scholarship_amount DECIMAL(5,2) NOT NULL,
+	scholarship_amount SMALLINT UNSIGNED NOT NULL,
 	scholarship_description VARCHAR(500) NOT NULL,
 	application_deadline DATETIME NOT NULL,
 	application_released DATETIME NOT NULL,
