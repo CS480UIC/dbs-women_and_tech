@@ -1,12 +1,6 @@
-event_id,member_id,event_title,event_address,event_date,,
-3579,1,Wonder Women: Celebrating Women in Tech 2022,"432 N Lake St, Madison, WI",2022-03-02,,
-2790,2,AAUW Tech Savvy,Wisconsin,2022-03-09,,
-24908,3,Women in Tech 3rd March - Lightning Talks!,On Meetup.com,2022-04-22,,
-123,4,Wisdom 2.0,"Mountain View, CA",2022-01-24,,
-6789,5,Women in Cloud: #WICxAnnualSummit 2022: Collective Influence,Virtual,2022-01-26,,
-,,,,,,
-,,,,,,
-,,,,,,
-,,,,,,
-,,,,,,
-,,,,,,
+Timestamp,event_id,member_id,event_title,event_address,event_date
+3/2/2022 2:55:16,123,1,"""Wonder Women: Celebrating Women in Tech 2022""","""432 N Lake St, Madison, WI""",2022-03-02
+3/2/2022 2:56:47,121,2,"""AAUW Tech Savvy""","""Wisconsin""",2022-03-09
+3/2/2022 2:57:44,119,3,"""Women in Tech 3rd March - Lightning Talks!""","""On Meetup.com""",2022-04-22
+3/1/2022 21:17:17,122,4,"""Wisdom 2.0""","""Mountain View, CA""",2022-01-24
+3/1/2022 21:18:29,110,5,"""Women in Cloud: #WICxAnnualSummit 2022: Collective Influence""","""Virtual""",2022-01-26
