@@ -5,8 +5,9 @@ CREATE DATABASE women_in_tech;
 use women_in_tech;
 
 CREATE TABLE member_user (
+
 	member_id TINYINT UNSIGNED UNIQUE NOT NULL AUTO_INCREMENT,
-	member_password VARCHAR(50) NOT NULL,
+	member_password VARCHAR(100) NOT NULL,
 	first_name VARCHAR(100) NOT NULL,
 	last_name VARCHAR(100) NOT NULL,
 	birthday DATE NOT NULL,
@@ -56,12 +57,12 @@ CREATE TABLE learning_resource
 (
 	resource_id TINYINT UNSIGNED NOT NULL,
 	member_id TINYINT UNSIGNED NOT NULL,
-	resource_title VARCHAR(30) NOT NULL,
-	resource_type VARCHAR(10) NOT NULL,
-	author VARCHAR(30) NOT NULL,
-	publisher VARCHAR(30) ,
+	resource_title VARCHAR(100) NOT NULL,
+	resource_type VARCHAR(100) NOT NULL,
+	author VARCHAR(100) NOT NULL,
+	publisher VARCHAR(100) ,
 	publish_year DATETIME NOT NULL,
-	resource_language VARCHAR(30) NOT NULL,
+	resource_language VARCHAR(100) NOT NULL,
   
 	PRIMARY KEY (resource_id),
 	FOREIGN KEY (member_id) REFERENCES member_user(member_id)
@@ -72,8 +73,8 @@ CREATE TABLE network_event
 (
 	event_id TINYINT UNSIGNED NOT NULL,
 	member_id TINYINT UNSIGNED NOT NULL,
-	event_title VARCHAR(30) NOT NULL,
-	event_address VARCHAR(30) NOT NULL,
+	event_title VARCHAR(200) NOT NULL,
+	event_address VARCHAR(200) NOT NULL,
 	event_date DATETIME NOT NULL,
 
 	PRIMARY KEY(event_id),
@@ -83,8 +84,8 @@ CREATE TABLE network_event
 CREATE TABLE scholarship
 (
 	scholarship_id TINYINT UNSIGNED UNIQUE,
-	scholarship_name VARCHAR(30) UNIQUE NOT NULL,
-	scholarship_amount DECIMAL(5,2) NOT NULL,
+	scholarship_name VARCHAR(200) UNIQUE NOT NULL,
+	scholarship_amount SMALLINT UNSIGNED NOT NULL,
 	scholarship_description VARCHAR(500) NOT NULL,
 	application_deadline DATETIME NOT NULL,
 	application_released DATETIME NOT NULL,
@@ -114,11 +115,11 @@ CREATE TABLE scholarship_past_current_holder
 CREATE TABLE special_interest_group
 (
 	group_id TINYINT UNIQUE NOT NULL,
-	group_name VARCHAR(30) UNIQUE NOT NULL,
+	group_name VARCHAR(200) UNIQUE NOT NULL,
 	members_id TINYINT UNSIGNED UNIQUE NULL,
 	mission_statement VARCHAR(500) NULL,
-	group_type VARCHAR(10) NOT NULL,
-	webpage_url VARCHAR(100) UNIQUE NOT NULL,
+	group_type VARCHAR(200) NOT NULL,
+	webpage_url VARCHAR(200) UNIQUE NOT NULL,
 	date_created DATETIME NOT NULL,
 
 	PRIMARY KEY (group_id),
