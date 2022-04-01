@@ -26,6 +26,8 @@ CREATE TABLE mentor
 
 	PRIMARY KEY(member_id),
 	FOREIGN KEY (member_id) REFERENCEs member_user(member_id)
+		ON UPDATE CASCADE
+		ON DELETE CASCADE
 );
 
 CREATE TABLE mentee
@@ -37,6 +39,8 @@ CREATE TABLE mentee
 
 	PRIMARY KEY(member_id),
 	FOREIGN KEY (member_id) REFERENCEs member_user(member_id)
+		ON UPDATE CASCADE
+		ON DELETE CASCADE
 );
 
 CREATE TABLE mentor_mentee
@@ -66,6 +70,8 @@ CREATE TABLE learning_resource
   
 	PRIMARY KEY (resource_id),
 	FOREIGN KEY (member_id) REFERENCES member_user(member_id)
+		ON UPDATE CASCADE
+		ON DELETE CASCADE
 );
 
 
@@ -79,6 +85,8 @@ CREATE TABLE network_event
 
 	PRIMARY KEY(event_id),
 	FOREIGN KEY (member_id) REFERENCES member_user(member_id)
+		ON UPDATE CASCADE
+		ON DELETE CASCADE
 );
 
 CREATE TABLE scholarship
