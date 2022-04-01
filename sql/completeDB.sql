@@ -33,7 +33,7 @@ CREATE TABLE `learning_resource` (
   `resource_language` varchar(100) NOT NULL,
   PRIMARY KEY (`resource_id`),
   KEY `member_id` (`member_id`),
-  CONSTRAINT `learning_resource_ibfk_1` FOREIGN KEY (`member_id`) REFERENCES `member_user` (`member_id`)
+  CONSTRAINT `learning_resource_ibfk_1` FOREIGN KEY (`member_id`) REFERENCES `member_user` (`member_id`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -55,7 +55,7 @@ DROP TABLE IF EXISTS `member_user`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `member_user` (
-  `member_id` tinyint unsigned NOT NULL,
+  `member_id` tinyint unsigned NOT NULL AUTO_INCREMENT,
   `member_password` varchar(100) NOT NULL,
   `first_name` varchar(100) NOT NULL,
   `last_name` varchar(100) NOT NULL,
@@ -65,9 +65,8 @@ CREATE TABLE `member_user` (
   `bio` varchar(500) DEFAULT NULL,
   PRIMARY KEY (`member_id`),
   UNIQUE KEY `member_id` (`member_id`),
-  UNIQUE KEY `member_password` (`member_password`),
   UNIQUE KEY `email` (`email`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -94,7 +93,7 @@ CREATE TABLE `mentee` (
   `school_name` varchar(400) DEFAULT NULL,
   PRIMARY KEY (`member_id`),
   UNIQUE KEY `member_id` (`member_id`),
-  CONSTRAINT `mentee_ibfk_1` FOREIGN KEY (`member_id`) REFERENCES `member_user` (`member_id`)
+  CONSTRAINT `mentee_ibfk_1` FOREIGN KEY (`member_id`) REFERENCES `member_user` (`member_id`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -122,7 +121,7 @@ CREATE TABLE `mentor` (
   `years_of_mentoring` smallint unsigned NOT NULL,
   PRIMARY KEY (`member_id`),
   UNIQUE KEY `member_id` (`member_id`),
-  CONSTRAINT `mentor_ibfk_1` FOREIGN KEY (`member_id`) REFERENCES `member_user` (`member_id`)
+  CONSTRAINT `mentor_ibfk_1` FOREIGN KEY (`member_id`) REFERENCES `member_user` (`member_id`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -178,7 +177,7 @@ CREATE TABLE `network_event` (
   `event_date` datetime NOT NULL,
   PRIMARY KEY (`event_id`),
   KEY `member_id` (`member_id`),
-  CONSTRAINT `network_event_ibfk_1` FOREIGN KEY (`member_id`) REFERENCES `member_user` (`member_id`)
+  CONSTRAINT `network_event_ibfk_1` FOREIGN KEY (`member_id`) REFERENCES `member_user` (`member_id`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -296,4 +295,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-03-31 21:32:53
+-- Dump completed on 2022-03-31 23:48:51
