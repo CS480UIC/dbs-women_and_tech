@@ -18,8 +18,8 @@ public class UserService {
 	public void regist(User form) throws UserException, ClassNotFoundException, InstantiationException, IllegalAccessException{
 		
 		// check the user name
-		User user = userDao.findByUsername(form.getUsername());
-		if(user.getUsername()!=null && user.getUsername().equals(form.getUsername())) throw new UserException("This user name has been registered!");
+		User user = userDao.findByUsername(form.getEmail());
+		if(user.getEmail()!=null && user.getEmail().equals(form.getEmail())) throw new UserException("This user name has been registered!");
 		userDao.add(form);
 	}
 	
@@ -28,12 +28,12 @@ public class UserService {
 	 * Login function
 	 */
 	public void login(User form) throws UserException, ClassNotFoundException, InstantiationException, IllegalAccessException {
-		User user = userDao.findByUsername(form.getUsername());
-		if(user.getUsername()==null) throw new UserException("The user is not in the database");
+		User user = userDao.findByUsername(form.getEmail());
+		if(user.getEmail()==null) throw new UserException("The user is not in the database");
 		
-		String password = user.getPassword();
+		String password = user.getMember_password();
 		
-		if(password!=null && !password.equals(form.getPassword()))
+		if(password!=null && !password.equals(form.getMember_password()))
 			throw new UserException(" The password is not right");
 		
 	}

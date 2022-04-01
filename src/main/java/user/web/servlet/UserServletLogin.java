@@ -42,7 +42,7 @@ public class UserServletLogin extends HttpServlet {
 		User user = null;
 		String pwd=null;
 		try {
-			user = userdao.findByUsername(request.getParameter("username"));
+			user = userdao.findByUsername(request.getParameter("email"));
 			pwd = request.getParameter("password");
 		} catch (ClassNotFoundException e1) {
 			e1.printStackTrace();
@@ -53,9 +53,9 @@ public class UserServletLogin extends HttpServlet {
 		}
 		
 		UserService userservice = new UserService();		
-		if(user.getUsername()!=null){
+		if(user.getEmail()!=null){
 			// PASSWORD VALIDATION
-			if(pwd.equals(user.getPassword()))
+			if(pwd.equals(user.getMember_password()))
 			{
 				try {
 					userservice.login(user);

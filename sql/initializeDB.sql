@@ -5,8 +5,9 @@ CREATE DATABASE women_in_tech;
 use women_in_tech;
 
 CREATE TABLE member_user (
-	member_id TINYINT UNSIGNED UNIQUE NOT NULL,
-	member_password VARCHAR(100) UNIQUE NOT NULL,
+
+	member_id TINYINT UNSIGNED UNIQUE NOT NULL AUTO_INCREMENT,
+	member_password VARCHAR(100) NOT NULL,
 	first_name VARCHAR(100) NOT NULL,
 	last_name VARCHAR(100) NOT NULL,
 	birthday DATE NOT NULL,
