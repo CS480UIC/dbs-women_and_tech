@@ -1,4 +1,5 @@
 # Normal Form 1:
+- Make sure each table has a single primary key
 - Make sure each single cell does not hold multiple values </br>
 - Make sure each record is unique </br>
 
