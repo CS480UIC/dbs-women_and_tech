@@ -22,23 +22,25 @@
   
   <body>
   <h1>Network Event Create</h1>
-<form action="<c:url value='/Entity1ServletCreate'/>" method="post">
-	Event ID    :<input type="text" name="eventID" value="${form.eventID }"/>
+<form action="<c:url value='/EventNetworkServletCreate'/>" method="post">
+	event_id    :<input type="text" name="event_id" value="${form.eventID }"/>
 	<span style="color: red; font-weight: 900">${errors.eventID }</span>
 	<br/>
-	Member ID：<input type="password" name="memberID" value="${form.memberID }"/>
+	member_id：<input type="password" name="member_id" value="${form.memberID }"/>
 	<span style="color: red; font-weight: 900">${errors.memberID }</span>
 	<br/>
-	Event Title	：<input type="text" name="eventTitle" value="${form.eventTitle }"/>
+	event_title	：<input type="text" name="event_title" value="${form.eventTitle }"/>
 	<span style="color: red; font-weight: 900">${errors.eventTitle }</span>
 	<br/>
-	Event Address	：<input type="text" name="eventAddress" value="${form.eventAddress}"/>
+	event_address	：<input type="text" name="event_address" value="${form.eventAddress}"/>
 	<span style="color: red; font-weight: 900">${errors.eventAddress }</span>
 	<br/>
-	Event Date	：<input type="text" name="eventDate" value="${form.eventDate }"/>
+	event_date	：<input type="text" name="event_date" value="${form.eventDate }"/>
 	<span style="color: red; font-weight: 900">${errors.eventDate }</span>
 	<br/>
 	<input type="submit" value="Create Event"/>
+	
+	
 </form>
   </body>
 </html>

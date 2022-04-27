@@ -21,32 +21,14 @@
   </head>
   
   <body>
-  <h1>Update Network Event</h1>
-<p style="color: red; font-weight: 900">${msg }</p>
-<form>
-	Event ID    :<input type="text" name="eventID" value="${network_event.eventID }" disabled/>
+  <h1>Update</h1>
+<form action="<c:url value='/EventNetworkServletUpdate'/>" method="post">
+	<input type="hidden" name="method" value="search"/>
+	Event ID   :<input type="text" name="eventID" value="${form.eventID }"/>
+	<span style="color: red; font-weight: 900">${errors.eventID }</span>
 	<br/>
 	
-	Member ID：<input type="text" name="memberID" value="${network_event.memberID }" disabled />
-	<br/>
-	
+	<input type="submit" value="Update Event"/>
 </form>
-<h1>Update the Event Information</h1>
-<form action="<c:url value='/Entity1ServletUpdate'/>" method="post">
-		<input type="hidden" name="method" value="update"/>
-				<input type="hidden" name="eventID" value="${network_event.eventID}"/>
-	
-	Event Title：<input type="password" name="eventTitle" value="${form.eventTitle }"/>
-	<span style="color: red; font-weight: 900">${errors.eventTitle}</span>
-	<br/>
-	Event Address：<input type="password" name="eventAddress" value="${form.eventAddress }"/>
-	<span style="color: red; font-weight: 900">${errors.eventAddress}</span>
-	<br/>
-	Event Date	：<input type="text" name="eventDate" value="${form.eventDate }"/>
-	<span style="color: red; font-weight: 900">${errors.eventDate }</span>
-	<br/>
-	<input type="submit" value="Update"/>
-</form>
-
-</body>
+  </body>
 </html>

@@ -24,24 +24,17 @@
   <h1>Update Network Event</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
 <form>
-	Event ID    		:<input type="text" name="eventID" value="${network_event.eventID }" disabled/>
+	Event ID    	:<input type="text" name="eventID" value="${network_event.eventID }" disabled/>
 	<br/>
-	Member ID 		：<input type="text" name="memberID" value="${network_event.memberID }" disabled/>
-	<br/>
-	Event Title 		：<input type="text" name="eventTitle" value="${network_event.eventTitle }" disabled/>
-	<br/>
-	Event Address ：<input type="text" name="eventAddress" value="${network_event.eventAddress}" disabled/>
-	<br/>
-	Event Date	：<input type="text" name="eventDate" value="${network_event.eventDate }" disabled/>
-	<br/>
+
 </form>
 <h1>Update the values below</h1>
-<form action="<c:url value='/ScholarshipServletUpdate'/>" method="post">
+<form action="<c:url value='/EventNetworkServletUpdate'/>" method="post">
 		<input type="hidden" name="method" value="update"/>
 				<input type="hidden" name="eventID" value="${network_event.eventID }"/>
-	Member ID：<input type="password" name="memberID" value="${form.memberID }"/>
-	<span style="color: red; font-weight: 900">${errors.memberID }</span>
-	<br/>
+	Member ID	：<input type="text" name="memberID" value="${form.memberID }"/>
+	<span style="color: red; font-weight: 900">${errors.eventTitle }</span>
+	<br/>	
 	Event Title	：<input type="text" name="eventTitle" value="${form.eventTitle }"/>
 	<span style="color: red; font-weight: 900">${errors.eventTitle }</span>
 	<br/>

@@ -23,7 +23,7 @@
   <body>
   <h1>Read Network Event</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
-<form action="<c:url value='/NetworkEventServletRead'/>" method="post">
+<form action="<c:url value='/EventNetworkServletRead'/>" method="post">
 	<input type="hidden" name="method" value="regist"/>
 	Event ID    :<input type="text" name="eventID " value="${form.eventID  }"/>
 	<span style="color: red; font-weight: 900">${errors.eventID  }</span>
