@@ -22,7 +22,8 @@
   </head>
   
   <body>
-    <h1>HAVE A NICE WEEKEND</h1>
+    
+    <img src="https://images.techopedia.com/images/uploads/women-in-tech.jpg">
     
   </body>
 </html>
