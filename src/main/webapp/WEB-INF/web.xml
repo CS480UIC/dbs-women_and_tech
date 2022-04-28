@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://JAVA.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
-  <display-name>CS480 Demo</display-name>
+  <display-name>dbs-women_and_tech</display-name>
     <servlet>
     <description></description>
     <display-name>Entity1ServletCreate</display-name>
@@ -47,6 +47,54 @@
   <servlet-mapping>
     <servlet-name>Entity1ServletDelete</servlet-name>
     <url-pattern>/Entity1ServletDelete</url-pattern>
+  </servlet-mapping>
+  
+  
+  <servlet>
+    <description></description>
+    <display-name>EventNetworkServletCreate</display-name>
+    <servlet-name>EventNetworkServletCreate</servlet-name>
+    <servlet-class>eventNetwork.web.servlet.EventNetworkServletCreate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>EventNetworkServletCreate</servlet-name>
+    <url-pattern>/EventNetworkServletCreate</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description></description>
+    <display-name>EventNetworkServletRead</display-name>
+    <servlet-name>EventNetworkServletRead</servlet-name>
+    <servlet-class>eventNetwork.web.servlet.EventNetworkServletRead</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>EventNetworkServletRead</servlet-name>
+    <url-pattern>/EventNetworkServletRead</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+    <servlet>
+    <description></description>
+    <display-name>EventNetworkServletUpdate</display-name>
+    <servlet-name>EventNetworkServletUpdate</servlet-name>
+    <servlet-class>eventNetwork.web.servlet.EventNetworkServletUpdate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>EventNetworkServletUpdate</servlet-name>
+    <url-pattern>/EventNetworkServletUpdate</url-pattern>
+  </servlet-mapping>
+  
+  
+    <servlet>
+    <description></description>
+    <display-name>EventNetworkServletDelete</display-name>
+    <servlet-name>EventNetworkServletDelete</servlet-name>
+    <servlet-class>eventNetwork.web.servlet.EventNetworkServletDelete</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>EventNetworkServletDelete</servlet-name>
+    <url-pattern>/EventNetworkServletDelete</url-pattern>
   </servlet-mapping>
   
   <servlet>
