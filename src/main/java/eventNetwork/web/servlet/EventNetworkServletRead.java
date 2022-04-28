@@ -53,7 +53,7 @@ public class EventNetworkServletRead extends HttpServlet{
 			info.add(values[0]);
 
 		}
-
+		
 	
 		try {
 			
