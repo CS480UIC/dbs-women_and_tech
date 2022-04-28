@@ -28,6 +28,7 @@ public class EventDao {
 
 	public eventNetwork findByUsername(String event_ID) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
 		eventNetwork eventNetwork = new eventNetwork();
+		System.out.println("find name event_ID" + event_ID);
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/women_in_tech","womenTech", "Uic1234567!");
@@ -67,6 +68,13 @@ public class EventDao {
 	
 	public void add(eventNetwork form) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
 		System.out.println("We are here");
+		
+//		System.out.println("1 event id " + form.getEventID());
+//	    System.out.println("2 MemberID " + form.getMemberID());
+//	    System.out.println("3, getEventTitle " + form.getEventTitle());
+//	    System.out.println("4, getEventAddress " + form.getEventAddress());
+//	    System.out.println("5 getEventDate " + form.getEventDate());
+	    
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/women_in_tech","womenTech", "Uic1234567!");
@@ -79,6 +87,9 @@ public class EventDao {
 		    preparestatement.setString(4,form.getEventAddress());
 		    preparestatement.setString(5,form.getEventDate());
 		    preparestatement.executeUpdate();
+		    
+		    
+		    
 		    connect.close();
 		} catch(SQLException e) {
 			throw new RuntimeException(e);
@@ -95,7 +106,7 @@ public class EventDao {
 			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/women_in_tech","womenTech", "Uic1234567!");
 			
     		
-			String sql = "UPDATE network_event SET member_id = ?, event_title = ?, event_address = ? , event_date = ? where event_id = ?;";
+			String sql = "UPDATE network_event SET event_id =? member_id = ?, event_title = ?, event_address = ? , event_date = ? where event_id = ?;";
 			System.out.println("Update Executed");
 			PreparedStatement preparestatement = connect.prepareStatement(sql); 
 			preparestatement.setString(1,form.getEventID());

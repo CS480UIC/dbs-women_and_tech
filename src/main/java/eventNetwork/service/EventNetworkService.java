@@ -23,6 +23,12 @@ private EventDao eventDao = new EventDao();
 	 */
 	public void create(eventNetwork form) throws EventNetworkException, ClassNotFoundException, InstantiationException, IllegalAccessException{
 		
+		System.out.println("server event id " + form.getEventID());
+	    System.out.println("server MemberID " + form.getMemberID());
+	    System.out.println("server, getEventTitle " + form.getEventTitle());
+	    System.out.println("server, getEventAddress " + form.getEventAddress());
+	    System.out.println("server getEventDate " + form.getEventDate());
+	    
 		// check the primary key of Entity1
 		eventNetwork event = eventDao.findByUsername(form.getEventID());
 		if(event.getEventID()!=null && event.getEventID().equals(form.getEventID())) throw new EventNetworkException("This user name has been registered!");

@@ -22,19 +22,20 @@
   
   <body>
   <h1>Read Network Event</h1>
-<p style="color: red; font-weight: 900">${msg }</p>
+<p style="color: red; font-weight: 900">${msg}</p>
 <form>
-	Event ID    		:<input type="text" name="eventID" value="${network_event.eventID }"/>
+	Event ID    		:<input type="text" name="event_id" value="${eventNetwork.event_id}"/>
 	<br/>
-	Member ID 		：<input type="text" name="memberID" value="${network_event.memberID }"/>
+	Member ID 		：<input type="text" name="member_id" value="${eventNetwork.member_id}"/>
 	<br/>
-	Event Title 		：<input type="text" name="eventTitle" value="${network_event.eventTitle }"/>
+	Event Title 		：<input type="text" name="event_title" value="${eventNetwork.event_title }"/>
 	<br/>
-	Event Address ：<input type="text" name="eventAddress" value="${network_event.eventAddress}"/>
+	Event Address ：<input type="text" name="event_address" value="${eventNetwork.event_address}"/>
 	<br/>
-	Event Date	：<input type="text" name="eventDate" value="${network_event.eventDate }"/>
+	Event Date	：<input type="date" name="event_date" value="${eventNetwork.event_date}"/>
 	<br/>
 </form>
+
 
 <button onclick="window.location.href='<c:url value='/jsps/main.jsp'/>'">Continue</button>
 </body>

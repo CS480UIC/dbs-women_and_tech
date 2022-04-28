@@ -24,8 +24,8 @@
   <h1>Delete Network Event</h1>
 <form action="<c:url value='/EventNetworkServletDelete'/>" method="post">
 	<input type="hidden" name="method" value="search"/>
-	Delete Event ID   :<input type="text" name="event_id" value="${form.eventID }"/>
-	<span style="color: red; font-weight: 900">${errors.eventID }</span>
+	Delete Event ID   :<input type="text" name="event_id" value="${form.event_id }"/>
+	<span style="color: red; font-weight: 900">${errors.event_id }</span>
 	<br/>
 	<input type="submit" value="Delete"/>
 </form>

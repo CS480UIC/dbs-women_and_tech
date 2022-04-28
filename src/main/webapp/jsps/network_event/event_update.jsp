@@ -24,7 +24,7 @@
   <h1>Update</h1>
 <form action="<c:url value='/EventNetworkServletUpdate'/>" method="post">
 	<input type="hidden" name="method" value="search"/>
-	Event ID   :<input type="text" name="eventID" value="${form.eventID }"/>
+	Event ID   :<input type="text" name="eventID" value="${form.event_id}"/>
 	<span style="color: red; font-weight: 900">${errors.eventID }</span>
 	<br/>
 	

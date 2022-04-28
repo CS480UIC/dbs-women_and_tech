@@ -11,6 +11,11 @@ import javax.servlet.http.HttpServletResponse;
 import eventNetwork.dao.EventDao;
 import eventNetwork.domain.eventNetwork;
 
+import java.util.ArrayList;
+import java.util.Enumeration;
+import java.util.List;
+import java.util.Map;
+import java.io.PrintWriter;
 
 public class EventNetworkServletRead extends HttpServlet{
 	
@@ -37,8 +42,22 @@ public class EventNetworkServletRead extends HttpServlet{
 		eventNetwork eventNetwork = null;
 		EventDao eventNetworkDao = new EventDao();
 		
+		Map<String,String[]> paramMap = request.getParameterMap();
+
+		eventNetwork form = new eventNetwork();
+		List<String> info = new ArrayList<String>();
+//		System.out.println(form);
+		for(String name : paramMap.keySet()) {
+			
+			String[] values = paramMap.get(name);
+			info.add(values[0]);
+
+		}
+
+	
 		try {
-			eventNetwork = eventNetworkDao.findByUsername(request.getParameter("event_id"));
+			
+			eventNetwork = eventNetworkDao.findByUsername(info.get(1));
 		} catch (ClassNotFoundException e1) {
 			e1.printStackTrace();
 		} catch (InstantiationException e1) {
@@ -47,8 +66,10 @@ public class EventNetworkServletRead extends HttpServlet{
 			e1.printStackTrace();
 		}
 		
+	
+		
 		if(eventNetwork.getEventID() !=null){
-					System.out.println(eventNetwork);
+					System.out.println(eventNetwork.getEventID());
 					request.setAttribute("eventNetwork", eventNetwork);
 					request.getRequestDispatcher("/jsps/network_event/event_read_output.jsp").forward(request, response);
 			}

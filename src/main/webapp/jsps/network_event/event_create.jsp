@@ -23,23 +23,22 @@
   <body>
   <h1>Network Event Create</h1>
 <form action="<c:url value='/EventNetworkServletCreate'/>" method="post">
-	event_id    :<input type="text" name="event_id" value="${form.eventID }"/>
-	<span style="color: red; font-weight: 900">${errors.eventID }</span>
+	event_id    :<input type="text" name="event_id" value="${form.event_id }"/>
+	<span style="color: red; font-weight: 900">${errors.event_id}</span>
 	<br/>
-	member_id：<input type="password" name="member_id" value="${form.memberID }"/>
-	<span style="color: red; font-weight: 900">${errors.memberID }</span>
+	member_id：<input type="password" name="member_id" value="${form.member_id }"/>
+	<span style="color: red; font-weight: 900">${errors.member_id}</span>
 	<br/>
-	event_title	：<input type="text" name="event_title" value="${form.eventTitle }"/>
-	<span style="color: red; font-weight: 900">${errors.eventTitle }</span>
+	event_title	：<input type="text" name="event_title" value="${form.event_title }"/>
+	<span style="color: red; font-weight: 900">${errors.event_title}</span>
 	<br/>
-	event_address	：<input type="text" name="event_address" value="${form.eventAddress}"/>
-	<span style="color: red; font-weight: 900">${errors.eventAddress }</span>
+	event_address	：<input type="text" name="event_address" value="${form.event_address}"/>
+	<span style="color: red; font-weight: 900">${errors.event_address}</span>
 	<br/>
-	event_date	：<input type="text" name="event_date" value="${form.eventDate }"/>
-	<span style="color: red; font-weight: 900">${errors.eventDate }</span>
+	event_date	：<input type="date" name="event_date" value="${form.event_date }"/>
+	<span style="color: red; font-weight: 900">${errors.event_date}</span>
 	<br/>
 	<input type="submit" value="Create Event"/>
-	
 	
 </form>
   </body>

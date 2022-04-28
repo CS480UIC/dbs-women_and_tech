@@ -61,11 +61,12 @@ public class eventNetwork {
 
 	@Override
 	public String toString() {
-		return "User [ eventID=" + event_id + ""
-				+ ", memberID=" + member_id
-				+ ", eventTitle=" + event_title
-				+ ", eventAddress=" + event_address
-				+ ", eventDate=" + event_date
+		return "networkEvent [ event_id=" + event_id + ""
+				+ ", member_id=" + member_id
+				+ ", event_title=" + event_title
+				+ ", event_address=" + event_address
+				+ ", event_date=" + event_date
 				+"]";
+		
 	}
 }

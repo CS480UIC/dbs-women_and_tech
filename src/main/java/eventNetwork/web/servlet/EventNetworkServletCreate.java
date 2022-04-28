@@ -64,24 +64,16 @@ public class EventNetworkServletCreate extends HttpServlet {
 			
 			String[] values = paramMap.get(name);
 			info.add(values[0]);
-			System.out.println(name + ": " + Arrays.toString(values));
-			System.out.println(info.add(values[0]));
 
 		}
-//		System.out.println("1");
-//		System.out.println(info);
 
-		form.setEventID(info.get(1));
-//		System.out.println("1");
+		form.setEventID(info.get(0));
 
-		form.setMemberID(info.get(2));
-//		System.out.println("2");
+		form.setMemberID(info.get(1));
 
-		form.setEventTitle(info.get(3));
-		form.setEventAddress(info.get(4));
-		form.setEventDate(info.get(5));
-//		System.out.println("3");
-		
+		form.setEventTitle(info.get(2));
+		form.setEventAddress(info.get(3));
+		form.setEventDate(info.get(4));
 		
 		try {
 			System.out.println("5");
