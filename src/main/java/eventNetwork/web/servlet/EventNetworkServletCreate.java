@@ -9,6 +9,7 @@ package eventNetwork.web.servlet;
 
 
 import java.io.IOException;
+import java.sql.Date;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -24,7 +25,7 @@ import javax.servlet.http.HttpServletResponse;
 //import entity1.service.Entity1Service;
 
 /*I stop here for import file */
-import eventNetwork.domain.eventNetwork;
+import eventNetwork.domain.EventNetwork;
 import eventNetwork.service.EventNetworkException;
 import eventNetwork.service.EventNetworkService;
 
@@ -35,13 +36,12 @@ import eventNetwork.service.EventNetworkService;
 
 public class EventNetworkServletCreate extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
+    
     /**
      * @see HttpServlet#HttpServlet()
      */
     public EventNetworkServletCreate() {
         super();
-        // TODO Auto-generated constructor stub
     }
 
 	/**
@@ -55,39 +55,32 @@ public class EventNetworkServletCreate extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		EventNetworkService eventNetworkservice = new EventNetworkService();
+		EventNetwork arService = new EventNetwork();
 		Map<String,String[]> paramMap = request.getParameterMap();
-		eventNetwork form = new eventNetwork();
+		EventNetwork form = new EventNetwork();
 		List<String> info = new ArrayList<String>();
-		System.out.println(form);
+
 		for(String name : paramMap.keySet()) {
-			
 			String[] values = paramMap.get(name);
 			info.add(values[0]);
-
 		}
-
-		form.setEventID(info.get(0));
-
-		form.setMemberID(info.get(1));
-
-		form.setEventTitle(info.get(2));
-		form.setEventAddress(info.get(3));
-		form.setEventDate(info.get(4));
+		form.setEvent_id(Integer.parseInt(info.get(0)));
+		form.setMember_id(Integer.parseInt(info.get(1)));
+		form.setEvent_title(info.get(2));
+		form.setEvent_address(info.get(3));
+		form.setEvent_date(Date.valueOf(info.get(4)));
+	
 		
 		try {
-			System.out.println("5");
-			eventNetworkservice.create(form);
+			arService.create(form);
+	
 			response.sendRedirect( request.getContextPath() + "/jsps/main.jsp");
 			
-		} catch (ClassNotFoundException | EventNetworkException e) {
-			// TODO Auto-generated catch block
+		} catch (ClassNotFoundException | Academic_resourceException e) {
 			e.printStackTrace();
 		} catch (InstantiationException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} catch (IllegalAccessException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} 
 		

@@ -31,7 +31,7 @@
 <h1>Update the values below</h1>
 <form action="<c:url value='/EventNetworkServletUpdate'/>" method="post">
 		<input type="hidden" name="method" value="update"/>
-				<input type="hidden" name="eventID" value="${eventNetwork.event_id }"/>
+				<input type="hidden" name="method" value="${eventNetwork.event_id }"/>
 	Member ID	：<input type="text" name="memberID" value="${form.member_id }"/>
 	<span style="color: red; font-weight: 900">${errors.member_id }</span>
 	<br/>	
