@@ -174,7 +174,7 @@ CREATE TABLE `network_event` (
   `member_id` tinyint unsigned NOT NULL,
   `event_title` varchar(200) NOT NULL,
   `event_address` varchar(200) NOT NULL,
-  `event_date` datetime NOT NULL,
+  `event_date` date NOT NULL,
   PRIMARY KEY (`event_id`),
   KEY `member_id` (`member_id`),
   CONSTRAINT `network_event_ibfk_1` FOREIGN KEY (`member_id`) REFERENCES `member_user` (`member_id`) ON DELETE CASCADE ON UPDATE CASCADE

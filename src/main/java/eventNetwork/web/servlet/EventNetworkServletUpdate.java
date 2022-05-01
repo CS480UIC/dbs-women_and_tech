@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import eventNetwork.dao.EventDao;
-import eventNetwork.domain.eventNetwork;
+import eventNetwork.domain.event_network;
 
 public class EventNetworkServletUpdate extends HttpServlet{
 	
@@ -39,7 +39,7 @@ public class EventNetworkServletUpdate extends HttpServlet{
 
 		String method = request.getParameter("method");
 		EventDao eventNetworkdao = new EventDao();
-		eventNetwork eventNetwork = null;
+		event_network eventNetwork = null;
 
 		if(method.equals("search"))
 		{
@@ -66,7 +66,7 @@ public class EventNetworkServletUpdate extends HttpServlet{
 		else if(method.equals("update"))
 		{
 			Map<String,String[]> paramMap = request.getParameterMap();
-			eventNetwork form = new eventNetwork();
+			event_network form = new event_network();
 			List<String> info = new ArrayList<String>();
 
 			for(String name : paramMap.keySet()) {

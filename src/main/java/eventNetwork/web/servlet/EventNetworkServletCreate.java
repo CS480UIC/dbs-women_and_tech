@@ -24,7 +24,7 @@ import javax.servlet.http.HttpServletResponse;
 //import entity1.service.Entity1Service;
 
 /*I stop here for import file */
-import eventNetwork.domain.eventNetwork;
+import eventNetwork.domain.event_network;
 import eventNetwork.service.EventNetworkException;
 import eventNetwork.service.EventNetworkService;
 
@@ -57,7 +57,7 @@ public class EventNetworkServletCreate extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		EventNetworkService eventNetworkservice = new EventNetworkService();
 		Map<String,String[]> paramMap = request.getParameterMap();
-		eventNetwork form = new eventNetwork();
+		event_network form = new event_network();
 		List<String> info = new ArrayList<String>();
 		System.out.println(form);
 		for(String name : paramMap.keySet()) {

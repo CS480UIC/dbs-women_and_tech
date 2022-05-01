@@ -21,41 +21,18 @@
   </head>
   
   <body>
-  <h1>Update Learning Resource</h1>
-<p style="color: red; font-weight: 900">${msg }</p>
-<form>
-	Resource ID   : <input type="text" name="resourceID" value="${learning_resource.resourceID }" disabled/>
-	<br/>
-	Member ID：<input type="password" name="memberID" value="${learning_resource.memberID }" disabled/>
-	<br/>
-	Resource Title	：<input type="text" name="resourceTitle" value="${learning_resource.resourceTitle }" disabled/>
-	<br/>
-	Resource Type	：<input type="text" name="resourceType" value="${learning_resource.resourceType}" disabled/>
-	<br/>
-	Author	：<input type="text" name="author" value="${learning_resource.author }" disabled/>
-	<br/>
-	Publisher	：<input type="text" name="publisher" value="${learning_resource.publisher }" disabled/>
-	<br/>
-	Publish Year	：<input type="text" name="publishYear" value="${learning_resource.publishYear}" disabled/>
-	<br/>
-	Language	：<input type="text" name="language" value="${learning_resource.language }" disabled/>
-	<br/>
-</form>
+ 
 <h1>Update the values below</h1>
 <form action="<c:url value='/SpecialInterestGroupServletUpdate'/>" method="post">
 		<input type="hidden" name="method" value="update"/>
-				<input type="hidden" name="username" value="${learning_resource.resourceID }"/>
-	Resource ID   : <input type="text" name="resourceID" value="${form.resourceID }"/>
-	<span style="color: red; font-weight: 900">${errors.resourceID }</span>
+				<input type="hidden" name="resourceID" value="${learning_resource.resource_id }"/>
+				<input type="hidden" name="memberID" value="${learning_resource.member_id  }"/>
+				
+	Resource Title	：<input type="text" name="resourceTitle" value="${form.resource_title }"/>
+	<span style="color: red; font-weight: 900">${errors.resource_title }</span>
 	<br/>
-	Member ID：<input type="password" name="memberID" value="${form.memberID }"/>
-	<span style="color: red; font-weight: 900">${errors.memberID }</span>
-	<br/>
-	Resource Title	：<input type="text" name="resourceTitle" value="${form.resourceTitle }"/>
-	<span style="color: red; font-weight: 900">${errors.resourceTitle }</span>
-	<br/>
-	Resource Type	：<input type="text" name="resourceType" value="${form.resourceType}"/>
-	<span style="color: red; font-weight: 900">${errors.resourceType }</span>
+	Resource Type	：<input type="text" name="resourceType" value="${form.resource_type}"/>
+	<span style="color: red; font-weight: 900">${errors.resource_type }</span>
 	<br/>
 	Author	：<input type="text" name="author" value="${form.author }"/>
 	<span style="color: red; font-weight: 900">${errors.author }</span>
@@ -63,11 +40,11 @@
 	Publisher	：<input type="text" name="publisher" value="${form.publisher }"/>
 	<span style="color: red; font-weight: 900">${errors.publisher }</span>
 	<br/>
-	Publish Year	：<input type="text" name="publishYear" value="${form.publishYear}"/>
-	<span style="color: red; font-weight: 900">${errors.publishYear }</span>
+	Publish Year	：<input type="text" name="publishYear" value="${form.publish_year}"/>
+	<span style="color: red; font-weight: 900">${errors.publish_year }</span>
 	<br/>
-	Language	：<input type="text" name="language" value="${form.language }"/>
-	<span style="color: red; font-weight: 900">${errors.language }</span>
+	Language	：<input type="text" name="language" value="${form.resource_language }"/>
+	<span style="color: red; font-weight: 900">${errors.resource_language }</span>
 	<br/>
 	<input type="submit" value="Update Resource"/>
 </form>

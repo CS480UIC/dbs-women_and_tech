@@ -7,7 +7,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import eventNetwork.dao.EventDao;
-import eventNetwork.domain.eventNetwork;
+import eventNetwork.domain.event_network;
 
 
 public class EventNetworkServletDelete extends HttpServlet {
@@ -34,11 +34,11 @@ public class EventNetworkServletDelete extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String method = request.getParameter("method");
 		EventDao eventNetworkDao = new EventDao();
-		eventNetwork eventNetwork = null;
+		event_network eventNetwork = null;
 		if(method.equals("search"))
 		{
 			try {
-				eventNetwork = eventNetworkDao.findByUsername(request.getParameter("event_id"));
+				eventNetwork = eventNetworkDao.findByUsername(request.getParameter("eventID"));
 			} catch (ClassNotFoundException e1) {
 				e1.printStackTrace();
 			} catch (InstantiationException e1) {
@@ -61,7 +61,7 @@ public class EventNetworkServletDelete extends HttpServlet {
 		{	
 			try {
 				
-				EventDao.delete(request.getParameter("event_id"));
+				EventDao.delete(request.getParameter("eventID"));
 				
 			} catch (ClassNotFoundException e1) {
 				e1.printStackTrace();

@@ -1,16 +1,6 @@
-/**
- * 
- */
-/**
- * @author diyinhu
- *
- */
 package eventNetwork.domain;
 
-public class eventNetwork {
-	/*
-	 * Correspond to the user table
-	 */
+public class event_network {
 	
 	private String event_id;
 	private String member_id; 
@@ -20,6 +10,7 @@ public class eventNetwork {
 	
 	
 	public String getEventID() {
+		System.out.println("In event_id in domain: " +  event_id);
 		return event_id;
 	}
 
@@ -28,14 +19,18 @@ public class eventNetwork {
 	}
 
 	public String getMemberID() {
+		System.out.println("In member_id in domain getting call");
+		System.out.println("In member_id in domain: " +  member_id);
 		return member_id;
 	}
 
 	public void setMemberID(String member_id) {
+		System.out.println("call member_id in domain: " +  member_id);
 		this.member_id = member_id;
 	}
 
 	public String getEventTitle() {
+		System.out.println("In event_title in domain: " +  event_title);
 		return event_title;
 	}
 
@@ -44,6 +39,7 @@ public class eventNetwork {
 	}
 	
 	public String getEventAddress() {
+		System.out.println("In event_address in domain: " +  event_address);
 		return event_address;
 	}
 
@@ -52,6 +48,7 @@ public class eventNetwork {
 	}
 	
 	public String getEventDate() {
+		System.out.println("In event_date in domain: " +  event_date);
 		return event_date;
 	}
 
@@ -69,4 +66,6 @@ public class eventNetwork {
 				+"]";
 		
 	}
+	
+
 }

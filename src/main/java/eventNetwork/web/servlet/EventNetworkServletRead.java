@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import eventNetwork.dao.EventDao;
-import eventNetwork.domain.eventNetwork;
+import eventNetwork.domain.event_network;
 
 import java.util.ArrayList;
 import java.util.Enumeration;
@@ -39,20 +39,20 @@ public class EventNetworkServletRead extends HttpServlet{
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		eventNetwork eventNetwork = null;
+		event_network eventNetwork = null;
 		EventDao eventNetworkDao = new EventDao();
 		
-//		Map<String,String[]> paramMap = request.getParameterMap();
-//
-//		eventNetwork form = new eventNetwork();
-//		List<String> info = new ArrayList<String>();
+		Map<String,String[]> paramMap = request.getParameterMap();
+
+		event_network form = new event_network();
+		List<String> info = new ArrayList<String>();
 //		System.out.println(form);
-//		for(String name : paramMap.keySet()) {
-//			System.out.println("Read: " + name);
-//			String[] values = paramMap.get(name);
-//			info.add(values[0]);
-//			
-//		}
+		for(String name : paramMap.keySet()) {
+			System.out.println("Read: " + name);
+			String[] values = paramMap.get(name);
+			info.add(values[0]);
+			
+		}
 		
 	
 		try {

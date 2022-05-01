@@ -6,7 +6,7 @@ package eventNetwork.service;
 //import entity1.service.UserException;
 
 import eventNetwork.dao.EventDao; 
-import eventNetwork.domain.eventNetwork;
+import eventNetwork.domain.event_network;
 
 
 
@@ -21,7 +21,7 @@ private EventDao eventDao = new EventDao();
 	 * @throws IllegalAccessException 
 	 * @throws InstantiationException 
 	 */
-	public void create(eventNetwork form) throws EventNetworkException, ClassNotFoundException, InstantiationException, IllegalAccessException{
+	public void create(event_network form) throws EventNetworkException, ClassNotFoundException, InstantiationException, IllegalAccessException{
 		
 		System.out.println("server event id " + form.getEventID());
 	    System.out.println("server MemberID " + form.getMemberID());
@@ -30,7 +30,7 @@ private EventDao eventDao = new EventDao();
 	    System.out.println("server getEventDate " + form.getEventDate());
 	    
 		// check the primary key of Entity1
-		eventNetwork event = eventDao.findByUsername(form.getEventID());
+	    event_network event = eventDao.findByUsername(form.getEventID());
 		if(event.getEventID()!=null && event.getEventID().equals(form.getEventID())) throw new EventNetworkException("This user name has been registered!");
 		eventDao.add(form);
 	}
@@ -43,8 +43,8 @@ private EventDao eventDao = new EventDao();
 	 * @throws IllegalAccessException 
 	 * @throws InstantiationException 
 	 */
-	public void login(eventNetwork form) throws EventNetworkException, ClassNotFoundException, InstantiationException, IllegalAccessException {
-		eventNetwork event_ID = eventDao.findByUsername(form.getEventID());
+	public void login(event_network form) throws EventNetworkException, ClassNotFoundException, InstantiationException, IllegalAccessException {
+		event_network event_ID = eventDao.findByUsername(form.getEventID());
 		if(event_ID.getEventID()==null) throw new EventNetworkException("The user is not in the database");
 		
 		String member_ID = event_ID.getMemberID();

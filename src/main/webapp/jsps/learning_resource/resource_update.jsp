@@ -20,42 +20,18 @@
 
   </head>
   
-  <body>
+    <body>
   <h1>Update Learning Resource</h1>
-<p style="color: red; font-weight: 900">${msg }</p>
-<form>
-	Resource ID    :<input type="text" name="resourceID" value="${learning_resource.resourceID }" disabled/>
-	<br/>
+<form action="<c:url value='/Academic_resourceServletUpdate'/>" method="post">
+	<input type="hidden" name="method" value="search"/>
 	
-	Member ID：<input type="text" name="memberID" value="${learning_resource.memberID }" disabled />
+	Update Resource ID :<input type="text" name="resourceID" value="${form.resource_id}"/>
+	<span style="color: red; font-weight: 900">${errors.resource_id }</span>
 	<br/>
-	
+	Update Member ID :<input type="text" name="memberID" value="${form.member_id }"/>
+	<span style="color: red; font-weight: 900">${errors.member_id }</span>
+	<br/>
+	<input type="submit" value="Update Academic Resource"/>
 </form>
-<h1>Update the Resource Information</h1>
-<form action="<c:url value='/Entity1ServletUpdate'/>" method="post">
-		<input type="hidden" name="method" value="update"/>
-				<input type="hidden" name="resourceID" value="${learning_resource.resourceID}"/>
-	
-	Resource Title：<input type="password" name="resourceTitle" value="${form.resourceTitle }"/>
-	<span style="color: red; font-weight: 900">${errors.resourceTitle}</span>
-	<br/>
-	Resource Type ：<input type="password" name="resourceType" value="${form.resourceType }"/>
-	<span style="color: red; font-weight: 900">${errors.resourceType}</span>
-	<br/>
-	Author	：<input type="text" name="author" value="${form.author }"/>
-	<span style="color: red; font-weight: 900">${errors.author }</span>
-	<br/>
-	Publisher	：<input type="text" name="publisher" value="${form.publisher }"/>
-	<span style="color: red; font-weight: 900">${errors.publisher }</span>
-	<br/>
-	Publish Year	：<input type="text" name="publishYear" value="${form.publishYear }"/>
-	<span style="color: red; font-weight: 900">${errors.publishYear }</span>
-	<br/>
-	Language	：<input type="text" name="language" value="${form.language }"/>
-	<span style="color: red; font-weight: 900">${errors.language }</span>
-	<br/>
-	<input type="submit" value="Update"/>
-</form>
-
-</body>
+  </body>
 </html>

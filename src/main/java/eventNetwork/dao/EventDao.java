@@ -19,15 +19,15 @@ import java.sql.SQLException;
 //import java.util.ArrayList;
 //import java.util.List;
 
-import eventNetwork.domain.eventNetwork;
+import eventNetwork.domain.event_network;
 
 /**
  * DDL functions performed in database
  */
 public class EventDao {
 
-	public eventNetwork findByUsername(String event_ID) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
-		eventNetwork eventNetwork = new eventNetwork();
+	public event_network findByUsername(String event_ID) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
+		event_network event_network = new event_network();
 		System.out.println("find name event_ID" + event_ID);
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
@@ -40,22 +40,32 @@ public class EventDao {
 		    //ResultSet resultSet  = preparestatement.executeUpdate();
 		    while(resultSet.next()){
 		    	String eventID = resultSet.getString("event_ID");
-		 
+		    	
+		    	System.out.println("event dao in event id: " + resultSet.getString("member_id"));
+		    	
+		    	
 		    	if(eventID.equals(event_ID)){
-		    		eventNetwork.setEventID(resultSet.getString("event_id"));
-		    		eventNetwork.setMemberID(resultSet.getString("member_id"));
-		    		eventNetwork.setEventTitle(resultSet.getString("event_title"));	
-		    		eventNetwork.setEventAddress(resultSet.getString("event_address"));
-		    		eventNetwork.setEventDate(resultSet.getString("event_date"));
+		    		
+		    		
+		    		event_network.setEventID(resultSet.getString("event_id"));
+		    		event_network.setMemberID(resultSet.getString("member_id"));
+		    		event_network.setEventTitle(resultSet.getString("event_title"));	
+		    		event_network.setEventAddress(resultSet.getString("event_address"));
+		    		event_network.setEventDate(resultSet.getString("event_date"));
+		    		
 		    			
 		    	}
 		    	
 		    }
+		    
+		    String member_test = event_network.getMemberID();
+		    System.out.println("event dao in member test: " + member_test);
+		    
 		    connect.close();
 		} catch(SQLException e) {
 			throw new RuntimeException(e);
 		}
-		return eventNetwork;
+		return event_network;
 	}	
 	
 	/**
@@ -66,7 +76,7 @@ public class EventDao {
 	 * @throws InstantiationException 
 	 */
 	
-	public void add(eventNetwork form) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
+	public void add(event_network form) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
 		System.out.println("We are here");
 		
 //		System.out.println("1 event id " + form.getEventID());
@@ -97,7 +107,7 @@ public class EventDao {
 	}
 	
 	
-	public void update(eventNetwork form) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
+	public void update(event_network form) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
 		System.out.println("Now going to update");
 		System.out.println(form);
 

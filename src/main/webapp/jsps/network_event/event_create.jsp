@@ -35,7 +35,7 @@
 	Event Address	：<input type="text" name="eventAddress" value="${form.event_address}"/>
 	<span style="color: red; font-weight: 900">${errors.event_address}</span>
 	<br/>
-	Event Date	：<input type="date" name="eventDate" value="${form.event_date }"/>
+	Event Date	：<input type="date" name="eventDate" value="${form.event_address }"/>
 	<span style="color: red; font-weight: 900">${errors.event_date}</span>
 	<br/>
 	<input type="submit" value="Create Event"/>

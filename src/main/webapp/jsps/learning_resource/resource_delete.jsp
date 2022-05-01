@@ -24,8 +24,11 @@
   <h1>Delete Learning Resource</h1>
 <form action="<c:url value='/Entity1ServletDelete'/>" method="post">
 	<input type="hidden" name="method" value="search"/>
-	Delete Resource ID   :<input type="text" name="resourceID" value="${form.resourceID }"/>
-	<span style="color: red; font-weight: 900">${errors.resourceID }</span>
+	Delete Resource ID   :<input type="text" name="resourceID" value="${form.resource_id }"/>
+	<span style="color: red; font-weight: 900">${errors.resource_id }</span>
+	<br/>
+	Delete Member ID   :<input type="text" name="resourceID" value="${form.member_id }"/>
+	<span style="color: red; font-weight: 900">${errors.member_id }</span>
 	<br/>
 	<input type="submit" value="Delete"/>
 </form>

@@ -25,22 +25,24 @@
 <p style="color: red; font-weight: 900">${msg }</p>
 <form action="<c:url value='/SpecialInterestgroupServletDelete'/>" method="post">
 	<input type="hidden" name="method" value="delete"/>
-		<input type="hidden" name="resourceID" value="${learning_resource.resourceID }"/>
-	Resource ID   : <input type="text" name="resourceID" value="${learning_resource.resourceID }" disabled/>
+		<input type="hidden" name="resourceID" value="${learning_resource.resource_id }"/>
+		<input type="hidden" name="resourceID" value="${learning_resource.resource_id }"/>
+		
+	Resource ID   : <input type="text" name="resourceID" value="${learning_resource.resource_id }" disabled/>
 	<br/>
-	Member ID：<input type="password" name="memberID" value="${learning_resource.memberID }" disabled/>
+	Member ID：<input type="text" name="memberID" value="${learning_resource.member_id }" disabled/>
 	<br/>
-	Resource Title	：<input type="text" name="resourceTitle" value="${learning_resource.resourceTitle }" disabled/>
+	Resource Title	：<input type="text" name="resourceTitle" value="${learning_resource.resource_title }" disabled/>
 	<br/>
-	Resource Type	：<input type="text" name="resourceType" value="${learning_resource.resourceType}" disabled/>
+	Resource Type	：<input type="text" name="resourceType" value="${learning_resource.resource_type}" disabled/>
 	<br/>
 	Author	：<input type="text" name="author" value="${learning_resource.author }" disabled/>
 	<br/>
 	Publisher	：<input type="text" name="publisher" value="${learning_resource.publisher }" disabled/>
 	<br/>
-	Publish Year	：<input type="text" name="publishYear" value="${learning_resource.publishYear}" disabled/>
+	Publish Year	：<input type="text" name="publishYear" value="${learning_resource.publish_year}" disabled/>
 	<br/>
-	Language	：<input type="text" name="language" value="${learning_resource.language }" disabled/>
+	Language	：<input type="text" name="language" value="${learning_resource.resource_language }" disabled/>
 	<br/>
 	<input type="submit" value="Delete Resource"/>
 </form>
