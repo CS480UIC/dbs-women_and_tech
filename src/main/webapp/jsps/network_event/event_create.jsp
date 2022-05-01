@@ -23,19 +23,19 @@
   <body>
   <h1>Network Event Create</h1>
 <form action="<c:url value='/EventNetworkServletCreate'/>" method="post">
-	event_id    :<input type="text" name="event_id" value="${form.event_id }"/>
+	Event ID    :<input type="text" name="eventID" value="${form.event_id }"/>
 	<span style="color: red; font-weight: 900">${errors.event_id}</span>
 	<br/>
-	member_id：<input type="password" name="member_id" value="${form.member_id }"/>
+	Member ID：<input type="password" name="memberID" value="${form.member_id }"/>
 	<span style="color: red; font-weight: 900">${errors.member_id}</span>
 	<br/>
-	event_title	：<input type="text" name="event_title" value="${form.event_title }"/>
+	Event Title	：<input type="text" name="eventTitle" value="${form.event_title }"/>
 	<span style="color: red; font-weight: 900">${errors.event_title}</span>
 	<br/>
-	event_address	：<input type="text" name="event_address" value="${form.event_address}"/>
+	Event Address	：<input type="text" name="eventAddress" value="${form.event_address}"/>
 	<span style="color: red; font-weight: 900">${errors.event_address}</span>
 	<br/>
-	event_date	：<input type="date" name="event_date" value="${form.event_date }"/>
+	Event Date	：<input type="date" name="eventDate" value="${form.event_date }"/>
 	<span style="color: red; font-weight: 900">${errors.event_date}</span>
 	<br/>
 	<input type="submit" value="Create Event"/>

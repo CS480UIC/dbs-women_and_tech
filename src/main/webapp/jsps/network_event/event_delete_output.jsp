@@ -25,20 +25,19 @@
 	<p style="color: red; font-weight: 900">${msg }</p>
 	<form action="<c:url value='/EventNetworkServletDelete'/>" method="post">
 		<input type="hidden" name="method" value="delete" /> <input
-			type="hidden" name="event_id" value="${eventNetwork.eventID }" />
-	event_id    :<input type="text" name="event_id" value="${eventNetwork.member_id }" disabled/>
+			type="hidden" name="eventID" value="${eventNetwork.eventID }" />
+	Event ID    :<input type="text" name="eventID" value="${eventNetwork.member_id }" disabled/>
 	<br/>
 	
-	member_id：<input type="text" name="member_id" value="${eventNetwork.member_id }" disabled/>
+	Member ID：<input type="text" name="memberID" value="${eventNetwork.member_id }" disabled/>
 	<br/>
 	
-	event_title	：<input type="text" name="event_title" value="${eventNetwork.event_title }" disabled/>
+	Event Title ：<input type="text" name="eventTitle" value="${eventNetwork.event_title }" disabled/>
 	<br/>
 	
-	event_address：<input type="text" name="event_address" value="${eventNetwork.event_address }" disabled/>
-	<br/>
+	Event Address：<input type="text" name="eventAddress" value="${eventNetwork.event_address }" disabled/>
 	
-	event_date	：<input type="date" name="event_date" value="${eventNetwork.event_date }" disabled/>
+	Event Date	：<input type="date" name="eventDate" value="${eventNetwork.event_date }" disabled/>
 	<br/>
 	<input type="submit" value="Delete Event"/>
 	</form>

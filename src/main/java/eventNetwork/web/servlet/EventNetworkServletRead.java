@@ -42,22 +42,22 @@ public class EventNetworkServletRead extends HttpServlet{
 		eventNetwork eventNetwork = null;
 		EventDao eventNetworkDao = new EventDao();
 		
-		Map<String,String[]> paramMap = request.getParameterMap();
-
-		eventNetwork form = new eventNetwork();
-		List<String> info = new ArrayList<String>();
+//		Map<String,String[]> paramMap = request.getParameterMap();
+//
+//		eventNetwork form = new eventNetwork();
+//		List<String> info = new ArrayList<String>();
 //		System.out.println(form);
-		for(String name : paramMap.keySet()) {
-			
-			String[] values = paramMap.get(name);
-			info.add(values[0]);
-
-		}
+//		for(String name : paramMap.keySet()) {
+//			System.out.println("Read: " + name);
+//			String[] values = paramMap.get(name);
+//			info.add(values[0]);
+//			
+//		}
 		
 	
 		try {
 			
-			eventNetwork = eventNetworkDao.findByUsername(info.get(1));
+			eventNetwork = eventNetworkDao.findByUsername(request.getParameter("eventID"));
 		} catch (ClassNotFoundException e1) {
 			e1.printStackTrace();
 		} catch (InstantiationException e1) {
