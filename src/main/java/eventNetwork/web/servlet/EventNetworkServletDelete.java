@@ -6,6 +6,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+//import entity1.dao.Entity1Dao;
+//import entity1.domain.Entity1;
 import eventNetwork.dao.EventDao;
 import eventNetwork.domain.event_network;
 
@@ -33,12 +35,12 @@ public class EventNetworkServletDelete extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String method = request.getParameter("method");
-		EventDao eventNetworkDao = new EventDao();
-		event_network eventNetwork = null;
+		EventDao EventDao = new EventDao();
+		event_network event_network = null;
 		if(method.equals("search"))
 		{
 			try {
-				eventNetwork = eventNetworkDao.findByUsername(request.getParameter("eventID"));
+				event_network = EventDao.findByEventAndMember(Integer.valueOf(request.getParameter("eventID")) , Integer.valueOf(request.getParameter("memberID")));
 			} catch (ClassNotFoundException e1) {
 				e1.printStackTrace();
 			} catch (InstantiationException e1) {
@@ -47,21 +49,23 @@ public class EventNetworkServletDelete extends HttpServlet {
 				e1.printStackTrace();
 			}
 		
-			if(eventNetwork.getEventID()!=null){
-						System.out.println(eventNetwork);
-						request.setAttribute("eventNetwork", eventNetwork);
+			if(event_network.getEventID()!=null && event_network.getMemberID() != null){
+						System.out.println(event_network);
+						request.setAttribute("event_network", event_network);
 						request.getRequestDispatcher("/jsps/network_event/event_delete_output.jsp").forward(request, response);			
 				}
 				else{
-				request.setAttribute("msg", "eventNetwork not found");
+				request.setAttribute("event_network", "Entity not found");
 				request.getRequestDispatcher("/jsps/network_event/event_read_output.jsp").forward(request, response);
 			}
 		}
 		else if(method.equals("delete"))
 		{	
 			try {
+				System.out.println("event id from delete: " + request.getParameter("eventID"));
+				System.out.println("member id from delete: " + request.getParameter("memberID"));
 				
-				EventDao.delete(request.getParameter("eventID"));
+				EventDao.delete(Integer.valueOf(request.getParameter("eventID")) , Integer.valueOf(request.getParameter("memberID")));
 				
 			} catch (ClassNotFoundException e1) {
 				e1.printStackTrace();
@@ -70,8 +74,7 @@ public class EventNetworkServletDelete extends HttpServlet {
 			} catch (IllegalAccessException e1) {
 				e1.printStackTrace();
 			}
-			request.setAttribute("msg", "eventNetwork Deleted");
-			request.getRequestDispatcher("/jsps/network_event/event_read_output.jsp").forward(request, response);
+			response.sendRedirect( request.getContextPath() + "/jsps/main.jsp");
 		}
 	}
 	

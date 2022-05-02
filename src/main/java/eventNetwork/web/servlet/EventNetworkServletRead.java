@@ -10,6 +10,8 @@ import javax.servlet.http.HttpServletResponse;
 
 import eventNetwork.dao.EventDao;
 import eventNetwork.domain.event_network;
+//import network_event.dao.Network_eventDao;
+//import network_event.domain.Network_Event;
 
 import java.util.ArrayList;
 import java.util.Enumeration;
@@ -19,7 +21,7 @@ import java.io.PrintWriter;
 
 public class EventNetworkServletRead extends HttpServlet{
 	
-	private static final long serialVersionUID = 1L;
+private static final long serialVersionUID = 1L;
     
     /**
      * @see HttpServlet#HttpServlet()
@@ -39,25 +41,12 @@ public class EventNetworkServletRead extends HttpServlet{
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		event_network eventNetwork = null;
-		EventDao eventNetworkDao = new EventDao();
+		event_network event_network = null;
+		EventDao EventDao = new EventDao();
 		
-		Map<String,String[]> paramMap = request.getParameterMap();
-
-		event_network form = new event_network();
-		List<String> info = new ArrayList<String>();
-//		System.out.println(form);
-		for(String name : paramMap.keySet()) {
-			System.out.println("Read: " + name);
-			String[] values = paramMap.get(name);
-			info.add(values[0]);
-			
-		}
 		
-	
 		try {
-			
-			eventNetwork = eventNetworkDao.findByUsername(request.getParameter("eventID"));
+			event_network = EventDao.findByEventAndMember(Integer.valueOf(request.getParameter("eventID")) , Integer.valueOf(request.getParameter("memberID")));
 		} catch (ClassNotFoundException e1) {
 			e1.printStackTrace();
 		} catch (InstantiationException e1) {
@@ -66,18 +55,21 @@ public class EventNetworkServletRead extends HttpServlet{
 			e1.printStackTrace();
 		}
 		
-	
-		
-		if(eventNetwork.getEventID() !=null){
-					System.out.println(eventNetwork.getEventID());
-					request.setAttribute("eventNetwork", eventNetwork);
+		if(event_network.getEventID()!=null && event_network.getMemberID()!=null){
+					System.out.println("Network event in read file: " + event_network.getEventID());
+					System.out.println("title in read file: " + event_network.getEventTitle());
+					
+					
+					request.setAttribute("event_network", event_network);
 					request.getRequestDispatcher("/jsps/network_event/event_read_output.jsp").forward(request, response);
 			}
 			else{
-			request.setAttribute("msg", "eventNetwork not found");
+			request.setAttribute("msg", "network_event not found");
 			request.getRequestDispatcher("/jsps/network_event/event_read_output.jsp").forward(request, response);
 		}
 	}
 	
 
 }
+
+

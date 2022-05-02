@@ -27,6 +27,9 @@
 	Event ID   :<input type="text" name="eventID" value="${form.event_id}"/>
 	<span style="color: red; font-weight: 900">${errors.event_id }</span>
 	<br/>
+	Member ID   :<input type="text" name="memberID" value="${form.member_id}"/>
+	<span style="color: red; font-weight: 900">${errors.member_id }</span>
+	<br/>
 	
 	<input type="submit" value="Update Event"/>
 </form>
