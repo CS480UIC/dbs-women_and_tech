@@ -25,7 +25,8 @@
 		<a href="<c:url value='/jsps/learning_resource/resource_create.jsp'/>" target="_parent">Create Learning Resource</a> |&nbsp; 
 		<a href="<c:url value='/jsps/learning_resource/resource_read.jsp'/>" target="_parent">Read Learning Resource</a> |&nbsp;
 		<a href="<c:url value='/jsps/learning_resource/resource_update.jsp'/>" target="_parent">Update Learning Resource</a> |&nbsp;	 
-		<a href="<c:url value='/jsps/learning_resource/resource_delete.jsp'/>" target="_parent">Delete Learning Resource</a>	
+		<a href="<c:url value='/jsps/learning_resource/resource_delete.jsp'/>" target="_parent">Delete Learning Resource</a> |&nbsp; 	
+		<a href="<c:url value='/jsps/learning_resource/resource_quries.jsp'/>" target="_parent">List of Learning Resource</a>
 	
 	</body>
 </html>

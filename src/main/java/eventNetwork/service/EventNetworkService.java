@@ -12,9 +12,6 @@ import eventNetwork.domain.event_network;
 
 
 
-
-
-
 public class EventNetworkService {
 	
 	private EventDao eventDao = new EventDao();

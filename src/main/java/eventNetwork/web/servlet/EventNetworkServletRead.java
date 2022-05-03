@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import eventNetwork.dao.EventDao;
 import eventNetwork.domain.event_network;
-//import network_event.dao.Network_eventDao;
+
 //import network_event.domain.Network_Event;
 
 import java.util.ArrayList;
@@ -21,7 +21,7 @@ import java.io.PrintWriter;
 
 public class EventNetworkServletRead extends HttpServlet{
 	
-private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = 1L;
     
     /**
      * @see HttpServlet#HttpServlet()

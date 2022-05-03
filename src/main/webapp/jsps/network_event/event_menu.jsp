@@ -26,7 +26,7 @@
 		<a href="<c:url value='/jsps/network_event/event_read.jsp'/>" target="_parent">Read Network Event</a> |&nbsp;
 		<a href="<c:url value='/jsps/network_event/event_update.jsp'/>" target="_parent">Update Network Event</a> |&nbsp;	 
 		<a href="<c:url value='/jsps/network_event/event_delete.jsp'/>" target="_parent">Delete Network Event</a> |&nbsp;
-		<a href="<c:url value='/jsps/network_event/list_network_event.jsp'/>" target="_parent">List of Network Event</a>
+		<a href="<c:url value='/jsps/network_event/quries.jsp'/>" target="_parent">List of Network Event</a>
 	
 	</body>
 </html>

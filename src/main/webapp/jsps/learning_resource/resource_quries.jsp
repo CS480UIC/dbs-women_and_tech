@@ -5,8 +5,9 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
   <head>
+    <base href="">
     
-    <title>Read Network Event</title>
+    <title>body</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -21,23 +22,10 @@
   </head>
   
   <body>
-  <h1>Read Network Event</h1>
-<p style="color: red; font-weight: 900">${msg }</p>
-
-<form action="<c:url value='/EventNetworkServletRead'/>" method="post">
-	<input type="hidden" name="method" value="regist"/>
-	
-	Event ID    :<input type="text" name="eventID" value="${form.event_id }"/>
-	<span style="color: red; font-weight: 900">${errors.event_id }</span>
-	<br/>
-	
-	Member ID    :<input type="text" name="memberID" value="${form.member_id }"/>
-	<span style="color: red; font-weight: 900">${errors.member_id }</span>
-	<br/>
-	
-
-	<input type="submit" value="Read Network Event"/>
-</form>
+    <h1>Learning Resource Queries</h1>
+    <br>
+    <a href="<c:url value='/findLR'/>" target="body">List all the learning resource in the table</a>&nbsp;&nbsp;
+ 
+    
   </body>
 </html>
-

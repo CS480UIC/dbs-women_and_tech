@@ -23,10 +23,10 @@
   <body>
  
 <h1>Update the values below</h1>
-<form action="<c:url value='/SpecialInterestGroupServletUpdate'/>" method="post">
+<form action="<c:url value='/LearningResourceServletUpdate'/>" method="post">
 		<input type="hidden" name="method" value="update"/>
-				<input type="hidden" name="resourceID" value="${learning_resource.resource_id }"/>
-				<input type="hidden" name="memberID" value="${learning_resource.member_id  }"/>
+				<input type="hidden" name="resourceID" value="${learning_resource.resourceID }"/>
+				<input type="hidden" name="memberID" value="${learning_resource.memberID  }"/>
 				
 	Resource Title	：<input type="text" name="resourceTitle" value="${form.resource_title }"/>
 	<span style="color: red; font-weight: 900">${errors.resource_title }</span>

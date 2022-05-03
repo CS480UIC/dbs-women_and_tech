@@ -23,7 +23,8 @@
   <body>
   <h1>Read Learning Resource</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
-<form action="<c:url value='/ResourceServletRead'/>" method="post">
+
+<form action="<c:url value='/LearningResourceServletRead'/>" method="post">
 	<input type="hidden" name="method" value="regist"/>
 	
 	

@@ -22,7 +22,7 @@
   
   <body>
   <h1>Create Learning Resource</h1>
-<form action="<c:url value='/Entity1ServletCreate'/>" method="post">
+<form action="<c:url value='/LearningResourceServletCreate'/>" method="post">
 	Resource ID   : <input type="text" name="resourceID" value="${form.resource_id }"/>
 	<span style="color: red; font-weight: 900">${errors.resource_id }</span>
 	<br/>

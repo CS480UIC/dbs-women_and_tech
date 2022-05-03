@@ -1,4 +1,4 @@
-package eventNetwork.web.servlet;
+package learning_resource.web.servlet;
 
 import java.io.IOException;
 import java.util.List;
@@ -8,11 +8,11 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import eventNetwork.service.EventNetworkService;
+import learning_resource.service.LearningResourceService;
 
-public class FindAllEventNetwork extends HttpServlet{
+public class FindAllLearningResource extends HttpServlet{
 	
-	private static final long serialVersionUID = 1L;
+private static final long serialVersionUID = 1L;
     
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		doPost(request,response);
@@ -22,10 +22,10 @@ public class FindAllEventNetwork extends HttpServlet{
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		EventNetworkService enService = new EventNetworkService();
+		LearningResourceService enService = new LearningResourceService();
 		try {
 			
-			request.setAttribute("event_network_list", enService.ARUserList());
+			request.setAttribute("learning_resource_list", enService.ARUserList());
 		} catch (InstantiationException | IllegalAccessException
 				| ClassNotFoundException e) {
 			e.printStackTrace();
@@ -42,8 +42,7 @@ public class FindAllEventNetwork extends HttpServlet{
 		}
 		
 		
-		request.getRequestDispatcher("/jsps/network_event/list_network_event.jsp").forward(request, response);
+		request.getRequestDispatcher("/jsps/learning_resource/list_learning_resource.jsp").forward(request, response);
 	}
 
-	
 }

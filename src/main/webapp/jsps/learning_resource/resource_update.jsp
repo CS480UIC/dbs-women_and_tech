@@ -22,7 +22,7 @@
   
     <body>
   <h1>Update Learning Resource</h1>
-<form action="<c:url value='/Academic_resourceServletUpdate'/>" method="post">
+<form action="<c:url value='/LearningResourceServletUpdate'/>" method="post">
 	<input type="hidden" name="method" value="search"/>
 	
 	Update Resource ID :<input type="text" name="resourceID" value="${form.resource_id}"/>

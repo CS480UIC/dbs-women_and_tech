@@ -1,25 +1,23 @@
-package eventNetwork.web.servlet;
+package learning_resource.web.servlet;
 
 import java.io.IOException;
+
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-//import entity1.dao.Entity1Dao;
-//import entity1.domain.Entity1;
-import eventNetwork.dao.EventDao;
-import eventNetwork.domain.event_network;
+import learning_resource.domain.Learning_Resource;
+import learning_resource.dao.ResourceDao;
 
-
-public class EventNetworkServletDelete extends HttpServlet {
+public class LearningResourceServletDelete extends HttpServlet{
 	
-	private static final long serialVersionUID = 1L;
+private static final long serialVersionUID = 1L;
     
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public EventNetworkServletDelete() {
+    public LearningResourceServletDelete() {
         super();
     }
     
@@ -35,12 +33,12 @@ public class EventNetworkServletDelete extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String method = request.getParameter("method");
-		EventDao EventDao = new EventDao();
-		event_network event_network = null;
+		ResourceDao resourceDao = new ResourceDao();
+		Learning_Resource lr = null;
 		if(method.equals("search"))
 		{
 			try {
-				event_network = EventDao.findByEventAndMember(Integer.valueOf(request.getParameter("eventID")) , Integer.valueOf(request.getParameter("memberID")));
+				lr = resourceDao.findByResourceAndMember(Integer.valueOf(request.getParameter("resourceID")) , Integer.valueOf(request.getParameter("memberID")));
 			} catch (ClassNotFoundException e1) {
 				e1.printStackTrace();
 			} catch (InstantiationException e1) {
@@ -49,23 +47,23 @@ public class EventNetworkServletDelete extends HttpServlet {
 				e1.printStackTrace();
 			}
 		
-			if(event_network.getEventID()!=null && event_network.getMemberID() != null){
-						System.out.println(event_network);
-						request.setAttribute("event_network", event_network);
-						request.getRequestDispatcher("/jsps/network_event/event_delete_output.jsp").forward(request, response);			
+			if(lr.getResourceID()!=null && lr.getMemberID() != null){
+					
+						request.setAttribute("learning_resource", lr);
+						request.getRequestDispatcher("/jsps/learning_resource/resource_delete_output.jsp").forward(request, response);			
 				}
 				else{
-				request.setAttribute("event_network", "event_network not found");
-				request.getRequestDispatcher("/jsps/network_event/event_read_output.jsp").forward(request, response);
+				request.setAttribute("learning_resourcek", "learning_resource not found");
+				request.getRequestDispatcher("/jsps/learning_resource/resource_read_output.jsp").forward(request, response);
 			}
 		}
 		else if(method.equals("delete"))
 		{	
 			try {
-				System.out.println("event id from delete: " + request.getParameter("eventID"));
+				System.out.println("event id from delete: " + request.getParameter("resourceID"));
 				System.out.println("member id from delete: " + request.getParameter("memberID"));
 				
-				EventDao.delete(Integer.valueOf(request.getParameter("eventID")) , Integer.valueOf(request.getParameter("memberID")));
+				resourceDao.delete(Integer.valueOf(request.getParameter("resourceID")) , Integer.valueOf(request.getParameter("memberID")));
 				
 			} catch (ClassNotFoundException e1) {
 				e1.printStackTrace();
