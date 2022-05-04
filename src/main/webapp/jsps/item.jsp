@@ -22,7 +22,7 @@
   </head>
   
   <body>
-    <h1>Welcome to the Demo</h1>
+    <h1>List of Queries</h1>
     <br>
     <a href="<c:url value='/findAll'/>" target="body">list all the user in the table</a>&nbsp;
     <br>
@@ -30,7 +30,14 @@
     <a href="<c:url value='/findLRBook'/>" target="body">List all the learning resource book</a>&nbsp;
     <br>
     <br>
-    <a href="<c:url value='/findMemberEvent'/>" target="body">List Number of Member for Network Event</a>
+    <a href="<c:url value='/findMemberEvent'/>" target="body">List Number of Member for Network Event</a>&nbsp;
+    <br>
+    <br>
+    <a href="<c:url value='/findMentee'/>" target="body">List all the Mentees - Simply Query</a>&nbsp;
+    <br>
+    <br>
+    <a href="<c:url value='/findMentor'/>" target="body">List all the Mentors - Complex Query</a>&nbsp;
+    <br>
  
    
   </body>

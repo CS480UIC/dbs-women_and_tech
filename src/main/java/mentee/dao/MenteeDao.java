@@ -5,14 +5,14 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-
-
-
+import java.util.ArrayList;
+import java.util.List;
 
 //import java.util.ArrayList;
 //import java.util.List;
 
 import mentee.domain.Mentee;
+import user.domain.User;
 
 /**
  * DDL functions performed in database
@@ -117,5 +117,34 @@ public class MenteeDao {
 		} catch(SQLException e) {
 			throw new RuntimeException(e);
 		}
+	}
+
+	
+	public List<Object> findMentee() throws InstantiationException, IllegalAccessException, ClassNotFoundException{
+		List<Object> list = new ArrayList<>();
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/women_in_tech","women_and_tech", "Uic1234567!");
+			String sql = "select * from mentee where major = 'CS' order by school_name";
+			PreparedStatement preparestatement = connect.prepareStatement(sql); 
+			ResultSet resultSet = preparestatement.executeQuery();			
+			while(resultSet.next()){
+				Mentee mentee = new Mentee();
+
+				
+				mentee.setMember_id(Integer.valueOf(resultSet.getString("member_id")));
+	    		mentee.setField_of_interest(resultSet.getString("field_of_interest"));
+	    		mentee.setMajor(resultSet.getString("major"));
+	    		mentee.setSchool_name(resultSet.getString("school_name"));
+	  
+	    		
+	    		list.add(mentee);
+			 }
+			connect.close();
+		} catch(SQLException e) {
+			throw new RuntimeException(e);
+		}
+		return list;
+		
 	}
 }
