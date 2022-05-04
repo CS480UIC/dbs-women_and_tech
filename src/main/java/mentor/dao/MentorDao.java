@@ -5,14 +5,14 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-
-
-
+import java.util.ArrayList;
+import java.util.List;
 
 //import java.util.ArrayList;
 //import java.util.List;
 
 import mentor.domain.Mentor;
+import user.domain.User;
 
 /**
  * DDL functions performed in database
@@ -111,5 +111,34 @@ public class MentorDao {
 		} catch(SQLException e) {
 			throw new RuntimeException(e);
 		}
+	}
+
+	public List<Object> findMentor() throws InstantiationException, IllegalAccessException, ClassNotFoundException{
+		List<Object> list = new ArrayList<>();
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/women_in_tech","women_and_tech", "Uic1234567!");
+			String sql = "select * from mentor where years_of_mentoring > (select avg(years_of_mentoring) from mentor)";
+			
+			PreparedStatement preparestatement = connect.prepareStatement(sql); 
+			ResultSet resultSet = preparestatement.executeQuery();			
+			while(resultSet.next()){
+				Mentor mentor = new Mentor();
+
+
+				mentor.setMember_id(Integer.valueOf( resultSet.getString("member_id")));
+	    		mentor.setYears_in_industry(Integer.valueOf( resultSet.getString("years_in_industry")));
+	    		mentor.setRole_in_industry( resultSet.getString("role_in_industry"));
+	    		mentor.setYears_of_mentoring(Integer.valueOf( resultSet.getString("years_of_mentoring")));
+				System.out.println(mentor);
+	    		
+	    		list.add(mentor);
+			 }
+			connect.close();
+		} catch(SQLException e) {
+			throw new RuntimeException(e);
+		}
+		return list;
+		
 	}
 }

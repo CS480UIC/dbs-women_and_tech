@@ -1,6 +1,8 @@
 package mentee.service;
 
 
+import java.util.List;
+
 import mentee.dao.MenteeDao;
 import mentee.domain.Mentee;
 
@@ -25,6 +27,11 @@ public class MenteeService {
 		Mentee mentee = MenteeDao.findBymember_id(form.getMember_id());
 		if(mentee.getMember_id()!=null && mentee.getMember_id().equals(form.getMember_id())) throw new MenteeException("This mentee member ID has been registered!");
 		menteeDao.add(form);
+	}
+	
+	public List<Object> findMentee() throws InstantiationException, IllegalAccessException, ClassNotFoundException{
+		return menteeDao.findMentee();
+		
 	}
 	/**
 	 * Login function

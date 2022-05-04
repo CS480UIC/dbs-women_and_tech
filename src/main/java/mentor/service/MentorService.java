@@ -1,6 +1,8 @@
 package mentor.service;
 
 
+import java.util.List;
+
 import mentor.dao.MentorDao;
 import mentor.domain.Mentor;
 
@@ -25,5 +27,10 @@ public class MentorService {
 		Mentor mentor = MentorDao.findByMember_id(form.getMember_id());
 		if(mentor.getMember_id()!=null && mentor.getMember_id().equals(form.getMember_id())) throw new MentorException("This mentor has been registered!");
 		mentorDao.add(form);
+	}
+	
+	public List<Object> findMentor() throws InstantiationException, IllegalAccessException, ClassNotFoundException{
+		return mentorDao.findMentor();
+		
 	}
 }
