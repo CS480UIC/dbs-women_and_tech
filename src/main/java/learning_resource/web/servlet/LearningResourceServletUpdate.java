@@ -1,9 +1,8 @@
-package eventNetwork.web.servlet;
+package learning_resource.web.servlet;
 
 import java.io.IOException;
 import java.sql.Date;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 
@@ -12,17 +11,17 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import eventNetwork.dao.EventDao;
-import eventNetwork.domain.event_network;
+import learning_resource.domain.Learning_Resource;
+import learning_resource.dao.ResourceDao;
 
-public class EventNetworkServletUpdate extends HttpServlet{
+public class LearningResourceServletUpdate extends HttpServlet{
 	
 	private static final long serialVersionUID = 1L;
 
 	/**
 	 * @see HttpServlet#HttpServlet()
 	 */
-	public EventNetworkServletUpdate() {
+	public LearningResourceServletUpdate() {
 		super();
 	}
 
@@ -39,13 +38,13 @@ public class EventNetworkServletUpdate extends HttpServlet{
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
 		String method = request.getParameter("method");
-		EventDao EventDao = new EventDao();
-		event_network eventNetwork = null;
+		ResourceDao resourceDao = new ResourceDao();
+		Learning_Resource lr = null;
 
 		if(method.equals("search"))
 		{
 			try {
-				eventNetwork = EventDao.findByEventAndMember(Integer.valueOf(request.getParameter("eventID")) , Integer.valueOf(request.getParameter("memberID")));
+				lr = resourceDao.findByResourceAndMember(Integer.valueOf(request.getParameter("resourceID")) , Integer.valueOf(request.getParameter("memberID")));
 			} catch (ClassNotFoundException e1) {
 				e1.printStackTrace();
 			} catch (InstantiationException e1) {
@@ -54,20 +53,20 @@ public class EventNetworkServletUpdate extends HttpServlet{
 				e1.printStackTrace();
 			}
 
-			if(eventNetwork.getEventID()!=null && eventNetwork.getMemberID() != null){
-				request.setAttribute("event_network", eventNetwork);
-				request.getRequestDispatcher("/jsps/network_event/event_update_output.jsp").forward(request, response);
+			if(lr.getResourceID()!=null && lr.getMemberID() != null){
+				request.setAttribute("learning_resource", lr);
+				request.getRequestDispatcher("/jsps/learning_resource/resource_update_output.jsp").forward(request, response);
 
 			}
 			else{
-				request.setAttribute("msg", "eventNetwork not found");
-				request.getRequestDispatcher("/jsps/network_event/event_update_output.jsp").forward(request, response);
+				request.setAttribute("msg", "learning_resource not found");
+				request.getRequestDispatcher("/jsps/learning_resource/resource_update_output.jsp").forward(request, response);
 			}
 		}
 		else if(method.equals("update"))
 		{
 			Map<String,String[]> paramMap = request.getParameterMap();
-			event_network form = new event_network();
+			Learning_Resource form = new Learning_Resource();
 			List<String> info = new ArrayList<String>();
 
 			for(String name : paramMap.keySet()) {
@@ -77,22 +76,21 @@ public class EventNetworkServletUpdate extends HttpServlet{
 				
 			}
 			
-			System.out.println("position: " + info.get(3));
 			
-			System.out.println("show event id: " + Integer.valueOf(request.getParameter("eventID")));
-			System.out.println("show member id: " + Integer.valueOf(request.getParameter("memberID")));
-			
-			form.setEventID(Integer.valueOf(request.getParameter("eventID")));
+			form.setResourceID(Integer.valueOf(request.getParameter("resourceID")));
 			form.setMemberID(Integer.valueOf(request.getParameter("memberID")));
-
-			form.setEventTitle(info.get(3));	
-			form.setEventAddress(info.get(4));
-			form.setEventDate(Date.valueOf(info.get(5)) );
+			form.setResourceTitle(info.get(3));	
+			form.setResourceType(info.get(4));
+			form.setAuthor(info.get(5));		
+			form.setPublisher(info.get(6));
+			form.setPublishYear(Integer.valueOf(info.get(7)));
+			form.setLanguage(info.get(8));
+			
 
 			try {
-				EventDao.update(form);
-				request.setAttribute("event_network", eventNetwork);
-				request.getRequestDispatcher("/jsps/network_event/event_read_output.jsp").forward(request, response);
+				resourceDao.update(form);
+				request.setAttribute("learning_resource", lr);
+				request.getRequestDispatcher("/jsps/learning_resource/resource_read_output.jsp").forward(request, response);
 
 			} catch (ClassNotFoundException e1) {
 				e1.printStackTrace();

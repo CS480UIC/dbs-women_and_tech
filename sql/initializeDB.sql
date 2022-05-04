@@ -29,7 +29,7 @@ CREATE TABLE `learning_resource` (
   `resource_type` varchar(100) NOT NULL,
   `author` varchar(100) NOT NULL,
   `publisher` varchar(100) DEFAULT NULL,
-  `publish_year` datetime NOT NULL,
+  `publish_year` date NOT NULL,
   `resource_language` varchar(100) NOT NULL,
   PRIMARY KEY (`resource_id`),
   KEY `member_id` (`member_id`),
@@ -174,7 +174,7 @@ CREATE TABLE `network_event` (
   `member_id` tinyint unsigned NOT NULL,
   `event_title` varchar(200) NOT NULL,
   `event_address` varchar(200) NOT NULL,
-  `event_date` datetime NOT NULL,
+  `event_date` date NOT NULL,
   PRIMARY KEY (`event_id`),
   KEY `member_id` (`member_id`),
   CONSTRAINT `network_event_ibfk_1` FOREIGN KEY (`member_id`) REFERENCES `member_user` (`member_id`) ON DELETE CASCADE ON UPDATE CASCADE

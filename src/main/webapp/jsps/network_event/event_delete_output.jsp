@@ -24,21 +24,22 @@
 	<h1>Delete Network Event</h1>
 	<p style="color: red; font-weight: 900">${msg }</p>
 	<form action="<c:url value='/EventNetworkServletDelete'/>" method="post">
-		<input type="hidden" name="method" value="delete" /> <input
-			type="hidden" name="event_id" value="${eventNetwork.eventID }" />
-	event_id    :<input type="text" name="event_id" value="${eventNetwork.member_id }" disabled/>
+		<input type="hidden" name="method" value="delete" /> 
+		<input type="hidden" name="eventID" value="${event_network.eventID }" />
+		<input type="hidden" name="memberID" value="${event_network.memberID }" />
+		
+	Event ID    :<input type="text" name="eventID" value="${event_network.eventID }" disabled/>
 	<br/>
 	
-	member_id：<input type="text" name="member_id" value="${eventNetwork.member_id }" disabled/>
+	Member ID：<input type="text" name="memberID" value="${event_network.memberID }" disabled/>
 	<br/>
 	
-	event_title	：<input type="text" name="event_title" value="${eventNetwork.event_title }" disabled/>
+	Event Title ：<input type="text" name="eventTitle" value="${event_network.eventTitle }" disabled/>
 	<br/>
 	
-	event_address：<input type="text" name="event_address" value="${eventNetwork.event_address }" disabled/>
-	<br/>
+	Event Address：<input type="text" name="eventAddress" value="${event_network.eventAddress }" disabled/>
 	
-	event_date	：<input type="date" name="event_date" value="${eventNetwork.event_date }" disabled/>
+	Event Date	：<input type="date" name="eventDate" value="${event_network.eventDate }" disabled/>
 	<br/>
 	<input type="submit" value="Delete Event"/>
 	</form>

@@ -23,13 +23,20 @@
   <body>
   <h1>Read Learning Resource</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
-<form action="<c:url value='/ResourceServletRead'/>" method="post">
+
+<form action="<c:url value='/LearningResourceServletRead'/>" method="post">
 	<input type="hidden" name="method" value="regist"/>
-	Resource ID    :<input type="text" name="resourceID" value="${form.resourceID }"/>
-	<span style="color: red; font-weight: 900">${errors.resourceID  }</span>
+	
+	
+	Resource ID    :<input type="text" name="resourceID" value="${form.resource_id }"/>
+	<span style="color: red; font-weight: 900">${errors.resource_id  }</span>
+	<br/>
+	
+	Member ID    :<input type="text" name="memberID" value="${form.member_id }"/>
+	<span style="color: red; font-weight: 900">${errors.member_id  }</span>
 	<br/>
 
-	<input type="submit" value="Read Resource"/>
+	<input type="submit" value="Read Learning Resource"/>
 </form>
   </body>
 </html>

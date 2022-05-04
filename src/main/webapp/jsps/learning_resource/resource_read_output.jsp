@@ -26,7 +26,7 @@
 <form>
 	Resource ID   : <input type="text" name="resourceID" value="${learning_resource.resourceID }" disabled/>
 	<br/>
-	Member ID：<input type="password" name="memberID" value="${learning_resource.memberID }" disabled/>
+	Member ID：<input type="text" name="memberID" value="${learning_resource.memberID }" disabled/>
 	<br/>
 	Resource Title	：<input type="text" name="resourceTitle" value="${learning_resource.resourceTitle }" disabled/>
 	<br/>
@@ -38,7 +38,7 @@
 	<br/>
 	Publish Year	：<input type="text" name="publishYear" value="${learning_resource.publishYear}" disabled/>
 	<br/>
-	Language	：<input type="text" name="language" value="${learning_resource.language }" disabled/>
+	Language	：<input type="text" name="language" value="${learning_resource.language}" disabled/>
 	<br/>
 </form>
 

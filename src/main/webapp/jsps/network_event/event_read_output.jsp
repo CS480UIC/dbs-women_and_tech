@@ -24,15 +24,15 @@
   <h1>Read Network Event</h1>
 <p style="color: red; font-weight: 900">${msg}</p>
 <form>
-	Event ID    		:<input type="text" name="event_id" value="${eventNetwork.event_id}"/>
+	Event ID    :<input type="number" name="eventID" value="${event_network.eventID}" disabled/>
 	<br/>
-	Member ID 		：<input type="text" name="member_id" value="${eventNetwork.member_id}"/>
+	Member ID ：<input type="number" name="memberID" value="${event_network.memberID }" disabled/>
 	<br/>
-	Event Title 		：<input type="text" name="event_title" value="${eventNetwork.event_title }"/>
+	Event Title	：<input type="text" name="eventTitle" value="${event_network.eventTitle }" disabled/>
 	<br/>
-	Event Address ：<input type="text" name="event_address" value="${eventNetwork.event_address}"/>
+	Event Address ：<input type="text" name="eventAddress" value="${event_network.eventAddress }" disabled/>
 	<br/>
-	Event Date	：<input type="date" name="event_date" value="${eventNetwork.event_date}"/>
+	Event Date	：<input type="date" name="eventDate" value="${event_network.eventDate }" disabled/>
 	<br/>
 </form>
 

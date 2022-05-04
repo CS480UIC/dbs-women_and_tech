@@ -99,6 +99,52 @@
   
   <servlet>
     <description></description>
+    <display-name>LearningResourceServletCreate</display-name>
+    <servlet-name>LearningResourceServletCreate</servlet-name>
+    <servlet-class>learning_resource.web.servlet.LearningResourceServletCreate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LearningResourceServletCreate</servlet-name>
+    <url-pattern>/LearningResourceServletCreate</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description></description>
+    <display-name>LearningResourceServletRead</display-name>
+    <servlet-name>LearningResourceServletRead</servlet-name>
+    <servlet-class>learning_resource.web.servlet.LearningResourceServletRead</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LearningResourceServletRead</servlet-name>
+    <url-pattern>/LearningResourceServletRead</url-pattern>
+  </servlet-mapping>
+  
+  
+  <servlet>
+    <description></description>
+    <display-name>LearningResourceServletUpdate</display-name>
+    <servlet-name>LearningResourceServletUpdate</servlet-name>
+    <servlet-class>learning_resource.web.servlet.LearningResourceServletUpdate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LearningResourceServletUpdate</servlet-name>
+    <url-pattern>/LearningResourceServletUpdate</url-pattern>
+  </servlet-mapping>
+  
+  
+  <servlet>
+    <description></description>
+    <display-name>LearningResourceServletDelete</display-name>
+    <servlet-name>LearningResourceServletDelete</servlet-name>
+    <servlet-class>learning_resource.web.servlet.LearningResourceServletDelete</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LearningResourceServletDelete</servlet-name>
+    <url-pattern>/LearningResourceServletDelete</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description></description>
     <display-name>UserServletRegister</display-name>
     <servlet-name>UserServletRegister</servlet-name>
     <servlet-class>user.web.servlet.UserServletRegister</servlet-class>
@@ -141,6 +187,55 @@
   <servlet-mapping>
     <servlet-name>UserServletLogout</servlet-name>
     <url-pattern>/UserServletLogout</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description></description>
+    <display-name>findARUser</display-name>
+    <servlet-name>findARUser</servlet-name>
+    
+    <servlet-class>eventNetwork.web.servlet.FindAllEventNetwork</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>findARUser</servlet-name>
+    <url-pattern>/findARUser</url-pattern>
+  </servlet-mapping>
+  
+   <servlet>
+    <description></description>
+    <display-name>findLR</display-name>
+    <servlet-name>findLR</servlet-name>
+    
+    <servlet-class>learning_resource.web.servlet.FindAllLearningResource</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>findLR</servlet-name>
+    <url-pattern>/findLR</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description></description>
+    <display-name>findLRBook</display-name>
+    <servlet-name>findLRBook</servlet-name>
+    
+    <servlet-class>learning_resource.web.servlet.FindBook</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>findLRBook</servlet-name>
+    <url-pattern>/findLRBook</url-pattern>
+  </servlet-mapping>
+  
+  
+  <servlet>
+    <description></description>
+    <display-name>findMemberEvent</display-name>
+    <servlet-name>findMemberEvent</servlet-name>
+    
+    <servlet-class>eventNetwork.web.servlet.FindMemberEvent</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>findMemberEvent</servlet-name>
+    <url-pattern>/findMemberEvent</url-pattern>
   </servlet-mapping>
   
   

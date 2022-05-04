@@ -22,14 +22,22 @@
   
   <body>
   <h1>Read Network Event</h1>
-<p style="color: red; font-weight: 900">${msg}</p>
+<p style="color: red; font-weight: 900">${msg }</p>
+
 <form action="<c:url value='/EventNetworkServletRead'/>" method="post">
 	<input type="hidden" name="method" value="regist"/>
-	event_id    :<input type="text" name="event_id " value="${form.event_id}"/>
-	<span style="color: red; font-weight: 900">${errors.event_id}</span>
+	
+	Event ID    :<input type="text" name="eventID" value="${form.event_id }"/>
+	<span style="color: red; font-weight: 900">${errors.event_id }</span>
 	<br/>
+	
+	Member ID    :<input type="text" name="memberID" value="${form.member_id }"/>
+	<span style="color: red; font-weight: 900">${errors.member_id }</span>
+	<br/>
+	
 
-	<input type="submit" value="Read Event"/>
+	<input type="submit" value="Read Network Event"/>
 </form>
   </body>
 </html>
+

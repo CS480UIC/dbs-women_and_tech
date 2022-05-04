@@ -21,20 +21,21 @@
   </head>
   
   <body>
-  <h1>Update Network Event</h1>
+ <!--  <h1>Update Network Event</h1> -->
 <p style="color: red; font-weight: 900">${msg }</p>
-<form>
-	Event ID    	:<input type="text" name="eventID" value="${eventNetwork.event_id }" disabled/>
-	<br/>
 
-</form>
 <h1>Update the values below</h1>
 <form action="<c:url value='/EventNetworkServletUpdate'/>" method="post">
 		<input type="hidden" name="method" value="update"/>
-				<input type="hidden" name="eventID" value="${eventNetwork.event_id }"/>
+				<input type="hidden" name="eventID" value="${event_network.eventID }"/>
+				<input type="hidden" name="memberID" value="${event_network.memberID }"/>
+				
+	<%-- Event ID	：<input type="text" name="eventID" value="${form.event_id }"/>
+	<span style="color: red; font-weight: 900">${errors.event_id }</span>
+	<br/>			
 	Member ID	：<input type="text" name="memberID" value="${form.member_id }"/>
 	<span style="color: red; font-weight: 900">${errors.member_id }</span>
-	<br/>	
+	<br/> --%>
 	Event Title	：<input type="text" name="eventTitle" value="${form.event_title}"/>
 	<span style="color: red; font-weight: 900">${errors.event_title}</span>
 	<br/>
@@ -49,3 +50,5 @@
 
 </body>
 </html>
+
+
