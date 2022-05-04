@@ -1,4 +1,4 @@
-package entity1.dao;
+package mentee.dao;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -12,57 +12,65 @@ import java.sql.SQLException;
 //import java.util.ArrayList;
 //import java.util.List;
 
-import entity1.domain.Entity1;
+import mentee.domain.Mentee;
 
 /**
  * DDL functions performed in database
  */
-public class Entity1Dao {
+public class MenteeDao {
 
-	public static Entity1 findByUsername(String username) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
-		Entity1 entity1 = new Entity1();
+	public static Mentee findBymember_id(Integer member_id_p) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
+		Mentee mentee = new Mentee();
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/women_in_tech","women_and_tech", "Uic1234567!");
-		    String sql = "select * from entity1 where username=?";
+		    String sql = "select * from mentee where member_id=?";
 		    PreparedStatement preparestatement = connect.prepareStatement(sql); 
-		    preparestatement.setString(1,username);
+		    preparestatement.setInt(1,member_id_p);
 		    ResultSet resultSet = preparestatement.executeQuery();
 		    //ResultSet resultSet  = preparestatement.executeUpdate();
 		    while(resultSet.next()){
-		    	String user_name = resultSet.getString("username");
-		    	if(user_name.equals(username)){
-		    		entity1.setUsername(resultSet.getString("username"));
-		    		entity1.setPassword(resultSet.getString("password"));
-		    		entity1.setEmail(resultSet.getString("email"));		
+		    	Integer member_id = Integer.parseInt(resultSet.getString("member_id"));
+		    	if(member_id.equals(member_id_p)){
+		    		mentee.setMember_id(resultSet.getInt("member_id"));
+		    		mentee.setField_of_interest(resultSet.getString("field_of_interest"));
+		    		mentee.setMajor(resultSet.getString("major"));
+		    		mentee.setSchool_name(resultSet.getString("school_name"));
+		    		
 		    	}
 		    }
 		    connect.close();
 		} catch(SQLException e) {
 			throw new RuntimeException(e);
 		}
-		return entity1;
+		return mentee;
 	}	
 	
 	/**
-	 * insert Entity1
+	 * insert mentee
 	 * @param form
 	 * @throws ClassNotFoundException 
 	 * @throws IllegalAccessException 
 	 * @throws InstantiationException 
 	 */
 	
-	public void add(Entity1 form) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
-		System.out.println("We are here");
+	public void add(Mentee form) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/women_in_tech","women_and_tech", "Uic1234567!");
 			
-			String sql = "insert into entity1 values(?,?,?)";
+			String sql = "insert into mentee values(?,?,?,?)";
 			PreparedStatement preparestatement = connect.prepareStatement(sql); 
-		    preparestatement.setString(1,form.getUsername());
-		    preparestatement.setString(2,form.getPassword());
-		    preparestatement.setString(3,form.getEmail());
+			
+			System.out.println(form.getMember_id());
+			System.out.println(form.getField_of_interest());
+			System.out.println(form.getMajor());
+			System.out.println(form.getSchool_name());
+				
+		    preparestatement.setInt(1,form.getMember_id());
+		    preparestatement.setString(2,form.getField_of_interest());
+		    preparestatement.setString(3,form.getMajor());
+		    preparestatement.setString(4,form.getSchool_name());
 		    preparestatement.executeUpdate();
 		    connect.close();
 		} catch(SQLException e) {
@@ -71,20 +79,21 @@ public class Entity1Dao {
 	}
 	
 	
-	public void update(Entity1 form) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
-		System.out.println("Now going to update");
-		System.out.println(form);
+	public void update(Mentee form) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
+
 
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/women_in_tech","women_and_tech", "Uic1234567!");
 			
-			String sql = "UPDATE entity1 SET password = ?, email = ? where username = ?;";
+			String sql = "UPDATE mentee SET field_of_interest = ?, major = ?, school_name = ? where member_id = ?;";
 			System.out.println("Update Executed");
 			PreparedStatement preparestatement = connect.prepareStatement(sql); 
-		    preparestatement.setString(1,form.getPassword());
-			preparestatement.setString(2,form.getEmail());
-		    preparestatement.setString(3,form.getUsername());
+			
+		    preparestatement.setString(1,form.getField_of_interest());
+		    preparestatement.setString(2,form.getMajor());
+		    preparestatement.setString(3,form.getSchool_name());
+		    preparestatement.setInt(4,form.getMember_id());
 		    preparestatement.executeUpdate();
 		    connect.close();
 		} catch(SQLException e) {
@@ -92,18 +101,17 @@ public class Entity1Dao {
 		}
 	}
 	
-	
-	public void delete(String username) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
+//	
+	public void delete(Integer member_id) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
 		System.out.println("Now going to delete");
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/women_in_tech","women_and_tech", "Uic1234567!");
 			
-			String sql = "delete from entity1 where username = ?";
-			System.out.println(username);
-			System.out.println("Delete Executed");
+			String sql = "delete from mentee where member_id = ?";
+
 			PreparedStatement preparestatement = connect.prepareStatement(sql); 
-		    preparestatement.setString(1,username);
+		    preparestatement.setInt(1, Integer.valueOf(member_id));
 		    preparestatement.executeUpdate();
 		    connect.close();
 		} catch(SQLException e) {

@@ -6,7 +6,7 @@
 <html>
   <head>
     
-    <title>Read Entity Output</title>
+    <title>Read Mentee Output</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -21,15 +21,22 @@
   </head>
   
   <body>
-  <h1>Read Entity Output</h1>
+  <h1>Read Mentee Output</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
 <form>
-	User    :<input type="text" name="username" value="${entity1.username }" disabled/>
+	
+	member_id:<input type=text name="member_id" value="${mentee.member_id}" disabled/>
 	<br/>
-	Password：<input type="text" name="password" value="${entity1.password }" disabled/>
+	field_of_interest：<input type="text" name="field_of_interest" value="${mentee.field_of_interest}" disabled/>
 	<br/>
-	Email	：<input type="text" name="email" value="${entity1.email }" disabled/>
+	major：<input type="text" name="major" value="${mentee.major}" disabled/>
+
 	<br/>
+	school_name：<input type="text" name="school_name" value="${mentee.school_name}" disabled/>
+	<br/>
+
+	
+	
 </form>
 
 <button onclick="window.location.href='<c:url value='/jsps/main.jsp'/>'">Continue</button>

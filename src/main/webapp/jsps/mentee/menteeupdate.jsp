@@ -22,22 +22,10 @@
   
   <body>
   <h1>Update mentee</h1>
-<form action="<c:url value='/Entity1ServletUpdate'/>" method="post">
+<form action="<c:url value='/MenteeServletUpdate'/>" method="post">
 	<input type="hidden" name="method" value="search"/>
 	member_id:<input type="text" name="member_id" value="${form.member_id }"/>
 	<span style="color: red; font-weight: 900">${errors.member_id }</span>
-	<br/>
-	field_of_interest：<input type="text" name="field_of_interest" value="${form.field_of_interest }"/>
-	<span style="color: red; font-weight: 900">${errors.field_of_interest }</span>
-	<br/>
-	 mentor_id：<input type="text" name="mentor_id" value="${form.mentor_id }"/>
-	<span style="color: red; font-weight: 900">${errors.mentor_id }</span>
-	<br/>
-	major：<input type="text" name="major" value="${form.major }"/>
-	<span style="color: red; font-weight: 900">${errors.major }</span>
-	<br/>
-	school_name：<input type="text" name="school_name" value="${form.school_name }"/>
-	<span style="color: red; font-weight: 900">${errors.school_name }</span>
 	<br/>
 	<input type="submit" value="Update mentee"/>
 </form>
