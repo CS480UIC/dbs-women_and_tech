@@ -213,6 +213,31 @@
     <url-pattern>/findLR</url-pattern>
   </servlet-mapping>
   
+  <servlet>
+    <description></description>
+    <display-name>findLRBook</display-name>
+    <servlet-name>findLRBook</servlet-name>
+    
+    <servlet-class>learning_resource.web.servlet.FindBook</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>findLRBook</servlet-name>
+    <url-pattern>/findLRBook</url-pattern>
+  </servlet-mapping>
+  
+  
+  <servlet>
+    <description></description>
+    <display-name>findMemberEvent</display-name>
+    <servlet-name>findMemberEvent</servlet-name>
+    
+    <servlet-class>eventNetwork.web.servlet.FindMemberEvent</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>findMemberEvent</servlet-name>
+    <url-pattern>/findMemberEvent</url-pattern>
+  </servlet-mapping>
+  
   
   <servlet>
     <description></description>

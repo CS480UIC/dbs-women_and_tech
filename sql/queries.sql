@@ -73,10 +73,6 @@ where scholarship_amount > (
 ) -- check if the scholarship description contasins the words 'bootcamp'
 ;
 
-select *
-from learning_resource C
-where exists
-	(select *
-    from network_event
-    where event_id = C.resource_id
-    );
+select event_id, count(member_id) as num_member
+from network_event
+group by event_id

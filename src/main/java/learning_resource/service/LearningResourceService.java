@@ -21,5 +21,10 @@ private ResourceDao resourceDao = new ResourceDao();
 		return resourceDao.findall();
 		
 	}
+	
+	public List<Object> BookList() throws InstantiationException, IllegalAccessException, ClassNotFoundException{
+		return resourceDao.findBook();
+		
+	}
 
 }

@@ -29,4 +29,9 @@ public class EventNetworkService {
 		
 	}
 	
+	public List<Object> memberEventList() throws InstantiationException, IllegalAccessException, ClassNotFoundException{
+		return eventDao.findMemberPerEvent();
+		
+	}
+	
 }

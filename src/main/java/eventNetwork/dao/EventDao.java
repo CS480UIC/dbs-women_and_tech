@@ -179,6 +179,8 @@ private String MySQL_user = "womenTech"; //TODO change user
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/women_in_tech", MySQL_user, MySQL_password);
 			String sql = "select * from network_event";
+			
+		
 			PreparedStatement preparestatement = connect.prepareStatement(sql); 
 			ResultSet resultSet = preparestatement.executeQuery();			
 			while(resultSet.next()){
@@ -195,6 +197,38 @@ private String MySQL_user = "womenTech"; //TODO change user
 			 }
 			
 			System.out.println("Number of Network Event: " + list.size());
+			
+			connect.close();
+		} catch(SQLException e) {
+			throw new RuntimeException(e);
+		}
+		return list;
+		
+	}
+	
+	public List<Object> findMemberPerEvent() throws InstantiationException, IllegalAccessException, ClassNotFoundException{
+		List<Object> list = new ArrayList<>();
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/women_in_tech", MySQL_user, MySQL_password);
+			
+			
+			String sql = "select event_id, count(member_id) as num_member from network_event group by event_id";
+					
+			PreparedStatement preparestatement = connect.prepareStatement(sql); 
+			ResultSet resultSet = preparestatement.executeQuery();			
+			while(resultSet.next()){
+				event_network network_Event = new event_network();
+
+	    		
+	    		network_Event.setEventID(resultSet.getInt("event_id"));
+	    		network_Event.setMemberID(resultSet.getInt("num_member"));
+	
+	    		
+	    		list.add(network_Event);
+			 }
+			
+			System.out.println("Number of Member in Network Event: " + list.size());
 			
 			connect.close();
 		} catch(SQLException e) {

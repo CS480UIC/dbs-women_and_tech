@@ -8,23 +8,19 @@
 
 </head>
 <body>
-	<h3 align="center"> Network Event Table </h3>
+	<h3 align="center"> Number of Member per Network Event Table </h3>
 	<table border="1" width="70%" align="center">
 	<tr>
-		<th>event_id</th>
-		<th>member_id</th>
-		<th>event_title</th>
-		<th>event_address</th>
-		<th>event_date</th>
+		<th>Event ID</th>
+		<th>Number of Member</th>
+
 	
 	</tr>
-<c:forEach items="${event_network_list}" var="line">
+<c:forEach items="${member_event_network_list}" var="line">
 	<tr>
 		<td>${line.eventID}</td>
 		<td>${line.memberID}</td>
- 		<td>${line.eventTitle}</td>
-		<td>${line.eventAddress}</td>
-		<td>${line.eventDate}</td> 
+ 	
 	
 	</tr>
 </c:forEach>

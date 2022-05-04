@@ -24,8 +24,14 @@
   <body>
     <h1>Welcome to the Demo</h1>
     <br>
-    <a href="<c:url value='/findAll'/>" target="body">Please list all the user in the table</a>&nbsp;&nbsp;
+    <a href="<c:url value='/findAll'/>" target="body">list all the user in the table</a>&nbsp;
+    <br>
+    <br>
+    <a href="<c:url value='/findLRBook'/>" target="body">List all the learning resource book</a>&nbsp;
+    <br>
+    <br>
+    <a href="<c:url value='/findMemberEvent'/>" target="body">List Number of Member for Network Event</a>
  
-    
+   
   </body>
 </html>

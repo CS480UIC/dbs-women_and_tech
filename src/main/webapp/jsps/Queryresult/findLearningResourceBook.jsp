@@ -8,23 +8,29 @@
 
 </head>
 <body>
-	<h3 align="center"> Network Event Table </h3>
+	<h3 align="center"> Learning Resource Book Table </h3>
 	<table border="1" width="70%" align="center">
 	<tr>
-		<th>event_id</th>
-		<th>member_id</th>
-		<th>event_title</th>
-		<th>event_address</th>
-		<th>event_date</th>
+		<th>Resource ID</th>
+		<th>Member ID</th>
+		<th>Title</th>
+		<th>Type</th>
+		<th>Author</th>
+		<th>Publisher</th>
+		<th>Publish Year</th>
+		<th>Language</th>
 	
 	</tr>
-<c:forEach items="${event_network_list}" var="line">
+<c:forEach items="${book_list}" var="line">
 	<tr>
-		<td>${line.eventID}</td>
+		<td>${line.resourceID}</td>
 		<td>${line.memberID}</td>
- 		<td>${line.eventTitle}</td>
-		<td>${line.eventAddress}</td>
-		<td>${line.eventDate}</td> 
+		<td>${line.resourceTitle}</td>
+		<td>${line.resourceType}</td>
+		<td>${line.author}</td>
+		<td>${line.publisher}</td>
+		<td>${line.publishYear}</td>
+		<td>${line.language}</td>
 	
 	</tr>
 </c:forEach>

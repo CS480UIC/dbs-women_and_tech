@@ -212,5 +212,44 @@ private String MySQL_user = "womenTech"; //TODO change user
 		return list;
 		
 	}
+	
+	
+	public List<Object> findBook() throws InstantiationException, IllegalAccessException, ClassNotFoundException{
+		List<Object> list = new ArrayList<>();
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/women_in_tech", MySQL_user, MySQL_password);
+			String sql = "select * from learning_resource where resource_type = 'Book' order by member_id";
+
+			PreparedStatement preparestatement = connect.prepareStatement(sql); 
+			ResultSet resultSet = preparestatement.executeQuery();			
+			
+//			preparestatement.setString(1,"Book");
+			
+			while(resultSet.next()){
+				Learning_Resource Learning_Resource = new Learning_Resource();
+
+	    
+	    		Learning_Resource.setResourceID(resultSet.getInt("resource_id"));
+	    		Learning_Resource.setMemberID(resultSet.getInt("member_id"));
+	    		Learning_Resource.setResourceTitle(resultSet.getString("resource_title"));	
+	    		Learning_Resource.setResourceType(resultSet.getString("resource_type"));
+	    		Learning_Resource.setAuthor(resultSet.getString("author"));		
+	    		Learning_Resource.setPublisher(resultSet.getString("publisher"));
+	    		Learning_Resource.setPublishYear(resultSet.getInt("publish_year"));
+	    		Learning_Resource.setLanguage(resultSet.getString("resource_language"));
+	    		
+	    		list.add(Learning_Resource);
+			 }
+			
+			System.out.println("Learning Resource is book: " + list.size());
+			
+			connect.close();
+		} catch(SQLException e) {
+			throw new RuntimeException(e);
+		}
+		return list;
+		
+	}
 
 }
