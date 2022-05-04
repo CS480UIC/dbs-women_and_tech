@@ -12,26 +12,24 @@
 	<table border="1" width="70%" align="center">
 	<tr>
 		<th>Resource ID</th>
-		<th>Member ID</th>
+		<th>First Name</th>
+		<th>Last Name</th>
 		<th>Title</th>
 		<th>Type</th>
-		<th>Author</th>
-		<th>Publisher</th>
-		<th>Publish Year</th>
-		<th>Language</th>
+		<th>Member Education Level</th>
+	
 	
 	</tr>
 <c:forEach items="${learning_resource_list}" var="line">
 	<tr>
 		<td>${line.resourceID}</td>
-		<td>${line.memberID}</td>
+
 		<td>${line.resourceTitle}</td>
 		<td>${line.resourceType}</td>
 		<td>${line.author}</td>
-		
 		<td>${line.publisher}</td>
-		<td>${line.publishYear}</td>
 		<td>${line.language}</td>
+
 	
 	</tr>
 </c:forEach>

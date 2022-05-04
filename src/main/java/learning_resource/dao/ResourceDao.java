@@ -184,7 +184,9 @@ private String MySQL_user = "womenTech"; //TODO change user
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/women_in_tech", MySQL_user, MySQL_password);
-			String sql = "select * from learning_resource";
+			String sql = "select resource_id, first_name, last_name, resource_title , resource_type, education_level from  learning_resource a left join member_user b on a.member_id = b.member_id";
+			
+			
 			PreparedStatement preparestatement = connect.prepareStatement(sql); 
 			ResultSet resultSet = preparestatement.executeQuery();			
 			while(resultSet.next()){
@@ -192,13 +194,12 @@ private String MySQL_user = "womenTech"; //TODO change user
 
 	    
 	    		Learning_Resource.setResourceID(resultSet.getInt("resource_id"));
-	    		Learning_Resource.setMemberID(resultSet.getInt("member_id"));
-	    		Learning_Resource.setResourceTitle(resultSet.getString("resource_title"));	
-	    		Learning_Resource.setResourceType(resultSet.getString("resource_type"));
-	    		Learning_Resource.setAuthor(resultSet.getString("author"));		
-	    		Learning_Resource.setPublisher(resultSet.getString("publisher"));
-	    		Learning_Resource.setPublishYear(resultSet.getInt("publish_year"));
-	    		Learning_Resource.setLanguage(resultSet.getString("resource_language"));
+	    		Learning_Resource.setResourceTitle(resultSet.getString("first_name"));	
+	    		Learning_Resource.setResourceType(resultSet.getString("last_name"));
+	    		Learning_Resource.setAuthor(resultSet.getString("resource_title"));		
+	    		Learning_Resource.setPublisher(resultSet.getString("resource_type"));
+	    		Learning_Resource.setLanguage(resultSet.getString("education_level"));
+	    		
 	    		
 	    		list.add(Learning_Resource);
 			 }

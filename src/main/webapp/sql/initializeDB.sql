@@ -29,7 +29,7 @@ CREATE TABLE `learning_resource` (
   `resource_type` varchar(100) NOT NULL,
   `author` varchar(100) NOT NULL,
   `publisher` varchar(100) DEFAULT NULL,
-  `publish_year` datetime NOT NULL,
+  `publish_year` int NOT NULL,
   `resource_language` varchar(100) NOT NULL,
   PRIMARY KEY (`resource_id`),
   KEY `member_id` (`member_id`),
