@@ -6,7 +6,7 @@
 <html>
   <head>
     
-    <title>Delete Entity</title>
+    <title>Delete Mentor</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -21,19 +21,20 @@
   </head>
   
   <body>
-  <h1>Delete Entity</h1>
+  <h1>Delete Mentor</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
-<form action="<c:url value='/Entity1ServletDelete'/>" method="post">
+<form action="<c:url value='/MentorServletDelete'/>" method="post">
 	<input type="hidden" name="method" value="delete"/>
-		<input type="hidden" name="username" value="${entity1.username }"/>
-	User    :<input type="text" name="username" value="${entity1.username }" disabled/>
+	<input type="hidden" name="member_id" value="${mentor.member_id }" />
+	member_id:<input type="text" name="member_id" value="${mentor.member_id }" disabled/>
 	<br/>
-	
-	Password：<input type="text" name="password" value="${entity1.password }" disabled/>
+	years_in_industry：<input type="text" name="years_in_industry" value="${mentor.years_in_industry }" disabled/>
 	<br/>
-	Email	：<input type="text" name="email" value="${entity1.email }" disabled/>
+	role_in_industry：<input type="text" name="role_in_industry" value="${mentor.role_in_industry }" disabled/>
 	<br/>
-	<input type="submit" value="Delete Entity1"/>
+	years_of_mentoring：<input type="text" name="years_of_mentoring" value="${mentor.years_of_mentoring }" disabled/>
+	<br/>
+	<input type="submit" value="Delete Mentor"/>
 </form>
 
 </body>

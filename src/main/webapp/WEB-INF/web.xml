@@ -96,6 +96,97 @@
   </servlet-mapping>
   
   
+   <servlet>
+    <description></description>
+    <display-name>MenteeServletCreate</display-name>
+    <servlet-name>MenteeServletCreate</servlet-name>
+    <servlet-class>mentee.web.servlet.MenteeServletCreate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MenteeServletCreate</servlet-name>
+    <url-pattern>/MenteeServletCreate</url-pattern>
+  </servlet-mapping>
+  
+    <servlet>
+    <description></description>
+    <display-name>MenteeServletRead</display-name>
+    <servlet-name>MenteeServletRead</servlet-name>
+    <servlet-class>mentee.web.servlet.MenteeServletRead</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MenteeServletRead</servlet-name>
+    <url-pattern>/MenteeServletRead</url-pattern>
+  </servlet-mapping>
+  
+      <servlet>
+    <description></description>
+    <display-name>MenteeServletDelete</display-name>
+    <servlet-name>MenteeServletDelete</servlet-name>
+    <servlet-class>mentee.web.servlet.MenteeServletDelete</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MenteeServletDelete</servlet-name>
+    <url-pattern>/MenteeServletDelete</url-pattern>
+  </servlet-mapping>
+  
+      <servlet>
+    <description></description>
+    <display-name>MenteeServletUpdate</display-name>
+    <servlet-name>MenteeServletUpdate</servlet-name>
+    <servlet-class>mentee.web.servlet.MenteeServletUpdate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MenteeServletUpdate</servlet-name>
+    <url-pattern>/MenteeServletUpdate</url-pattern>
+  </servlet-mapping>
+  
+  
+   <servlet>
+    <description></description>
+    <display-name>MentorServletCreate</display-name>
+    <servlet-name>MentorServletCreate</servlet-name>
+    <servlet-class>mentor.web.servlet.MentorServletCreate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MentorServletCreate</servlet-name>
+    <url-pattern>/MentorServletCreate</url-pattern>
+  </servlet-mapping>
+  
+    <servlet>
+    <description></description>
+    <display-name>MentorServletRead</display-name>
+    <servlet-name>MentorServletRead</servlet-name>
+    <servlet-class>mentor.web.servlet.MentorServletRead</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MentorServletRead</servlet-name>
+    <url-pattern>/MentorServletRead</url-pattern>
+  </servlet-mapping>
+  
+  
+        <servlet>
+    <description></description>
+    <display-name>MentorServletDelete</display-name>
+    <servlet-name>MentorServletDelete</servlet-name>
+    <servlet-class>mentor.web.servlet.MentorServletDelete</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MentorServletDelete</servlet-name>
+    <url-pattern>/MentorServletDelete</url-pattern>
+  </servlet-mapping>
+  
+        <servlet>
+    <description></description>
+    <display-name>MentorServletUpdate</display-name>
+    <servlet-name>MentorServletUpdate</servlet-name>
+    <servlet-class>mentor.web.servlet.MentorServletUpdate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MentorServletUpdate</servlet-name>
+    <url-pattern>/MentorServletUpdate</url-pattern>
+  </servlet-mapping>
+  
+  
   <servlet>
     <description></description>
     <display-name>findAll</display-name>

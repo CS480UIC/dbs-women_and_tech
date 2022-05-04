@@ -6,7 +6,7 @@
 <html>
   <head>
     
-    <title>Read Entity Output</title>
+    <title>Read Mentor Output</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -21,14 +21,16 @@
   </head>
   
   <body>
-  <h1>Read Entity Output</h1>
+  <h1>Read Mentor Output</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
 <form>
-	User    :<input type="text" name="username" value="${entity1.username }" disabled/>
+	 member_id:<input type="text" name="member_id" value="${mentor.member_id }" disabled/>
 	<br/>
-	Password：<input type="text" name="password" value="${entity1.password }" disabled/>
+	years_in_industry：<input type="text" name="years_in_industry" value="${mentor.years_in_industry }" disabled/>
 	<br/>
-	Email	：<input type="text" name="email" value="${entity1.email }" disabled/>
+	role_in_industry：<input type="text" name="role_in_industry" value="${mentor.role_in_industry }" disabled/>
+	<br/>
+	years_of_mentoring：<input type="text" name="years_of_mentoring" value="${mentor.years_of_mentoring }" disabled/>
 	<br/>
 </form>
 

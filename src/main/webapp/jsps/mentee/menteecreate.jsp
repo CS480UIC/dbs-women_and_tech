@@ -6,7 +6,7 @@
 <html>
   <head>
     
-    <title>mentee Create</title>
+    <title>Create mentee</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -22,15 +22,12 @@
   
   <body>
   <h1>Create mentee</h1>
-<form action="<c:url value='/Entity1ServletCreate'/>" method="post">
+<form action="<c:url value='/MenteeServletCreate'/>" method="post">
 	 member_id:<input type="text" name="member_id" value="${form.member_id }"/>
 	<span style="color: red; font-weight: 900">${errors.member_id }</span>
 	<br/>
 	field_of_interest：<input type="text" name="field_of_interest" value="${form.field_of_interest }"/>
 	<span style="color: red; font-weight: 900">${errors.field_of_interest }</span>
-	<br/>
-	 mentor_id：<input type="text" name="mentor_id" value="${form.mentor_id }"/>
-	<span style="color: red; font-weight: 900">${errors.mentor_id }</span>
 	<br/>
 	major：<input type="text" name="major" value="${form.major }"/>
 	<span style="color: red; font-weight: 900">${errors.major }</span>

@@ -6,7 +6,7 @@
 <html>
   <head>
     
-    <title>mentor Create</title>
+    <title>Mentor Create</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -21,8 +21,8 @@
   </head>
   
   <body>
-  <h1>mentor Create</h1>
-<form action="<c:url value='/Entity1ServletCreate'/>" method="post">
+  <h1>Mentor Create</h1>
+<form action="<c:url value='/MentorServletCreate'/>" method="post">
 	 member_id:<input type="text" name="member_id" value="${form.member_id }"/>
 	<span style="color: red; font-weight: 900">${errors.member_id }</span>
 	<br/>
@@ -31,9 +31,6 @@
 	<br/>
 	role_in_industry：<input type="text" name="role_in_industry" value="${form.role_in_industry }"/>
 	<span style="color: red; font-weight: 900">${errors.role_in_industry }</span>
-	<br/>
-	mentee_id：<input type="text" name="mentee_id" value="${form.mentee_id }"/>
-	<span style="color: red; font-weight: 900">${errors.mentee_id }</span>
 	<br/>
 	years_of_mentoring：<input type="text" name="years_of_mentoring" value="${form.years_of_mentoring }"/>
 	<span style="color: red; font-weight: 900">${errors.years_of_mentoring }</span>

@@ -6,7 +6,7 @@
 <html>
   <head>
     
-    <title>Delete Entity</title>
+    <title>Delete Mentee</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -21,19 +21,21 @@
   </head>
   
   <body>
-  <h1>Delete Entity</h1>
+  <h1>Delete Mentee</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
-<form action="<c:url value='/Entity1ServletDelete'/>" method="post">
+<form action="<c:url value='/MenteeServletDelete'/>" method="post">
 	<input type="hidden" name="method" value="delete"/>
-		<input type="hidden" name="username" value="${entity1.username }"/>
-	User    :<input type="text" name="username" value="${entity1.username }" disabled/>
+	<input type="hidden" name="member_id" value="${mentee.member_id }" />
+	member_id:<input type=text name="member_id" value="${mentee.member_id}" disabled/>
 	<br/>
-	
-	Password：<input type="text" name="password" value="${entity1.password }" disabled/>
+	field_of_interest：<input type="text" name="field_of_interest" value="${mentee.field_of_interest}" disabled/>
 	<br/>
-	Email	：<input type="text" name="email" value="${entity1.email }" disabled/>
+	major：<input type="text" name="major" value="${mentee.major}" disabled/>
+
 	<br/>
-	<input type="submit" value="Delete Entity1"/>
+	school_name：<input type="text" name="school_name" value="${mentee.school_name}" disabled/>
+	<br/>
+	<input type="submit" value="Delete Mentee"/>
 </form>
 
 </body>
