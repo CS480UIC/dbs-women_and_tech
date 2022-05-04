@@ -20,7 +20,7 @@ order by scholarship_amount
 
 select *
 from mentee
-where major = '"CS"'
+where major = 'CS'
 order by school_name
 ;
 
@@ -64,4 +64,11 @@ where scholarship_amount > (
 	from scholarship
 ) -- check if the scholarship description contasins the words 'bootcamp'
 ;
+
+select *
+from mentor
+where years_of_mentoring > (
+	select avg(years_of_mentoring)
+    from mentor
+);
 
