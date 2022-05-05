@@ -84,9 +84,9 @@ public class MenteeServletUpdate extends HttpServlet {
 				info.add(values[0]);
 			}
 			form.setMember_id((Integer.valueOf(request.getParameter("member_id"))));
-			form.setField_of_interest(info.get(1));
-			form.setMajor(info.get(2));		
-			form.setSchool_name(info.get(3));	
+			form.setField_of_interest(info.get(2));
+			form.setMajor(info.get(3));		
+			form.setSchool_name(info.get(4));	
 
 			try {
 				menteedao.update(form);
