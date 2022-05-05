@@ -27,7 +27,7 @@
 		<a href="<c:url value='/jsps/learning_resource/resource_read.jsp'/>" target="_parent">Read Learning Resource</a> |&nbsp;
 		<a href="<c:url value='/jsps/learning_resource/resource_update.jsp'/>" target="_parent">Update Learning Resource</a> |&nbsp;	 
 		<a href="<c:url value='/jsps/learning_resource/resource_delete.jsp'/>" target="_parent">Delete Learning Resource</a> |&nbsp; 	
-		<a href="<c:url value='/findLR'/>" target="body">Learning Resource Table</a>
+		
 		<img src="https://elearningindustry.com/wp-content/uploads/2018/02/10-top-elearning-resources-that-help-you-learn-anything-today.jpeg">
 		
 	</body>

@@ -43,9 +43,10 @@ CREATE TABLE `learning_resource` (
 
 LOCK TABLES `learning_resource` WRITE;
 /*!40000 ALTER TABLE `learning_resource` DISABLE KEYS */;
-INSERT INTO `learning_resource` VALUES (30,5,'\"Why we have too few women leaders\"','\"Speech\"','\"Sheryl Sandberg\"','\"\"','2010-12-21 00:00:00','\"English\"'),(60,4,'\"Speeches by Women in Tech\"','\"Speech\"','\"Johanna Blakley\"','\"\"','2011-02-02 00:00:00','\"English\"'),(109,3,'\"Hidden Figures\"','\"Drama Film\"','\"Margot Lee Shetterly\"','\"\"','2017-01-06 00:00:00','\"English\"'),(121,1,'\"Brotopia: Breaking Up the Boys\' Club of Silicon Valley by Emily Chang\"','\"Book\"','\"Emily Chang\"','\"Portfolio; First Edition \"','2018-02-06 00:00:00','\"English\"'),(123,2,'\"Female Innovators at Work: Women on Top of Tech by Danielle Newnham\"','\"Book\"','\"Danielle Newnham\"','\"Apress; 1st ed. edition\"','2016-11-18 00:00:00','\"English\"');
+INSERT INTO `learning_resource` VALUES (30,5,'Why we have too few women leaders','Speech','Sheryl Sandberg',' ','2010-12-21 00:00:00','English'),(60,4,'Speeches by Women in Tech','Speech','Johanna Blakley',' ','2011-02-02 00:00:00','English'),(109,3,'Hidden Figures','Drama Film','Margot Lee Shetterly',' ','2017-01-06 00:00:00','English'),(121,1,'Brotopia: Breaking Up the Boys','Book','Emily Chang','Portfolio; First Edition','2018-02-06 00:00:00','English'),(123,2,'Female Innovators at Work: Women on Top of Tech by Danielle Newnham','Book','Danielle Newnham','Apress; 1st ed. edition','2016-11-18 00:00:00','English');
 /*!40000 ALTER TABLE `learning_resource` ENABLE KEYS */;
 UNLOCK TABLES;
+
 
 --
 -- Table structure for table `member_user`
@@ -187,7 +188,7 @@ CREATE TABLE `network_event` (
 
 LOCK TABLES `network_event` WRITE;
 /*!40000 ALTER TABLE `network_event` DISABLE KEYS */;
-INSERT INTO `network_event` VALUES (110,5,'\"Women in Cloud: #WICxAnnualSummit 2022: Collective Influence\"','\"Virtual\"','2022-01-26 00:00:00'),(119,3,'\"Women in Tech 3rd March - Lightning Talks!\"','\"On Meetup.com\"','2022-04-22 00:00:00'),(121,2,'\"AAUW Tech Savvy\"','\"Wisconsin\"','2022-03-09 00:00:00'),(122,4,'\"Wisdom 2.0\"','\"Mountain View, CA\"','2022-01-24 00:00:00'),(123,1,'\"Wonder Women: Celebrating Women in Tech 2022\"','\"432 N Lake St, Madison, WI\"','2022-03-02 00:00:00');
+INSERT INTO `network_event` VALUES (110,5,'Women in Cloud: #WICxAnnualSummit 2022: Collective Influence','Virtual','2022-01-26 00:00:00'),(119,3,'Women in Tech 3rd March - Lightning Talks!','On Meetup.com','2022-04-22 00:00:00'),(121,2,'AAUW Tech Savvy','Wisconsin','2022-03-09 00:00:00'),(122,4,'Wisdom 2.0','Mountain View, CA','2022-01-24 00:00:00'),(123,1,'Wonder Women: Celebrating Women in Tech 2022','432 N Lake St, Madison, WI','2022-03-02 00:00:00');
 /*!40000 ALTER TABLE `network_event` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -282,7 +283,7 @@ CREATE TABLE `special_interest_group` (
 
 LOCK TABLES `special_interest_group` WRITE;
 /*!40000 ALTER TABLE `special_interest_group` DISABLE KEYS */;
-INSERT INTO `special_interest_group` VALUES (1,'\"Women_who_code\"',6,'\"Support women who code\"','\"tech\"','\"www.tech.edu\"','2022-03-01 00:00:00'),(2,'\"tech for women\"',7,'\"Help women break into tech\"','\"tech\"','\"www.tech4women.com\"','2022-02-08 00:00:00'),(3,'\"AI Exploration\"',8,'\"Learn about AI\"','\"AI\"','\"www.learnAI.com\"','2022-01-14 00:00:00'),(4,'\"Machine Learning Interest Group\"',9,'\"Learn about machine learning\"','\"Machine Learning\"','\"www.learMachine.com\"','2021-08-11 00:00:00'),(5,'\"Intro to Software Development\"',10,'\"Learn what it takes to become a software developer\"','\"Software Development\"','\"www.introtosoftware.com\"','2021-10-06 00:00:00');
+INSERT INTO `special_interest_group` VALUES (1,'\Women_who_code\"',6,'\"Support women who code\"','\"tech\"','\"www.tech.edu\"','2022-03-01 00:00:00'),(2,'\"tech for women\"',7,'\"Help women break into tech\"','\"tech\"','\"www.tech4women.com\"','2022-02-08 00:00:00'),(3,'\"AI Exploration\"',8,'\"Learn about AI\"','\"AI\"','\"www.learnAI.com\"','2022-01-14 00:00:00'),(4,'\"Machine Learning Interest Group\"',9,'\"Learn about machine learning\"','\"Machine Learning\"','\"www.learMachine.com\"','2021-08-11 00:00:00'),(5,'\"Intro to Software Development\"',10,'\"Learn what it takes to become a software developer\"','\"Software Development\"','\"www.introtosoftware.com\"','2021-10-06 00:00:00');
 /*!40000 ALTER TABLE `special_interest_group` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;

@@ -27,7 +27,7 @@
 		<a href="<c:url value='/jsps/network_event/event_read.jsp'/>" target="_parent">Read Network Event</a> |&nbsp;
 		<a href="<c:url value='/jsps/network_event/event_update.jsp'/>" target="_parent">Update Network Event</a> |&nbsp;	 
 		<a href="<c:url value='/jsps/network_event/event_delete.jsp'/>" target="_parent">Delete Network Event</a> |&nbsp;
-		<a href="<c:url value='/findARUser'/>" target="body">Network Event Table</a>
+	
 		<br>
 		<br>
 		<img src="https://www.marcom-connect.com/wp-content/uploads/2012/08/networking-event.jpg" width="1200" height="500">

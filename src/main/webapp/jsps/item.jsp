@@ -27,10 +27,16 @@
     <a href="<c:url value='/findAll'/>" target="body">list all the user in the table</a>&nbsp;
     <br>
     <br>
-    <a href="<c:url value='/findLRBook'/>" target="body">List all the learning resource book</a>&nbsp;
+    <a href="<c:url value='/findLRBook'/>" target="body">List all the learning resource book - Simply Query</a>&nbsp;
     <br>
     <br>
-    <a href="<c:url value='/findMemberEvent'/>" target="body">List Number of Member for Network Event</a>&nbsp;
+    <a href="<c:url value='/findLR'/>" target="body">Learning Resource Table - Complex Query</a>
+    <br>
+    <br>
+    <a href="<c:url value='/findARUser'/>" target="body">Network Event Table - Simple Query</a>
+    <br>
+    <br>
+    <a href="<c:url value='/findMemberEvent'/>" target="body">List Number of Member for Network Event - Aggregate Queries</a>&nbsp;
     <br>
     <br>
     <a href="<c:url value='/findMentee'/>" target="body">List all the Mentees - Simply Query</a>&nbsp;
