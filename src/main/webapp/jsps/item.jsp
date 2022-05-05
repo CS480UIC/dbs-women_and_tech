@@ -23,7 +23,7 @@
   
   <body>
     <h1>List of Queries</h1>
-    <br>
+    <br> 
     <a href="<c:url value='/findAll'/>" target="body">list all the user in the table</a>&nbsp;
     <br>
     <br>
