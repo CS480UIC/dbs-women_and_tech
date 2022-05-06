@@ -12,7 +12,7 @@ import learning_resource.domain.Learning_Resource;
 
 public class ResourceDao {
 	
-private String MySQL_user = "womenTech"; //TODO change user
+private String MySQL_user = "women_and_tech"; //TODO change user
 	
 	/**
 	 * password of your username to connect to the database

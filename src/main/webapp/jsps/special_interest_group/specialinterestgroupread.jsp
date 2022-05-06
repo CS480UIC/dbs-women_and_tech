@@ -23,10 +23,8 @@
   <body>
   <h1>Read Special Interest Group</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
-<form action="<c:url value='/SpecialInterestGroupServletRead'/>" method="post">
-	<input type="hidden" name="method" value="regist"/>
-	Special Interest Group ID    :<input type="text" name="eventID " value="${form.groupID  }"/>
-	<span style="color: red; font-weight: 900">${errors.groupID  }</span>
+<form action="<c:url value='/Special_Interest_GroupServletRead'/>" method="post">
+	Special Interest Group By ID 		：<input type="number" name="group_id" value="${form.group_id}"/>
 	<br/>
 	<input type="submit" value="Read Special Interest Group"/>
 </form>

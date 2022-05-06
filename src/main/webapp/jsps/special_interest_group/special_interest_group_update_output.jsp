@@ -24,40 +24,42 @@
   <h1>Update Special Interest Group</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
 <form>
-	Group ID    		:<input type="text" name="groupID" value="${special_interest_group.groupID }" disabled/>
+	Group ID    		:<input type="number" name="group_id" value="${special_interest_group.group_id }" disabled/>
 	<br/>
-	Members ID 		：<input type="text" name="membersID" value="${special_interest_group.membersID }" disabled/>
+	Group Name    		:<input type="text" name="group_name" value="${special_interest_group.group_name }" disabled/>
 	<br/>
-	Mission Statement 		：<input type="text" name="missionStatement" value="${special_interest_group.missionStatement }" disabled/>
+	Members ID 		：<input type="number" name="members_id" value="${special_interest_group.members_id }" disabled/>
 	<br/>
-	Type ：<input type="text" name="type" value="${special_interest_group.type}" disabled/>
+	Mission Statement 		：<input type="text" name="mission_statement" value="${special_interest_group.mission_statement }" disabled/>
 	<br/>
-	Web Page URL	：<input type="text" name="webPageURL" value="${special_interest_group.webPageURL }" disabled/>
+	Type ：<input type="text" name="group_type" value="${special_interest_group.group_type}" disabled/>
 	<br/>
-	Date Created	：<input type="text" name="dateCreated" value="${special_interest_group.dateCreated }" disabled/>
+	Web Page URL	：<input type="text" name="webpage_url" value="${special_interest_group.webpage_url }" disabled/>
+	<br/>
+	Date Created	：<input type="date" name="date_created" value="${special_interest_group.date_created }" disabled/>
 	<br/>
 </form>
 <h1>Update the values below</h1>
-<form action="<c:url value='/SpecialInterestGroupServletUpdate'/>" method="post">
+<form action="<c:url value='/Special_Interest_GroupServletUpdate'/>" method="post">
 		<input type="hidden" name="method" value="update"/>
-				<input type="hidden" name="username" value="${special_interest_group.groupID }"/>
-	Group ID    		:<input type="text" name="groupID" value="${form.groupID }"/>
-	<span style="color: red; font-weight: 900">${errors.groupID }</span>
+				<input type="hidden" name="group_id" value="${special_interest_group.group_id }"/>
+	Group Name    		:<input type="text" name="group_name" value="${form.group_name }"/>
+	<span style="color: red; font-weight: 900">${errors.group_name }</span>
 	<br/>
-	Members ID 		：<input type="text" name="membersID" value="${form.membersID }"/>
-	<span style="color: red; font-weight: 900">${errors.membersID }</span>
+	Members ID 		：<input type="number" name="members_id" value="${form.members_id }"/>
+	<span style="color: red; font-weight: 900">${errors.members_id }</span>
 	<br/>
-	Mission Statement 		：<input type="text" name="missionStatement" value="${form.missionStatement }"/>
-	<span style="color: red; font-weight: 900">${errors.missionStatement }</span>
+	Mission Statement 		：<input type="text" name="mission_statement" value="${form.mission_statement }"/>
+	<span style="color: red; font-weight: 900">${errors.mission_statement }</span>
 	<br/>
-	Type ：<input type="text" name="type" value="${form.type}"/>
-	<span style="color: red; font-weight: 900">${errors.type }</span>
+	Type ：<input type="text" name="group_type" value="${form.group_type}"/>
+	<span style="color: red; font-weight: 900">${errors.group_type }</span>
 	<br/>
-	Web Page URL	：<input type="text" name="webPageURL" value="${form.webPageURL }"/>
-	<span style="color: red; font-weight: 900">${errors.webPageURL }</span>
+	Web Page URL	：<input type="text" name="webpage_url" value="${form.webpage_url }"/>
+	<span style="color: red; font-weight: 900">${errors.webpage_url }</span>
 	<br/>
-	Date Created	：<input type="text" name="dateCreated" value="${form.dateCreated }"/>
-	<span style="color: red; font-weight: 900">${errors.dateCreated }</span>
+	Date Created	：<input type="date" name="date_created" value="${form.date_created }"/>
+	<span style="color: red; font-weight: 900">${errors.date_created }</span>
 	<br/>
 	<input type="submit" value="Update Special Interest Group"/>
 </form>

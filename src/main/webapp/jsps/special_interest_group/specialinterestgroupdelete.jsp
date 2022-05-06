@@ -22,9 +22,9 @@
   
   <body>
   <h1>Delete Special Interest Group</h1>
-<form action="<c:url value='/SpecialInterestGroupServletDelete'/>" method="post">
+<form action="<c:url value='/Special_Interest_GroupServletDelete'/>" method="post">
 	<input type="hidden" name="method" value="search"/>
-	Delete Special Interest group ID   :<input type="text" name="groupID" value="${form.groupID }"/>
+	Delete Special Interest group ID   :<input type="text" name="group_id" value="${form.group_id }"/>
 	<span style="color: red; font-weight: 900">${errors.groupID }</span>
 	<br/>
 	<input type="submit" value="Delete Special Interest Group"/>

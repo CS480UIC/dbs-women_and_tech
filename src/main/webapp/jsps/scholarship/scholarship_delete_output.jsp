@@ -25,20 +25,20 @@
 <p style="color: red; font-weight: 900">${msg }</p>
 <form action="<c:url value='/ScholarshipServletDelete'/>" method="post">
 	<input type="hidden" name="method" value="delete"/>
-		<input type="hidden" name="username" value="${scholarship.scholarshipID }"/>
-	Scholarship ID    		:<input type="text" name="scholarshipID" value="${scholarship.scholarshipID }" disabled/>
+		<input type="hidden" name="scholarship_id" value="${scholarship.scholarship_id }"/>
+	Scholarship ID    		:<input type="number" name="scholarship_id" value="${scholarship.scholarship_id }" disabled/>
 	<br/>
-	Scholarship Name 		：<input type="text" name="scholarshipName" value="${scholarship.scholarshipName }" disabled/>
+	Scholarship Name 		：<input type="text" name="scholarship_name" value="${scholarship.scholarship_name }" disabled/>
 	<br/>
-	Scholarship Amount 		：<input type="text" name="scholarshipAmount" value="${scholarship.scholarshipAmount }" disabled/>
+	Scholarship Amount 		：<input type="number" name="scholarship_amount" value="${scholarship.scholarship_amount }" disabled/>
 	<br/>
-	Scholarship Description ：<input type="text" name="scholarshipDescription" value="${scholarship.scholarshipDescription}" disabled/>
+	Scholarship Description ：<input type="text" name="scholarship_description" value="${scholarship.scholarship_description}" disabled/>
 	<br/>
-	Scholarship Deadline	：<input type="text" name="scholarshipDeadline" value="${scholarship.scholarshipDeadline }" disabled/>
+	Deadline	            ：<input type="date" name="application_deadline" value="${scholarship.application_deadline }" disabled/>
 	<br/>
-	Scholarship Released	：<input type="text" name="scholarshipReleased" value="${scholarship.scholarshipReleased }" disabled/>
+	Scholarship Released	：<input type="date" name="application_released" value="${scholarship.application_released }" disabled/>
 	<br/>
-	Scholarship Requirements ：<input type="text" name="scholarshipRequirements" value="${scholarship.scholarshipRequirements }" disabled/>
+	Scholarship Requirements ：<input type="text" name="requirements" value="${scholarship.requirements }" disabled/>
 	<br/>
 	<input type="submit" value="Delete Scholarship"/>
 </form>

@@ -44,7 +44,19 @@
     <br>
     <a href="<c:url value='/findMentor'/>" target="body">List all the Mentors - Complex Query</a>&nbsp;
     <br>
- 
+    <br>
+    <a href="<c:url value='/findScholarship'/>" target="body">List all the Scholarships with amounts > $700 - Simple Query</a>&nbsp;
+    <br>
+    <br>
+    <a href="<c:url value='/findScholarshipLike'/>" target="body">List all the Scholarships like 'bootcamp' - Aggregate Query</a>&nbsp;
+  	<br>
+    <br>
+    <a href="<c:url value='/findScholarshipRoundSqrt'/>" target="body">List all the Scholarships amounts square rooted and rounded to the 1 decimal place  - Aggregate Query</a>&nbsp;
+  	<br>
+    <br>
+    <a href="<c:url value='/findScholarshipAvg'/>" target="body">List all the Scholarships greater than the average scholarship amount - Complex Query</a>&nbsp;
+  	<br>
+    <br>
    
   </body>
 </html>

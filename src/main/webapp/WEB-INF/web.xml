@@ -330,6 +330,101 @@
   </servlet-mapping>
   
   
+    <servlet>
+    <description></description>
+    <display-name>ScholarshipServletCreate</display-name>
+    <servlet-name>ScholarshipServletCreate</servlet-name>
+    <servlet-class>scholarship.web.servlet.ScholarshipServletCreate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ScholarshipServletCreate</servlet-name>
+    <url-pattern>/ScholarshipServletCreate</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description></description>
+    <display-name>ScholarshipServletRead</display-name>
+    <servlet-name>ScholarshipServletRead</servlet-name>
+    <servlet-class>scholarship.web.servlet.ScholarshipServletRead</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ScholarshipServletRead</servlet-name>
+    <url-pattern>/ScholarshipServletRead</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+    <servlet>
+    <description></description>
+    <display-name>ScholarshipServletUpdate</display-name>
+    <servlet-name>ScholarshipServletUpdate</servlet-name>
+    <servlet-class>scholarship.web.servlet.ScholarshipServletUpdate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ScholarshipServletUpdate</servlet-name>
+    <url-pattern>/ScholarshipServletUpdate</url-pattern>
+  </servlet-mapping>
+  
+  
+    <servlet>
+    <description></description>
+    <display-name>ScholarshipServletDelete</display-name>
+    <servlet-name>ScholarshipServletDelete</servlet-name>
+    <servlet-class>scholarship.web.servlet.ScholarshipServletDelete</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ScholarshipServletDelete</servlet-name>
+    <url-pattern>/ScholarshipServletDelete</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description></description>
+    <display-name>Special_Interest_GroupServletCreate</display-name>
+    <servlet-name>Special_Interest_GroupServletCreate</servlet-name>
+    <servlet-class>special_interest_group.web.servlet.Special_Interest_GroupServletCreate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Special_Interest_GroupServletCreate</servlet-name>
+    <url-pattern>/Special_Interest_GroupServletCreate</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description></description>
+    <display-name>Special_Interest_GroupServletRead</display-name>
+    <servlet-name>Special_Interest_GroupServletRead</servlet-name>
+    <servlet-class>special_interest_group.web.servlet.Special_Interest_GroupServletRead</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Special_Interest_GroupServletRead</servlet-name>
+    <url-pattern>/Special_Interest_GroupServletRead</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+    <servlet>
+    <description></description>
+    <display-name>Special_Interest_GroupServletUpdate</display-name>
+    <servlet-name>Special_Interest_GroupServletUpdate</servlet-name>
+    <servlet-class>special_interest_group.web.servlet.Special_Interest_GroupServletUpdate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Special_Interest_GroupServletUpdate</servlet-name>
+    <url-pattern>/Special_Interest_GroupServletUpdate</url-pattern>
+  </servlet-mapping>
+  
+  
+    <servlet>
+    <description></description>
+    <display-name>Special_Interest_GroupServletDelete</display-name>
+    <servlet-name>Special_Interest_GroupServletDelete</servlet-name>
+    <servlet-class>special_interest_group.web.servlet.Special_Interest_GroupServletDelete</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Special_Interest_GroupServletDelete</servlet-name>
+    <url-pattern>/Special_Interest_GroupServletDelete</url-pattern>
+  </servlet-mapping>
+  
+  
   <servlet>
     <description></description>
     <display-name>findAll</display-name>
@@ -364,6 +459,54 @@
   <servlet-mapping>
     <servlet-name>findMentor</servlet-name>
     <url-pattern>/findMentor</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description></description>
+    <display-name>findScholarship</display-name>
+    <servlet-name>findScholarship</servlet-name>
+    
+    <servlet-class>scholarship.web.servlet.findScholarship</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>findScholarship</servlet-name>
+    <url-pattern>/findScholarship</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description></description>
+    <display-name>findScholarshipLike</display-name>
+    <servlet-name>findScholarshipLike</servlet-name>
+    
+    <servlet-class>scholarship.web.servlet.findScholarshipLike</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>findScholarshipLike</servlet-name>
+    <url-pattern>/findScholarshipLike</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description></description>
+    <display-name>findScholarshipRoundSqrt</display-name>
+    <servlet-name>findScholarshipRoundSqrt</servlet-name>
+    
+    <servlet-class>scholarship.web.servlet.findScholarshipRoundSqrt</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>findScholarshipRoundSqrt</servlet-name>
+    <url-pattern>/findScholarshipRoundSqrt</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description></description>
+    <display-name>findScholarshipAvg</display-name>
+    <servlet-name>findScholarshipAvg</servlet-name>
+    
+    <servlet-class>scholarship.web.servlet.findScholarshipAvg</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>findScholarshipAvg</servlet-name>
+    <url-pattern>/findScholarshipAvg</url-pattern>
   </servlet-mapping>
   
   

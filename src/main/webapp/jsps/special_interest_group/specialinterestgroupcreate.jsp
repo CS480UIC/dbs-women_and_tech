@@ -22,24 +22,27 @@
   
   <body>
   <h1>Special Interest Group Create</h1>
-<form action="<c:url value='/SpecialInterestGroupServletCreate'/>" method="post">
-	Group ID    		:<input type="text" name="groupID" value="${form.groupID }"/>
-	<span style="color: red; font-weight: 900">${errors.groupID }</span>
+<form action="<c:url value='/Special_Interest_GroupServletCreate'/>" method="post">
+	Group ID    		:<input type="number" name="group_id" value="${form.group_id }"/>
+	<span style="color: red; font-weight: 900">${errors.group_id }</span>
 	<br/>
-	Members ID 		：<input type="text" name="membersID" value="${form.membersID }"/>
-	<span style="color: red; font-weight: 900">${errors.membersID }</span>
+	Group Name    		:<input type="text" name="group_name" value="${form.group_name }"/>
+	<span style="color: red; font-weight: 900">${errors.group_name }</span>
 	<br/>
-	Mission Statement 		：<input type="text" name="missionStatement" value="${form.missionStatement }"/>
-	<span style="color: red; font-weight: 900">${errors.missionStatement }</span>
+	Members ID 		：<input type="number" name="members_id" value="${form.members_id }"/>
+	<span style="color: red; font-weight: 900">${errors.members_id }</span>
 	<br/>
-	Type ：<input type="text" name="type" value="${form.type}"/>
-	<span style="color: red; font-weight: 900">${errors.type }</span>
+	Mission Statement 		：<input type="text" name="mission_statement" value="${form.mission_statement }"/>
+	<span style="color: red; font-weight: 900">${errors.mission_statement }</span>
 	<br/>
-	Web Page URL	：<input type="text" name="webPageURL" value="${form.webPageURL }"/>
-	<span style="color: red; font-weight: 900">${errors.webPageURL }</span>
+	Type ：<input type="text" name="group_type" value="${form.group_type}"/>
+	<span style="color: red; font-weight: 900">${errors.group_type }</span>
 	<br/>
-	Date Created	：<input type="text" name="dateCreated" value="${form.dateCreated }"/>
-	<span style="color: red; font-weight: 900">${errors.dateCreated }</span>
+	Web Page URL	：<input type="text" name="webpage_url" value="${form.webpage_url }"/>
+	<span style="color: red; font-weight: 900">${errors.webpage_url }</span>
+	<br/>
+	Date Created	：<input type="date" name="date_created" value="${form.date_created }"/>
+	<span style="color: red; font-weight: 900">${errors.date_created }</span>
 	<br/>
 	<input type="submit" value="Create Scholarship"/>
 </form>

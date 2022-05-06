@@ -20,7 +20,7 @@ public class InitDao {
 	public void initialize(InputStream input) throws ClassNotFoundException {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/women_in_tech","womenTech", "Uic1234567!");
+			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/women_in_tech","women_and_tech", "Uic1234567!");
 			
 
 			//Initialize the script runner

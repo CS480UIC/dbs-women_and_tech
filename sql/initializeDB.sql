@@ -43,7 +43,7 @@ CREATE TABLE `learning_resource` (
 
 LOCK TABLES `learning_resource` WRITE;
 /*!40000 ALTER TABLE `learning_resource` DISABLE KEYS */;
-INSERT INTO `learning_resource` VALUES (30,5,'\"Why we have too few women leaders\"','\"Speech\"','\"Sheryl Sandberg\"','\"\"','2010-12-21 00:00:00','\"English\"'),(60,4,'\"Speeches by Women in Tech\"','\"Speech\"','\"Johanna Blakley\"','\"\"','2011-02-02 00:00:00','\"English\"'),(109,3,'\"Hidden Figures\"','\"Drama Film\"','\"Margot Lee Shetterly\"','\"\"','2017-01-06 00:00:00','\"English\"'),(121,1,'\"Brotopia: Breaking Up the Boys\' Club of Silicon Valley by Emily Chang\"','\"Book\"','\"Emily Chang\"','\"Portfolio; First Edition \"','2018-02-06 00:00:00','\"English\"'),(123,2,'\"Female Innovators at Work: Women on Top of Tech by Danielle Newnham\"','\"Book\"','\"Danielle Newnham\"','\"Apress; 1st ed. edition\"','2016-11-18 00:00:00','\"English\"');
+INSERT INTO `learning_resource` VALUES (30,5,'Why we have too few women leaders','Speech','Sheryl Sandberg','','2010-12-21 00:00:00','English'),(60,4,'Speeches by Women in Tech','Speech','Johanna Blakley','','2011-02-02 00:00:00','English'),(109,3,'Hidden Figures','Drama Film','Margot Lee Shetterly','','2017-01-06 00:00:00','English'),(121,1,'Brotopia: Breaking Up the Boys\' Club of Silicon Valley by Emily Chang','Book','Emily Chang','Portfolio; First Edition ','2018-02-06 00:00:00','English'),(123,2,'Female Innovators at Work: Women on Top of Tech by Danielle Newnham','Book','Danielle Newnham','Apress; 1st ed. edition','2016-11-18 00:00:00','English');
 /*!40000 ALTER TABLE `learning_resource` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -75,7 +75,7 @@ CREATE TABLE `member_user` (
 
 LOCK TABLES `member_user` WRITE;
 /*!40000 ALTER TABLE `member_user` DISABLE KEYS */;
-INSERT INTO `member_user` VALUES (1,'\"bnmdxcfghj\"','\"Joann \"','\"Chan\"','1998-11-26','\"Senior in College\"','\"jchan49@uic.edu\"','\"Hi I am Joann\"'),(2,'\"dfcvgbhnj\"','\"Jenny\"','\"Tu\"','1998-03-04','\"Freshman in College\"','\"jennyThbj@uic.edu\"','\"Hi I am Jenny\"'),(3,'\"fvbgnjm\"','\"Kennedy\"','\"Tam\"','1998-04-07','\"high school\"','\"kenT@gmail.edu\"','\"Hi i am Ken\"'),(4,'\"mjnhbgvf\"','\"Daisy\"','\"Yim\"','1999-06-08','\"Junior in College\"','\"daisyY@gmail.edu\"','\"Hi I am Daisy\"'),(5,'\"hbtgrvfe\"','\"Ryan\"','\"Qin\"','1972-03-09','\"First year Grad\"','\"ryanQ@gmail.edu\"','\"Hi I am Ryan\"'),(6,'\"uyjhntg\"','\"Billy\"','\"Bob\"','1992-02-28','\"PHD\"','\"b_bob@gmail.com\"','\"Hi I\'m Bob!\"'),(7,'\"rgtbfvythu\"','\"Paulin\"','\"Neutron\"','2001-04-01','\"PHD\"','\"paul@genius.com\"','\"Hi, I\'m Paul!\"'),(8,'\"gtrefdsju7\"','\"Joann \"','\"Doe\"','1998-11-16','\"MS\"','\"jdoe@yahoo.com\"','\"Hi I\'m Joe Doe!\"'),(9,'\"i7khtygr\"','\"Jane\"','\"Doe\"','1985-01-01','\"MS\"','\"j.doe@yahoo.com\"','\"Hi I\'m Jane Doe!\"'),(10,'\"64e5rtg\"','\"Margot\"','\"Bobfree\"','1987-12-14','\"MS\"','\"m.bobfree@yahoo.com\"','\"Hi, I\'m Marcus!\"'),(11,'\"7ik5ju6rhy\"','\"Sunny\"','\"Joehill\"','2013-06-10','\"BS\"','\"zig-free@yahoo.com\"','\"Hi, people call me Ziggy!\"');
+INSERT INTO `member_user` VALUES (1,'bnmdxcfghj','Joann ','Chan','1998-11-26','Senior in College','jchan49@uic.edu','Hi I am Joann'),(2,'dfcvgbhnj','Jenny','Tu','1998-03-04','Freshman in College','jennyThbj@uic.edu','Hi I am Jenny'),(3,'fvbgnjm','Kennedy','Tam','1998-04-07','high school','kenT@gmail.edu','Hi i am Ken'),(4,'mjnhbgvf','Daisy','Yim','1999-06-08','Junior in College','daisyY@gmail.edu','Hi I am Daisy'),(5,'hbtgrvfe','Ryan','Qin','1972-03-09','First year Grad','ryanQ@gmail.edu','Hi I am Ryan'),(6,'uyjhntg','Billy','Bob','1992-02-28','PHD','b_bob@gmail.com','Hi I\'m Bob!'),(7,'rgtbfvythu','Paulin','Neutron','2001-04-01','PHD','paul@genius.com','Hi, I\'m Paul!'),(8,'gtrefdsju7','Joann ','Doe','1998-11-16','MS','jdoe@yahoo.com','Hi I\'m Joe Doe!'),(9,'i7khtygr','Jane','Doe','1985-01-01','MS','j.doe@yahoo.com','Hi I\'m Jane Doe!'),(10,'64e5rtg','Margot','Bobfree','1987-12-14','MS','m.bobfree@yahoo.com','Hi, I\'m Marcus!'),(11,'7ik5ju6rhy','Sunny','Joehill','2013-06-10','BS','zig-free@yahoo.com','Hi, people call me Ziggy!');
 /*!40000 ALTER TABLE `member_user` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -103,7 +103,7 @@ CREATE TABLE `mentee` (
 
 LOCK TABLES `mentee` WRITE;
 /*!40000 ALTER TABLE `mentee` DISABLE KEYS */;
-INSERT INTO `mentee` VALUES (1,'\"UI/UX\"','\"Computer Science\"','\"UIC\"'),(2,'\"unknown\"','\"undecided\"','\"UIUC\"'),(3,'\"Back-end development\"','\"CS\"','\"University of Illinois at Chicago\"'),(4,'\"front end development\"','\"undecided\"','\"IIT\"'),(5,'\"Undecided\"','\"CS\"','\"Northwestern University\"');
+INSERT INTO `mentee` VALUES (1,'UI/UX','Computer Science','UIC'),(2,'unknown','undecided','UIUC'),(3,'Back-end development','CS','University of Illinois at Chicago'),(4,'front end development','undecided','IIT'),(5,'Undecided','CS','Northwestern University');
 /*!40000 ALTER TABLE `mentee` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -131,7 +131,7 @@ CREATE TABLE `mentor` (
 
 LOCK TABLES `mentor` WRITE;
 /*!40000 ALTER TABLE `mentor` DISABLE KEYS */;
-INSERT INTO `mentor` VALUES (6,5,'\"Software Engineer\"',5),(7,10,'\"Product Manager\"',7),(8,8,'\"Senior Product Manager\"',2),(9,2,'\"Full Stack Developer\"',1),(10,15,'\"UI/UX Designer\"',10);
+INSERT INTO `mentor` VALUES (6,5,'Software Engineer',5),(7,10,'Product Manager',7),(8,8,'Senior Product Manager',2),(9,2,'Full Stack Developer',1),(10,15,'UI/UX Designer',10);
 /*!40000 ALTER TABLE `mentor` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -187,7 +187,7 @@ CREATE TABLE `network_event` (
 
 LOCK TABLES `network_event` WRITE;
 /*!40000 ALTER TABLE `network_event` DISABLE KEYS */;
-INSERT INTO `network_event` VALUES (110,5,'\"Women in Cloud: #WICxAnnualSummit 2022: Collective Influence\"','\"Virtual\"','2022-01-26 00:00:00'),(119,3,'\"Women in Tech 3rd March - Lightning Talks!\"','\"On Meetup.com\"','2022-04-22 00:00:00'),(121,2,'\"AAUW Tech Savvy\"','\"Wisconsin\"','2022-03-09 00:00:00'),(122,4,'\"Wisdom 2.0\"','\"Mountain View, CA\"','2022-01-24 00:00:00'),(123,1,'\"Wonder Women: Celebrating Women in Tech 2022\"','\"432 N Lake St, Madison, WI\"','2022-03-02 00:00:00');
+INSERT INTO `network_event` VALUES (110,5,'Women in Cloud: #WICxAnnualSummit 2022: Collective Influence','Virtual','2022-01-26 00:00:00'),(119,3,'Women in Tech 3rd March - Lightning Talks!','On Meetup.com','2022-04-22 00:00:00'),(121,2,'AAUW Tech Savvy','Wisconsin','2022-03-09 00:00:00'),(122,4,'Wisdom 2.0','Mountain View, CA','2022-01-24 00:00:00'),(123,1,'Wonder Women: Celebrating Women in Tech 2022','432 N Lake St, Madison, WI','2022-03-02 00:00:00');
 /*!40000 ALTER TABLE `network_event` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -218,7 +218,7 @@ CREATE TABLE `scholarship` (
 
 LOCK TABLES `scholarship` WRITE;
 /*!40000 ALTER TABLE `scholarship` DISABLE KEYS */;
-INSERT INTO `scholarship` VALUES (1,'\"Coding Bootcamp Scholarships\"',1000,'\"Our coding bootcamp scholarship directory features more than 40 unique scholarships\"','2022-03-09 00:00:00','2022-02-04 00:00:00','\"GPA must be at least 4\"'),(2,'\"Flatiron School Scholarships\"',7000,'\"The Women Take Tech Initiative scholarship awards a 50% discount on tuition to females\"','2022-03-25 00:00:00','2022-03-12 00:00:00','\"all Flatiron School campus-based and online courses globally\"'),(3,'\"Makers Academy Scholarship\"',700,'\"Any minorities or women who enroll in classes at the academy can receive a tuition discount\"','2022-05-10 00:00:00','2022-10-06 00:00:00','\"none\"'),(4,'\"Grand Circus Scholarship\"',1750,'\"Grand Circus is also using scholarships to help diversify the program and the tech industry in general\"','2021-11-04 00:00:00','2022-09-10 00:00:00','\"Anyone who identifies as a woman, Latinx, LGBTQ+, Native American, Black, or Veteran is eligible and recipients will be awarded $1,750\"'),(5,'\"BHW Scholarship\"',300,'\"DigitalCrafts is working to make tech careers more accessible to minority groups including female, Latinx, and Black students who are underrepresented in the tech industry\"','2022-08-12 00:00:00','2022-12-29 00:00:00','\"Women who are pursuing an undergraduate or master\'s degree and are majoring in science, technology, engineering, or mathematics during the 2022 school year\"');
+INSERT INTO `scholarship` VALUES (1,'Coding Bootcamp Scholarships',1000,'Our coding bootcamp scholarship directory features more than 40 unique scholarships','2022-03-09 00:00:00','2022-02-04 00:00:00','GPA must be at least 4'),(2,'Flatiron School Scholarships',7000,'The Women Take Tech Initiative scholarship awards a 50% discount on tuition to females','2022-03-25 00:00:00','2022-03-12 00:00:00','all Flatiron School campus-based and online courses globally'),(3,'Makers Academy Scholarship',700,'Any minorities or women who enroll in classes at the academy can receive a tuition discount','2022-05-10 00:00:00','2022-10-06 00:00:00','none'),(4,'Grand Circus Scholarship',1750,'Grand Circus is also using scholarships to help diversify the program and the tech industry in general','2021-11-04 00:00:00','2022-09-10 00:00:00','Anyone who identifies as a woman, Latinx, LGBTQ+, Native American, Black, or Veteran is eligible and recipients will be awarded $1,750'),(5,'BHW Scholarship',300,'DigitalCrafts is working to make tech careers more accessible to minority groups including female, Latinx, and Black students who are underrepresented in the tech industry','2022-08-12 00:00:00','2022-12-29 00:00:00','Women who are pursuing an undergraduate or master\'s degree and are majoring in science, technology, engineering, or mathematics during the 2022 school year');
 /*!40000 ALTER TABLE `scholarship` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -282,7 +282,7 @@ CREATE TABLE `special_interest_group` (
 
 LOCK TABLES `special_interest_group` WRITE;
 /*!40000 ALTER TABLE `special_interest_group` DISABLE KEYS */;
-INSERT INTO `special_interest_group` VALUES (1,'\"Women_who_code\"',6,'\"Support women who code\"','\"tech\"','\"www.tech.edu\"','2022-03-01 00:00:00'),(2,'\"tech for women\"',7,'\"Help women break into tech\"','\"tech\"','\"www.tech4women.com\"','2022-02-08 00:00:00'),(3,'\"AI Exploration\"',8,'\"Learn about AI\"','\"AI\"','\"www.learnAI.com\"','2022-01-14 00:00:00'),(4,'\"Machine Learning Interest Group\"',9,'\"Learn about machine learning\"','\"Machine Learning\"','\"www.learMachine.com\"','2021-08-11 00:00:00'),(5,'\"Intro to Software Development\"',10,'\"Learn what it takes to become a software developer\"','\"Software Development\"','\"www.introtosoftware.com\"','2021-10-06 00:00:00');
+INSERT INTO `special_interest_group` VALUES (1,'Women_who_code',6,'Support women who code','tech','www.tech.edu','2022-03-01 00:00:00'),(2,'tech for women',7,'Help women break into tech','tech','www.tech4women.com','2022-02-08 00:00:00'),(3,'AI Exploration',8,'Learn about AI','AI','www.learnAI.com','2022-01-14 00:00:00'),(4,'Machine Learning Interest Group',9,'Learn about machine learning','Machine Learning','www.learMachine.com','2021-08-11 00:00:00'),(5,'Intro to Software Development',10,'Learn what it takes to become a software developer','Software Development','www.introtosoftware.com','2021-10-06 00:00:00');
 /*!40000 ALTER TABLE `special_interest_group` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;

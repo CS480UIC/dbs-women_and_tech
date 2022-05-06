@@ -22,10 +22,10 @@
   
   <body>
   <h1>Update</h1>
-<form action="<c:url value='/SpecialInterestGroupServletUpdate'/>" method="post">
+<form action="<c:url value='/Special_Interest_GroupServletUpdate'/>" method="post">
 	<input type="hidden" name="method" value="search"/>
-	Update Special Interest Group   :<input type="text" name="groupID" value="${form.groupID }"/>
-	<span style="color: red; font-weight: 900">${errors.groupID }</span>
+	Update Special Interest Group By ID   :<input type="number" name="group_id" value="${form.group_id }"/>
+	<span style="color: red; font-weight: 900">${errors.group_id }</span>
 	<br/>
 	<input type="submit" value="Update Scholarship"/>
 </form>

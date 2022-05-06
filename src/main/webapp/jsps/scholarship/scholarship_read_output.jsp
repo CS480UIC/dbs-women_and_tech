@@ -1,4 +1,4 @@
-<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
+ <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 
@@ -24,19 +24,19 @@
   <h1>Read Scholarship</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
 <form>
-	Scholarship ID    		:<input type="text" name="scholarshipID" value="${scholarship.scholarshipID }"/>
+	Scholarship ID    		:<input type="number" name="scholarship_id" value="${scholarship.scholarship_id }" disabled/>
 	<br/>
-	Scholarship Name 		：<input type="text" name="scholarshipName" value="${scholarship.scholarshipName }"/>
+	Scholarship Name 		：<input type="text" name="scholarship_name" value="${scholarship.scholarship_name }" disabled/>
 	<br/>
-	Scholarship Amount 		：<input type="text" name="scholarshipAmount" value="${scholarship.scholarshipAmount }"/>
+	Scholarship Amount 		：<input type="number" name="scholarship_amount" value="${scholarship.scholarship_amount }" disabled/>
 	<br/>
-	Scholarship Description ：<input type="text" name="scholarshipDescription" value="${scholarship.scholarshipDescription}"/>
+	Scholarship Description ：<input type="text" name="scholarship_description" value="${scholarship.scholarship_description}" disabled/>
 	<br/>
-	Scholarship Deadline	：<input type="text" name="scholarshipDeadline" value="${scholarship.scholarshipDeadline }"/>
+	Deadline	            ：<input type="date" name="application_deadline" value="${scholarship.application_deadline }" disabled/>
 	<br/>
-	Scholarship Released	：<input type="text" name="scholarshipReleased" value="${scholarship.scholarshipReleased }"/>
+	Scholarship Released	：<input type="date" name="application_released" value="${scholarship.application_released }" disabled/>
 	<br/>
-	Scholarship Requirements ：<input type="text" name="scholarshipRequirements" value="${scholarship.scholarshipRequirements }"/>
+	Scholarship Requirements ：<input type="text" name="requirements" value="${scholarship.requirements }" disabled/>
 	<br/>
 </form>
 

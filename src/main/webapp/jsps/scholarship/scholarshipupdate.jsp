@@ -24,8 +24,8 @@
   <h1>Update</h1>
 <form action="<c:url value='/ScholarshipServletUpdate'/>" method="post">
 	<input type="hidden" name="method" value="search"/>
-	Update Scholarship   :<input type="text" name="scholarshipID" value="${form.scholarshipID }"/>
-	<span style="color: red; font-weight: 900">${errors.scholarshipID }</span>
+	Update Scholarship by ID   :<input type="text" name="scholarship_id" value="${form.scholarship_id }"/>
+	<span style="color: red; font-weight: 900">${errors.scholarship_id }</span>
 	<br/>
 	<input type="submit" value="Update Scholarship"/>
 </form>

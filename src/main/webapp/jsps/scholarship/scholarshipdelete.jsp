@@ -24,8 +24,8 @@
   <h1>Delete Scholarship</h1>
 <form action="<c:url value='/ScholarshipServletDelete'/>" method="post">
 	<input type="hidden" name="method" value="search"/>
-	Delete Scholarship ID   :<input type="text" name="eventID" value="${form.scholarshipID }"/>
-	<span style="color: red; font-weight: 900">${errors.scholarshipID }</span>
+	Delete Scholarship by ID   :<input type="text" name="scholarship_id" value="${form.scholarship_id }"/>
+	<span style="color: red; font-weight: 900">${errors.scholarship_id }</span>
 	<br/>
 	<input type="submit" value="Delete Scholarship"/>
 </form>

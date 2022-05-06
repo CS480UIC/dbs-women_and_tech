@@ -24,40 +24,43 @@
   <h1>Update Scholarship</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
 <form>
-	Scholarship ID    		:<input type="text" name="scholarshipID" value="${scholarship.scholarshipID }" disabled/>
+	Scholarship ID    		:<input type="number" name="scholarship_id" value="${scholarship.scholarship_id }" disabled/>
 	<br/>
-	Scholarship Name 		：<input type="text" name="scholarshipName" value="${scholarship.scholarshipName }" disabled/>
+	Scholarship Name 		：<input type="text" name="scholarship_name" value="${scholarship.scholarship_name }" disabled/>
 	<br/>
-	Scholarship Amount 		：<input type="text" name="scholarshipAmount" value="${scholarship.scholarshipAmount }" disabled/>
+	Scholarship Amount 		：<input type="number" name="scholarship_amount" value="${scholarship.scholarship_amount }" disabled/>
 	<br/>
-	Scholarship Description ：<input type="text" name="scholarshipDescription" value="${scholarship.scholarshipDescription}" disabled/>
+	Scholarship Description ：<input type="text" name="scholarship_description" value="${scholarship.scholarship_description}" disabled/>
 	<br/>
-	Scholarship Deadline	：<input type="text" name="scholarshipDeadline" value="${scholarship.scholarshipDeadline }" disabled/>
+	Deadline	            ：<input type="date" name="application_deadline" value="${scholarship.application_deadline }" disabled/>
 	<br/>
-	Scholarship Released	：<input type="text" name="scholarshipReleased" value="${scholarship.scholarshipReleased }" disabled/>
+	Scholarship Released	：<input type="date" name="application_released" value="${scholarship.application_released }" disabled/>
 	<br/>
-	Scholarship Requirements ：<input type="text" name="scholarshipRequirements" value="${scholarship.scholarshipRequirements }" disabled/>
+	Scholarship Requirements ：<input type="text" name="requirements" value="${scholarship.requirements }" disabled/>
 	<br/>
 </form>
 <h1>Update the values below</h1>
 <form action="<c:url value='/ScholarshipServletUpdate'/>" method="post">
 		<input type="hidden" name="method" value="update"/>
-				<input type="hidden" name="username" value="${scholarship.scholarshipID }"/>
-	Scholarship Name：<input type="text" name="scholarshipName" value="${form.scholarshipName }"/>
-	<span style="color: red; font-weight: 900">${errors.scholarshipName }</span>
+				<input type="hidden" name="scholarship_id" value="${scholarship.scholarship_id }"/>
+	Scholarship Name 		：<input type="text" name="scholarship_name" value="${form.scholarship_name}"/>
+	<span style="color: red; font-weight: 900">${errors.scholarship_name }</span>
 	<br/>
-	Scholarship Amount	：<input type="text" name="scholarshipAmount" value="${form.scholarshipAmount }"/>
-	<span style="color: red; font-weight: 900">${errors.scholarshipAmount }</span>
+	Scholarship Amount 		：<input type="number" name="scholarship_amount" value="${form.scholarship_amount}"/>
+	<span style="color: red; font-weight: 900">${errors.scholarship_amount }</span>
 	<br/>
-	Scholarship Description	：<input type="text" name="scholarshipDescription" value="${form.scholarshipDescription}"/>
-	<span style="color: red; font-weight: 900">${errors.scholarshipDescription }</span>
+	Scholarship Description ：<input type="text" name="scholarship_description" value="${form.scholarship_description}"/>
+	<span style="color: red; font-weight: 900">${errors.scholarship_description }</span>
 	<br/>
-	Scholarship Deadline	：<input type="text" name="scholarshipDeadline" value="${form.scholarshipDeadline }"/>
-	<span style="color: red; font-weight: 900">${errors.scholarshipDeadline }</span>
+	Scholarship Deadline	：<input type="date" name="application_deadline" value="${form.application_deadline}"/>
+	<span style="color: red; font-weight: 900">${errors.application_deadline }</span>
 	<br/>
-	Scholarship Requirements	：<input type="text" name="scholarshipRequirements" value="${form.scholarshipRequirements }"/>
-	<span style="color: red; font-weight: 900">${errors.scholarshipRequirements }</span>
-	<br>
+	Scholarship Released	：<input type="date" name="application_released" value="${form.application_released}"/>
+	<span style="color: red; font-weight: 900">${errors.application_released }</span>
+	<br/>
+	Scholarship Requirements ：<input type="text" name="requirements" value="${form.requirements }"/>
+	<span style="color: red; font-weight: 900">${errors.requirements }</span>
+	<br/>
 	<input type="submit" value="Update Scholarship"/>
 </form>
 

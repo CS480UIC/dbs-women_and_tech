@@ -21,14 +21,11 @@
   </head>
   
   <body>
-  <h1>Read Scholarship</h1>
+  <h1>Read a Scholarship</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
 <form action="<c:url value='/ScholarshipServletRead'/>" method="post">
-	<input type="hidden" name="method" value="regist"/>
-	Scholarship ID    :<input type="text" name="eventID " value="${form.scholarshipID  }"/>
-	<span style="color: red; font-weight: 900">${errors.scholarshipID  }</span>
+	Scholarship ID 		：<input type="number" name="scholarship_id" value="${scholarship.scholarship_id}"/>
 	<br/>
-
 	<input type="submit" value="Read Scholarship"/>
 </form>
   </body>

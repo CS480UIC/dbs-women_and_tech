@@ -25,7 +25,7 @@ import eventNetwork.domain.event_network;
  */
 public class EventDao {
 
-private String MySQL_user = "womenTech"; //TODO change user
+private String MySQL_user = "women_and_tech"; //TODO change user
 	
 	/**
 	 * password of your username to connect to the database

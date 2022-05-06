@@ -24,17 +24,19 @@
   <h1>Read Entity</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
 <form>
-		Group ID    		:<input type="text" name="groupID" value="${special_interest_group.groupID }" disabled/>
+	Group ID    		:<input type="number" name="group_id" value="${special_interest_group.group_id }" disabled/>
 	<br/>
-	Members ID 		：<input type="text" name="membersID" value="${special_interest_group.membersID }" disabled/>
+	Group Name    		:<input type="text" name="group_name" value="${special_interest_group.group_name }" disabled/>
 	<br/>
-	Mission Statement 		：<input type="text" name="missionStatement" value="${special_interest_group.missionStatement }" disabled/>
+	Members ID 		：<input type="number" name="members_id" value="${special_interest_group.members_id }" disabled/>
 	<br/>
-	Type ：<input type="text" name="type" value="${special_interest_group.type}" disabled/>
+	Mission Statement 		：<input type="text" name="mission_statement" value="${special_interest_group.mission_statement }" disabled/>
 	<br/>
-	Web Page URL	：<input type="text" name="webPageURL" value="${special_interest_group.webPageURL }" disabled/>
+	Type ：<input type="text" name="group_type" value="${special_interest_group.group_type}" disabled/>
 	<br/>
-	Date Created	：<input type="text" name="dateCreated" value="${special_interest_group.dateCreated }" disabled/>
+	Web Page URL	：<input type="text" name="webpage_url" value="${special_interest_group.webpage_url }" disabled/>
+	<br/>
+	Date Created	：<input type="date" name="date_created" value="${special_interest_group.date_created }" disabled/>
 	<br/>
 </form>
 
